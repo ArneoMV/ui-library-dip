@@ -1,0 +1,45 @@
+@use 'variable' as *;
+@use 'mixin' as *;
+@use '../abstract/color' as *;
+
+body {
+    background-color: $neutral-100;
+    margin: $base-margin;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+main {
+    display: flex;
+}
+
+
+img, iframe, object, embed, video {
+	width: 100%;
+	max-width: 100%;
+}
+img {
+    width: 50px;
+    height: auto;
+    object-fit: cover;
+}
+a {
+    text-decoration: underline;
+}
+article {
+    height: auto;
+}
+div {
+    height: auto;
+}
+
+.padding {
+    padding: $base-padding;
+}
+
+.content {
+    position: relative;
+    top: 60px; /* Adjust top position to accommodate the fixed navbar height */
+    left: 0;
+    margin-bottom: 150px;
+}

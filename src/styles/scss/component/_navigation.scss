@@ -1,0 +1,31 @@
+
+@use "../base/variable.scss" as *;
+
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 64px;
+    width: 100%;
+    padding: 12px 24px;
+    z-index: 999;
+    .navigation-logo {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 20px;
+        height: 100%;
+        width: 200px;
+    }
+    .navigation-links {
+        display: flex;
+        gap: $base-gap;
+        justify-content: flex-end;
+        a {
+            text-decoration: none;
+        }
+        
+    }
+}

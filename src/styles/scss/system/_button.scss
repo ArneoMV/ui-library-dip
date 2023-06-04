@@ -1,0 +1,89 @@
+@use '../abstract/color' as *;
+@use '../base/variable' as *;
+
+// COMPONENT STYLES
+@mixin Button {
+  padding: 8px 18px;
+  border: none;
+  border-radius: $base-border-radius-md;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  font-family: Sofia Sans;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.07em;
+  text-align: left;
+}
+
+.button.primary {
+  @include Button();
+  background-color: $primary-500;
+  color: $primary-100;
+
+  &:hover {
+    background-color: $primary-300;
+    color: $primary-100;
+    box-shadow: $shadow-sm;
+  }
+  &:focus {
+    background-color: $primary-400;
+    color: $primary-100;
+    border: 2px solid $primary-100;
+  }
+  &:disabled {
+    background-color: $neutral-300;
+    color: $neutral-500;
+    border: 2px solid $neutral-300;
+    cursor: not-allowed;
+  }
+}
+
+.button.secondary {
+  @include Button();
+  background-color: transparent;
+  color: $primary-400;
+  border: 2px solid $primary-400;
+
+  &:hover {
+    background-color: transparent;
+    color: $primary-300;
+    border: 2px solid $primary-300;
+  }
+  &:focus {
+    background-color: transparent;
+    color: $primary-600;
+    border: 2px solid $primary-600;
+  }
+  &:disabled {
+    background-color: transparent;
+    color: $neutral-400;
+    border: 2px solid $neutral-400;
+    cursor: not-allowed;
+  }
+}
+
+.button.link {
+  @include Button();
+  background-color: transparent;
+  color: $primary-400;
+
+  &:hover {
+    background-color: transparent;
+    color: $primary-300;
+    text-decoration: underline;
+  }
+  &:focus {
+    background-color: transparent;
+    color: $primary-600;
+    text-decoration: underline;
+    
+  }
+  &:disabled {
+    background-color: transparent;
+    color: $neutral-500;
+    text-decoration: none;
+    cursor: not-allowed;
+  }
+}

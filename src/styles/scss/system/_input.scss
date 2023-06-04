@@ -1,0 +1,118 @@
+@use '../abstract/color' as *;
+@use '../base/variable' as *;
+
+/* INPUT */
+@mixin inputErrorStyles {
+    background-color: $error-100;
+    border: 2px solid $error-100;
+}
+
+@mixin inputErrorTextStyles {
+    font-family: Sofia Sans;
+    color: $error-200;
+    font-size: 14px;
+    margin-top: 5px;
+    line-height: 1.4;
+    letter-spacing: 0.07em;
+}
+
+@mixin inputDisabledStyles {
+    background-color: $neutral-200;
+    border: 1px solid $neutral-200;
+    color: $neutral-200;
+    cursor: not-allowed;
+}
+@mixin inputOutlined {
+  height: 30px;
+  width: auto;
+  border: 1px solid $neutral-500;
+  background-color: transparent;
+  margin: 3px 0;
+  padding-left: 10px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  border-radius: 5px;
+}
+
+.input {
+  position: relative;
+  background-color: transparent;
+
+  &.input-error {
+    .input-field {
+      @include inputErrorStyles;
+    }
+    .input-icon-error {
+      color: $error-300;
+    }
+    .input-error-text {
+      @include inputErrorTextStyles;
+    }
+  }
+
+  &.input-success {
+    .input-field {
+      border-color: $neutral-400;
+    }
+    .input-icon-success {
+      color: $success-300;
+    }
+  }
+
+  .input-label {
+    font-weight: 500;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: $neutral-600;
+  }
+
+  .input-wrapper {
+    position: relative;
+  }
+
+  .input-field {
+    border-radius: $base-border-radius-md;
+    border: 2px solid $neutral-400;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 8px 12px;
+    color: $neutral-400;
+    font-family: Sofia Sans;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: 0.07em;
+    text-align: left;
+    width: 100%;
+
+    &:hover {
+      background-color: $neutral-100;
+      box-shadow: $shadow-sm;
+      border: 1px solid $primary-100;
+    }
+
+    &:focus {
+      background-color: $neutral-100;
+      border: 1px solid $primary-100;
+      color: $neutral-600;
+      box-shadow: $shadow-sm;
+    }
+    &[disabled] {
+        @include inputDisabledStyles();
+        box-shadow: none;
+        &::placeholder {
+            color: $neutral-400; /* Placeholder text color */
+          }
+      }
+  }
+
+  .input-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    font-size: 16px;
+  }
+}
+
