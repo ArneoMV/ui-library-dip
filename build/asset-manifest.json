@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ui-librery-dip/static/css/main.5c87ff94.css",
+    "main.js": "/ui-librery-dip/static/js/main.56d271bf.js",
+    "index.html": "/ui-librery-dip/index.html",
+    "main.5c87ff94.css.map": "/ui-librery-dip/static/css/main.5c87ff94.css.map",
+    "main.56d271bf.js.map": "/ui-librery-dip/static/js/main.56d271bf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5c87ff94.css",
+    "static/js/main.56d271bf.js"
+  ]
+}
