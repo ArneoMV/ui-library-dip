@@ -3,63 +3,64 @@
 
 // COMPONENT STYLES
 @mixin Button {
-  padding: 8px 18px;
+  padding: 6px 14px;
   border: none;
   border-radius: $base-border-radius-md;
   cursor: pointer;
   text-transform: uppercase;
 
   font-family: Sofia Sans;
+  color: $primary-600;
   font-size: 14px;
   font-weight: 700;
-  line-height: 1.4;
+  line-height: 1.6;
   letter-spacing: 0.07em;
   text-align: left;
 }
 
 .button.primary {
   @include Button();
-  background-color: $primary-500;
-  color: $primary-100;
+  background-color: $primary-100;
 
   &:hover {
-    background-color: $primary-300;
-    color: $primary-100;
+    box-sizing: border-box;
     box-shadow: $shadow-sm;
+    background-color: $primary-200;
   }
   &:focus {
-    background-color: $primary-400;
-    color: $primary-100;
-    border: 2px solid $primary-100;
+    box-shadow: $shadow-sm; 
+    background-color: $primary-200;
   }
   &:disabled {
     background-color: $neutral-300;
     color: $neutral-500;
-    border: 2px solid $neutral-300;
     cursor: not-allowed;
+    box-shadow: none;
   }
 }
 
 .button.secondary {
   @include Button();
   background-color: transparent;
-  color: $primary-400;
-  border: 2px solid $primary-400;
+  color: $primary-600;
+  border: 2px solid $primary-300;
 
   &:hover {
-    background-color: transparent;
-    color: $primary-300;
+    background-color: $neutral-100;
+    box-shadow: $shadow-sm;
+    color: $primary-600;
     border: 2px solid $primary-300;
   }
   &:focus {
-    background-color: transparent;
+    background-color: $neutral-100;
+    box-shadow: $shadow-sm;
     color: $primary-600;
-    border: 2px solid $primary-600;
+    border: 2px solid $primary-300;
   }
   &:disabled {
     background-color: transparent;
-    color: $neutral-400;
-    border: 2px solid $neutral-400;
+    color: $neutral-300;
+    border: 2px solid $neutral-300;
     cursor: not-allowed;
   }
 }
@@ -71,7 +72,7 @@
 
   &:hover {
     background-color: transparent;
-    color: $primary-300;
+    color: $primary-600;
     text-decoration: underline;
   }
   &:focus {

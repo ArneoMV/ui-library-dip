@@ -1,0 +1,66 @@
+@use '../abstract/color' as *;
+@use '../base/variable' as *;
+
+$breakpoint-alpha: 480px; // adjust to your needs
+
+.table {
+  margin: 1em 0;
+  min-width: 300px; // adjust to your needs
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-radius: $base-border-radius-md;
+  overflow: hidden;
+  border: 1px solid $primary-300;
+  thead, tbody {
+    background-color: $primary-200;
+  }
+  tr {
+    border-top: 1px solid $primary-300;
+    border-bottom: 1px solid $primary-300;
+  }
+  
+  th {
+    display: none; // for accessibility, use a visually hidden method here instead! Thanks, reddit!   
+  }
+  
+  td {
+    display: block; 
+    
+    &:first-child {
+      padding-top: .5em;
+    }
+    
+    &:last-child {
+      padding-bottom: .5em;
+    }
+
+    // &:before {
+    //   content: attr(data-th)": "; // who knew you could do this? The internet, that's who.
+
+    //   // optional styles to make it look nicer
+    //   width: 6.5em; // adjust according to your own content
+    //   display: inline-block;
+    //   // end optional styles
+      
+    //   @media (min-width: $breakpoint-alpha) {
+    //     display: none;
+    //   }
+    // }
+  }
+  
+  th, td {
+    text-align: left;
+    @media (min-width: $breakpoint-alpha) {
+      display: table-cell;
+      padding: $pading-md;
+      
+    //   &:first-child {
+    //     padding-left: 0;
+    //   }
+      
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+}

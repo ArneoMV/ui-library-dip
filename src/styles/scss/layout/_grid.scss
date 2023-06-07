@@ -33,12 +33,12 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
 .column {
     display: flex;
     flex-direction: column;
-    gap: $base-border-radius-md;
+    gap: $base-border-radius-lg;
 }
 .row {
     display: flex;
     flex-flow: row;
-    gap: $base-border-radius-md;
+    gap: $base-border-radius-lg;
     @media screen and (max-width: 767px) {
     }
 }

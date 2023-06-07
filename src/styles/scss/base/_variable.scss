@@ -1,9 +1,12 @@
 // spacing
 $base-padding: 1.5rem;
 $base-margin: 1.5rem;
-$base-gap: 0.75rem;
+$base-gap: 1.5rem;
 
 $base-lineHeight: 0;
+
+//
+$pading-md: 12px;
 
 // borders
 $base-border-thickness: 1px;
@@ -30,7 +33,7 @@ $layer-2: 200;
 $layer-3: 300;
 
 // shadow
-$shadow-sm:  6px 6px 15px 0px rgba(61, 71, 86, 0.102);
-$shadow-lg: 1px 10px 30px 0px rgba(0, 0, 0, 0.102);
+$shadow-sm:  3px 3px 15px 0px rgba(61, 71, 86, 0.19);
+$shadow-lg: 1px 10px 30px 0px rgba(0, 0, 0, 0.3);
 $shadow-primary: 3px 3px 12px 0px rgba(131, 169, 218, 0.4);
 

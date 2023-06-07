@@ -8,6 +8,7 @@ import Navigation from './components/Navigation.jsx';
 import Menu from './components/Menu.jsx';
 import ButtonPage from './components/pages/ButtonPage.jsx';
 import InputPage from './components/pages/InputPage.jsx';
+import CheckboxPage from './components/pages/CheckboxPage.jsx';
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
             <Routes>
               <Route path="/button" element={<ButtonPage />} />
               <Route path="/input" element={<InputPage />} />
+              <Route path="/checkbox" element={<CheckboxPage />} />
             </Routes>
           </div>
         </main>

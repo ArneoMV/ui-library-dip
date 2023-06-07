@@ -1,0 +1,94 @@
+@use '../abstract/color' as *;
+@use '../base/variable' as *;
+
+
+.chekbox_frame {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    p {
+        font-size: 14px;
+    }
+    .active {
+        background-color: $primary-200; 
+        box-shadow: $shadow-sm; 
+    }
+}
+@mixin checkbox_style {
+    width: 18px;
+    height: 18px;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.checkbox {
+    @include checkbox_style();
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+
+    background-color: transparent;
+    border: 2px solid $primary-200;
+  
+    &:hover {
+        box-sizing: border-box;
+        background-color: $primary-200;
+        border: 2px solid $primary-200;
+        box-shadow: $shadow-sm;
+    }
+  
+    &:active {
+        background-color: $primary-200;
+    }
+  
+    &.disabled {
+        background: $neutral-300;
+        border-radius: 3px;
+        cursor: not-allowed;
+    }
+    &.error {
+        background: $error-300;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+  
+    input {
+        @include checkbox_style();
+        position: absolute;
+        top: 0;
+        left: 0;
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        background-color: $success-200;
+    }
+  
+    .checkmark {
+        @include checkbox_style();
+        transition: background-color 0.3s ease-in-out;
+  
+      &:after {
+        content: "";
+        position: absolute;
+        display: none;
+        left: 5.5px;
+        top: 1.5px;
+        width: 3px;
+        height: 8px;
+        border: solid $success-400;
+        border-width: 0 2px 2px 0;
+        transform: rotate(50deg);
+      }
+    }
+  
+    input:checked ~ .checkmark {
+        background-color: $primary-200;
+    }
+  
+    input:checked ~ .checkmark:after {
+      display: block;
+    }
+  }
+  
+  
+  
