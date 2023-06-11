@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/ui-librery-dip/static/css/main.a1ca4df9.css",
-    "main.js": "/ui-librery-dip/static/js/main.b036263a.js",
+    "main.css": "/ui-librery-dip/static/css/main.d5566dc3.css",
+    "main.js": "/ui-librery-dip/static/js/main.837f9c30.js",
     "index.html": "/ui-librery-dip/index.html",
-    "static/media/check.svg": "/ui-librery-dip/static/media/check.83e6497a67501d87e2f796ccfac784fa.svg",
+    "static/media/check.svg": "/ui-librery-dip/static/media/check.71b556b4aa0a8feb05cb2737093a1797.svg",
     "static/media/Arrow-down.svg": "/ui-librery-dip/static/media/Arrow-down.70e98558673716fe6313f1c36c845a7f.svg",
-    "main.a1ca4df9.css.map": "/ui-librery-dip/static/css/main.a1ca4df9.css.map",
-    "main.b036263a.js.map": "/ui-librery-dip/static/js/main.b036263a.js.map"
+    "main.d5566dc3.css.map": "/ui-librery-dip/static/css/main.d5566dc3.css.map",
+    "main.837f9c30.js.map": "/ui-librery-dip/static/js/main.837f9c30.js.map"
   },
   "entrypoints": [
-    "static/css/main.a1ca4df9.css",
-    "static/js/main.b036263a.js"
+    "static/css/main.d5566dc3.css",
+    "static/js/main.837f9c30.js"
   ]
 }
