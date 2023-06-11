@@ -14,10 +14,10 @@ const CheckboxPage = () => {
       setIsChecked(event.target.checked);
     };
     const data = [
-        { cell1: 'label', cell2: 'cell2_1', cell3: 'cell3_1', cell4: 'cell4_1' },
-        { cell1: 'checked', cell2: 'cell2_2', cell3: 'cell3_2', cell4: 'cell4_2' },
-        { cell1: 'onChange', cell2: 'cell2_3', cell3: 'cell3_3', cell4: 'cell4_3' },
-        { cell1: 'disabled', cell2: 'cell2_3', cell3: 'cell3_3', cell4: 'cell4_3' },
+        { cell1: 'label', cell2: 'Label for the checkbox', cell3: 'string', cell4: '-' },
+        { cell1: 'checked', cell2: 'Indicates whether checkbox is checked', cell3: 'boolean', cell4: 'false' },
+        { cell1: 'onChange', cell2: 'Callback function for checkbox change', cell3: 'function', cell4: '-' },
+        { cell1: 'disabled', cell2: 'Disables the checkbox', cell3: 'boolean', cell4: 'false' },
     ];
   
     return (
@@ -81,5 +81,3 @@ const CheckboxPage = () => {
 };
 
 export default CheckboxPage;
-
-{/* <p>{isChecked ? 'Checked' : 'Unchecked'}</p> */}

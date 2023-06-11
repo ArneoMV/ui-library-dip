@@ -14,10 +14,12 @@ const RadiobuttonPage = () => {
       setSelectedValue(value);
     };
     const data = [
-        { cell1: 'label', cell2: 'cell2_1', cell3: 'cell3_1', cell4: 'cell4_1' },
-        { cell1: 'checked', cell2: 'cell2_2', cell3: 'cell3_2', cell4: 'cell4_2' },
-        { cell1: 'onChange', cell2: 'cell2_3', cell3: 'cell3_3', cell4: 'cell4_3' },
-        { cell1: 'disabled', cell2: 'cell2_3', cell3: 'cell3_3', cell4: 'cell4_3' },
+        { cell1: 'label', cell2: 'Label for the input field', cell3: 'string', cell4: '-' },
+        { cell1: 'placeholder', cell2: 'Placeholder text for the input field', cell3: 'string', cell4: '-' },
+        { cell1: 'type', cell2: 'Type of the input field', cell3: 'string', cell4: 'text' },
+        { cell1: 'success', cell2: 'Indicates a successful input', cell3: 'bool', cell4: 'false' },
+        { cell1: 'error', cell2: 'Error message for invalid input', cell3: 'string', cell4: '-' },
+        { cell1: 'disabled', cell2: 'Disables the input field', cell3: 'bool', cell4: 'false' },
     ];
   
     return (

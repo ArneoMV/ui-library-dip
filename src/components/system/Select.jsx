@@ -53,12 +53,12 @@ const Select = ({ type, options, selectNumber, isOpen, toggleOpen, onSelect, tit
           </>
         )}
         {type === 'link' && (
-          <a href={option.link} className="option-label">
+          <a href={option.link} className="option-label link">
             {option.label}
           </a>
         )}
         {type !== 'checkbox' && type !== 'link' && (
-          <p className="option-label">{option.label}</p>
+          <a className="link">{option.label}</a>
         )}
       </div>
     ))}

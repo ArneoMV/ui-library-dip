@@ -2,9 +2,15 @@ import React from "react";
 import Button from '../system/Button';
 import Prism from "prismjs";
 import "../../styles/prism.css";
-// import '../../styles/scss/system/_pageStructure.scss';
+import Table from '../system/Table';
 
 const ButtonPage = () => {
+
+    const data = [
+        { cell1: 'type', cell2: 'Vrsta tipke', cell3: 'string', cell4: 'default' },
+        { cell1: 'children', cell2: 'Sadržaj unutar tipke', cell3: 'node', cell4: '-' },
+        { cell1: 'disabled', cell2: 'Zastavica za onemogućavanje tipke', cell3: 'bool', cell4: 'false' },
+    ];
   return (
     <div className="page-structure">
         <h2>Gumb</h2>
@@ -97,6 +103,9 @@ Button type="secondary">Normal</Button>
 `}</code></pre> 
             </div>   
         </div>
+
+         {/* Table   */}
+         <Table data={data} />
     </div>
   );
 };

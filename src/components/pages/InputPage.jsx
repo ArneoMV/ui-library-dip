@@ -2,8 +2,18 @@ import React from "react";
 import Input from '../system/Input';
 import Prism from "prismjs";
 import "../../styles/prism.css";
+import Table from '../system/Table';
 
 const InputPage = () => {
+
+    const data = [
+        { cell1: 'label', cell2: 'Label for the input field', cell3: 'string', cell4: '-' },
+        { cell1: 'placeholder', cell2: 'Placeholder text for the input field', cell3: 'string', cell4: '-' },
+        { cell1: 'type', cell2: 'Type of the input field', cell3: 'string', cell4: 'text' },
+        { cell1: 'success', cell2: 'Indicates a successful input', cell3: 'bool', cell4: 'false' },
+        { cell1: 'error', cell2: 'Error message for invalid input', cell3: 'string', cell4: '-' },
+        { cell1: 'disabled', cell2: 'Disables the input field', cell3: 'bool', cell4: 'false' }, 
+    ];
   return (
     <div className="page-structure">
         <h2>Unos</h2>
@@ -43,7 +53,10 @@ const InputPage = () => {
  
             </div>   
         </div>
-        </div>
+        
+        {/* Table   */}
+        <Table data={data} />
+    </div>
   );
 };
 
