@@ -1,0 +1,108 @@
+@use '../abstract/color' as *;
+@use '../base/variable' as *;
+
+.select {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 38px; /* Set the height of the select */
+  border: 1px solid red;
+  gap: 6px;
+
+  .select-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 38px; /* Set the height of the select-header */
+    width: 100%; /* Set the width to occupy the entire available space */
+    padding: 0.5rem;
+    border: 1px solid $neutral-300;
+    border-radius: $base-border-radius-sm;
+    cursor: pointer;
+
+    .select-label {
+      font-family: 'Sofia Sans', sans-serif;
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: 0.04em;
+      font-weight: 600; // SemiBold
+
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      min-width: 0; /* Add this line to allow text to wrap */
+    }
+
+    &.open {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    .select-arrow {
+      width: auto;
+      fill: $neutral-500;
+      transition: transform 0.3s ease-in-out;
+      transform: rotate(0deg);
+
+      &.up {
+        transform: rotate(180deg);
+      }
+
+      svg {
+        display: block;
+        margin: 0 auto; // Center the arrow horizontally
+      }
+    }
+  }
+
+  .select-options {
+    z-index: 10;
+    background-color: $neutral-100;
+    border: 1px solid $neutral-300;
+    border-top: none;
+    border-bottom-right-radius: $base-border-radius-sm;
+    border-bottom-left-radius: $base-border-radius-sm;
+
+    .select-option {
+      padding: 0.5rem;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      cursor: pointer;
+      gap: 24px;
+
+      .option-label {
+        color: black;
+      }
+
+      &:hover {
+        background-color: $neutral-200;
+      }
+
+      &.selected {
+        background-color: $primary-200;
+        color: $neutral-600;
+      }
+    }
+
+    .select-checkbox-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      border: 1px solid $neutral-300;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+
+      &.checked {
+        background-color: $primary-200;
+
+        .option-icon {
+          filter: invert(1) brightness(1.5);
+        }
+      }
+    }
+  }
+}

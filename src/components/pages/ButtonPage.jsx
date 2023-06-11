@@ -77,15 +77,23 @@ const ButtonPage = () => {
             <div className="padding">
             <h3>Javascript</h3>
             <pre className="language-javascript"><code>{`
-const Button = ({ children, disabled }) => {
-    const buttonClassName = disabled ? 'button disabled' : 'button';
-    
-    return (
-        <button className={buttonClassName} disabled={disabled}>
-        {children}
-        </button>
-    );
-};
+<Button type="primary">Normal</Button>
+<Button type="primary" className="hover">Hover</Button>
+<Button type="primary" className="active">Active</Button>
+<Button type="primary" className="focus">Focused</Button>
+<Button type="primary" disabled>Disabled</Button>
+
+Button type="secondary">Normal</Button>
+<Button type="secondary" className="hover">Hover</Button>
+<Button type="secondary" className="active">Active</Button>
+<Button type="secondary" className="focus">Focused</Button>
+<Button type="secondary" disabled>Disabled</Button>
+
+<Button type="link">Normal</Button>
+<Button type="link" className="hover">Hover</Button>
+<Button type="link" className="active">Active</Button>
+<Button type="link" className="focus">Focused</Button>
+<Button type="link" disabled>Disabled</Button>
 `}</code></pre> 
             </div>   
         </div>

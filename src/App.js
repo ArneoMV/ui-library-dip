@@ -9,6 +9,8 @@ import Menu from './components/Menu.jsx';
 import ButtonPage from './components/pages/ButtonPage.jsx';
 import InputPage from './components/pages/InputPage.jsx';
 import CheckboxPage from './components/pages/CheckboxPage.jsx';
+import RadiobuttonPage from './components/pages/RadiobuttonPage.jsx';
+import SelectPage from './components/pages/SelectPage.jsx';
 
 const App = () => {
   return (
@@ -24,6 +26,8 @@ const App = () => {
               <Route path="/button" element={<ButtonPage />} />
               <Route path="/input" element={<InputPage />} />
               <Route path="/checkbox" element={<CheckboxPage />} />
+              <Route path="/radio-button" element={<RadiobuttonPage />} />
+              <Route path="/select" element={<SelectPage />} />
             </Routes>
           </div>
         </main>

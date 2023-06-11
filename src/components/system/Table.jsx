@@ -1,40 +1,29 @@
 import React from 'react';
 import '../../styles/scss/system/_table.scss';
 
-const Table = () => {
+const Table = ({ data }) => {
   return (
     <table className="table">
       <thead>
         <tr>
-          <th>head1</th>
-          <th>head2</th>
-          <th>head3</th>
-          <th>head4</th>
+          <th>Svojtsvo</th>
+          <th>Opis</th>
+          <th>Vrsta</th>
+          <th>Zadano</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <td>cell1_1</td>
-          <td>cell2_1</td>
-          <td>cell3_1</td>
-          <td>cell4_1</td>
+    <tbody>
+      {data.map((item, index) => (
+        <tr key={index}>
+          <td>{item.cell1}</td>
+          <td>{item.cell2}</td>
+          <td>{item.cell3}</td>
+          <td>{item.cell4}</td>
         </tr>
-        <tr>
-          <td>cell1_2</td>
-          <td>cell2_2</td>
-          <td>cell3_2</td>
-          <td>cell4_2</td>
-        </tr>
-        <tr>
-          <td>cell1_3</td>
-          <td>cell2_3</td>
-          <td>cell3_3</td>
-          <td>cell4_3</td>
-        </tr>
-      </tbody>
+      ))}
+    </tbody>
     </table>
   );
 };
 
 export default Table;
-

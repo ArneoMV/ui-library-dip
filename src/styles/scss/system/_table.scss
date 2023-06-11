@@ -4,19 +4,29 @@
 $breakpoint-alpha: 480px; // adjust to your needs
 
 .table {
-  margin: 1em 0;
+  border: 1px solid $neutral-500; /* Set the border color here */
   min-width: 300px; // adjust to your needs
-  border-collapse: collapse;
   border-spacing: 0;
   border-radius: $base-border-radius-md;
   overflow: hidden;
-  border: 1px solid $primary-300;
-  thead, tbody {
-    background-color: $primary-200;
+  
+  thead {
+    background-color: $neutral-200;
+    tr {
+      th {
+        border-bottom: 1px solid $neutral-500;
+      }
+    }
+  }
+  tbody {
+    background-color: $neutral-100;
   }
   tr {
-    border-top: 1px solid $primary-300;
-    border-bottom: 1px solid $primary-300;
+    &:last-child {
+      td {
+          border-bottom: none;
+      }
+    }
   }
   
   th {
@@ -24,28 +34,14 @@ $breakpoint-alpha: 480px; // adjust to your needs
   }
   
   td {
-    display: block; 
-    
+    display: block;
+    border-bottom: 1px solid $neutral-500;
     &:first-child {
       padding-top: .5em;
     }
-    
     &:last-child {
       padding-bottom: .5em;
     }
-
-    // &:before {
-    //   content: attr(data-th)": "; // who knew you could do this? The internet, that's who.
-
-    //   // optional styles to make it look nicer
-    //   width: 6.5em; // adjust according to your own content
-    //   display: inline-block;
-    //   // end optional styles
-      
-    //   @media (min-width: $breakpoint-alpha) {
-    //     display: none;
-    //   }
-    // }
   }
   
   th, td {
@@ -53,11 +49,6 @@ $breakpoint-alpha: 480px; // adjust to your needs
     @media (min-width: $breakpoint-alpha) {
       display: table-cell;
       padding: $pading-md;
-      
-    //   &:first-child {
-    //     padding-left: 0;
-    //   }
-      
       &:last-child {
         padding-right: 0;
       }

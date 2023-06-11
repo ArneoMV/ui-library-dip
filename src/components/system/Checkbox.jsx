@@ -9,7 +9,7 @@ const Checkbox = ({ label, checked, onChange }) => {
     });
   
     return (
-        <div className='chekbox_frame'>
+        <div className='chekbox-container'>
             <label className={checkboxClasses}>
                 <input type="checkbox" checked={checked} onChange={onChange} />
                 <span className="checkmark"></span>
