@@ -1,0 +1,41 @@
+@use "../abstract/color.scss" as *;
+@use "../base/variable.scss" as *;
+
+
+.component-card {
+    &.column {
+        gap: 1px;
+    }
+    border: $base-border-thickness solid $neutral-700;
+    min-width: 200px;
+    border-radius: $base-border-radius-sm;
+
+    .card-title {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        padding: 10px 0px 8px 10px;
+
+        p {
+            color: rgba(0, 0, 0, 0.88);
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 14px;
+        }
+    }
+
+    .center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        
+        border: none;
+
+        img {
+            height: auto;
+            width: 80%;
+            object-fit: cover;
+        }
+    }
+}

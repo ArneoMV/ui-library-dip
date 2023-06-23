@@ -9,8 +9,16 @@ body {
     margin: 0;
     padding: 0;
 }
+
+.body {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: flex-start;;
+}
 main {
     display: flex;
+    width: 100%;
 }
 
 
@@ -39,7 +47,7 @@ div {
 
 .content {
     position: relative;
-    top: 60px; /* Adjust top position to accommodate the fixed navbar height */
+    top: 12vh; /* Adjust top position to accommodate the fixed navbar height */
     left: 0;
     margin-bottom: 150px;
 }

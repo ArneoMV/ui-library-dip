@@ -39,14 +39,14 @@ const CheckboxPage = () => {
                     <div className="row">
                         <Checkbox
                             label="Normal"
-                            checked={isChecked}
-                            onChange={handleCheckboxChange}
                         />
                          <CheckboxHover
                             label="Hover"
                         />
                         <CheckboxActive
                             label="Active"
+                            checked={isChecked}
+                            onChange={handleCheckboxChange}
                         />
                          <CheckboxDisabled
                             label="Disabled"

@@ -3,34 +3,42 @@
 @use "../base/variable.scss" as *;
 
 .side-menu {
-    position: fixed;
-    top: 60px; /* Adjust top position to accommodate the fixed navbar height */
-    left: 0;
-    width: 200px;
-    height: 100%;
-    overflow-y: auto;
-  }
+  position: fixed;
+  top: 10%; /* Prilagodite gornji položaj da bi se uklopio visina fiksne navigacije */
+  left: 0;
+  display: flex;
+  width: inherit;
+  height: 100%;
+  overflow-y: auto;
+
   .menu-items {
+    width: 100%;
     list-style: none;
-    padding: 0;
+    padding: 0 48px;
     margin: 0;
-  }
-  
-  .menu-items li {
-    margin-bottom: 10px;
-  }
-  
-  .menu-items li a {
-    text-decoration: none;
-    color: $neutral-600;
-    display: block;
-    padding: 12px 24px;
-  }
+    .menu-item {
+      padding: 4px 0px 4px 12px;
+      margin: 8px 0;
+      border-radius: 8px;
+      a {
+        text-decoration: none;
+        color: $neutral-600;
+        display: block;
+      }
+
+      &:hover {
+        background-color: $neutral-200;
+        a {
+          color: $primary-400;
+        }
+      }
+    }
+
+  }  
+
   .active {
     font-weight: 500;
     color: $primary-500 !important;
   }
-  .menu-items li a:hover {
-    color: $primary-400;
-  }
-  
+
+}
