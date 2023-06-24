@@ -6,9 +6,10 @@
     &.column {
         gap: 1px;
     }
-    border: $base-border-thickness solid $neutral-700;
+    border: $base-border-thickness solid $neutral-500;
     min-width: 200px;
     border-radius: $base-border-radius-sm;
+    background-color: $neutral-100;
 
     .card-title {
         width: 100%;
@@ -37,5 +38,10 @@
             width: 80%;
             object-fit: cover;
         }
+    }
+
+
+    &:hover {
+        box-shadow: $shadow-sm;
     }
 }

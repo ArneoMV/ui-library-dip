@@ -7,8 +7,8 @@
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
-  gap: $base-border-radius-md;
-
+  gap: $base-border-radius-lg;
+  overflow: visible;
   .example-section {
     border-radius: $base-border-radius-md;
     border: 1px solid $neutral-500;
