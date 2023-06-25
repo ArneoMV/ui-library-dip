@@ -33,7 +33,7 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
 .column {
     display: flex;
     flex-direction: column;
-    gap: $base-border-radius-lg;
+    // gap: $base-border-radius-lg;
 }
 .row {
     display: flex;

@@ -2,18 +2,24 @@ import React, { useState } from 'react';
 import '../../styles/scss/system/_input.scss';
 import { FaCheckCircle, FaExclamationCircle } from 'react-icons/fa';
 
-const Input = ({ label, placeholder, error, success, disabled }) => {
+const Input = ({ label, placeholder, error, success, disabled, onChange }) => {
   const [inputValue, setInputValue] = useState('');
 
   const handleChange = (e) => {
     setInputValue(e.target.value);
+    if (typeof onChange === 'function') {
+      onChange(e.target.value);
+    }
   };
+  ;
+
+  const hasError = error && !success;
 
   return (
-    <div className={`input ${error ? 'input-error' : ''} ${success ? 'input-success' : ''}`}>
+    <div className={`input ${hasError ? 'input-error' : ''} ${success ? 'input-success' : ''}`}>
       {label && <label className="input-label">{label}</label>}
       <div className="input-wrapper">
-        {error && <FaExclamationCircle className="input-icon input-icon-error" />}
+        {hasError && <FaExclamationCircle className="input-icon input-icon-error" />}
         {success && <FaCheckCircle className="input-icon input-icon-success" />}
         <input
           type="text"
@@ -24,7 +30,7 @@ const Input = ({ label, placeholder, error, success, disabled }) => {
           disabled={disabled}
         />
       </div>
-      {error && <div className="input-error-text">{error}</div>}
+      {hasError && <div className="input-error-text">{error}</div>}
     </div>
   );
 };

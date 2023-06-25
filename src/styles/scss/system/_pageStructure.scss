@@ -28,3 +28,30 @@
     }
   }
 }
+
+.modular-page-structure {
+    width: 100%;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: $base-border-radius-lg;
+    overflow: visible;
+    .example-section {
+      border-radius: $base-border-radius-md;
+      border: 1px solid $neutral-500;
+      overflow: auto;
+  
+      pre {
+        width: 100%;
+      }
+  
+      .example-title {
+        width: 85px;
+      }
+  
+      .row {
+        // justify-content: space-between;
+        gap: $base-gap;
+      }
+    }
+}

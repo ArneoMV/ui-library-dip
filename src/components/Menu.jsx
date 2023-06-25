@@ -12,21 +12,7 @@ const Menu = () => {
         <div className="menu-item"><NavLink to="/checkbox">Checkbox</NavLink></div>
         <div className="menu-item"><NavLink to="/radio-button">Radiobutton</NavLink></div>
         <div className="menu-item"><NavLink to="/select">Select</NavLink></div>
-        <div className="menu-item"><NavLink to="/switch">Switch</NavLink></div>
-        <div className="menu-item"><NavLink to="/tooltip">Tooltip</NavLink></div>
-        <div className="menu-item"><NavLink to="/modal">Modal</NavLink></div>
-        <div className="menu-item"><NavLink to="/alert">Alert</NavLink></div>
-        <div className="menu-item"><NavLink to="/menu">Menu</NavLink></div>
-        <div className="menu-item"><NavLink to="/tab">Tab</NavLink></div>
-        <div className="menu-item"><NavLink to="/accortion">Accortion</NavLink></div>
-        <div className="menu-item"><NavLink to="/progress-bar">Progress bar</NavLink></div>
-        <div className="menu-item"><NavLink to="/card">Card</NavLink></div>
-        <div className="menu-item"><NavLink to="/slider">Slider</NavLink></div>
-        <div className="menu-item"><NavLink to="/date-picker">Date picker</NavLink></div>
-        <div className="menu-item"><NavLink to="/pagination">Pagination</NavLink></div>
-        <div className="menu-item"><NavLink to="/avatar">Avatar</NavLink></div>
-        <div className="menu-item"><NavLink to="/badge">Badge</NavLink></div>
-        <div className="menu-item"><NavLink to="/stepper">Stepper</NavLink></div>
+        <div className="menu-item"><NavLink to="/form">Form</NavLink></div>
       </div>
     </div>
   );

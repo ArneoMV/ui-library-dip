@@ -25,7 +25,7 @@
 
 
 @mixin input-base {
-  background-color: transparent;
+  background-color: $neutral-100;
   border-radius: $base-border-radius-md;
   border: 2px solid $neutral-400;
   cursor: pointer;
@@ -66,11 +66,11 @@
   }
 
   .input-label {
-    font-weight: 500;
+    font-weight: 400;
     margin-bottom: 5px;
-    text-transform: uppercase;
     font-size: 14px;
     color: $neutral-600;
+    letter-spacing: 1.23px;
   }
 
   .input-wrapper {
@@ -82,14 +82,14 @@
 
     &:hover {
       box-sizing: border-box;
-      background-color: $primary-100;
-      border: 2px solid $primary-100;
+      background-color: $neutral-100;
+      border: 2px solid $primary-300;
       box-shadow: $shadow-sm;
     }
 
     &:focus {
-      background-color: $primary-100;
-      border: 2px solid $primary-100;
+      background-color: $neutral-100;
+      border: 2px solid $primary-300;
       box-shadow: $shadow-sm;
       color: $neutral-700;
       
