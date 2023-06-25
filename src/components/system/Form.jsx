@@ -4,6 +4,7 @@ import { DevTool } from '@hookform/devtools';
 
 import Button from '../system/Button';
 import Input from '../system/Input';
+import Checkbox from '../system/Checkbox';
 
 export const Form = () => {
   const {
@@ -79,7 +80,11 @@ export const Form = () => {
             error={errors.email && errors.email.message}
           />
         </div>
-
+        <div className="row">
+            <Checkbox
+                label="Agree to terms and conditions"
+            />
+        </div>
         <div className="row">
           <Button type="primary">Send</Button>
         </div>

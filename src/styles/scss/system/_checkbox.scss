@@ -22,7 +22,7 @@
 @mixin checkboxCheckmark {
     @include checkbox-base();
     transition: background-color 0.3s ease-in-out;
-
+    
   &:after {
     content: "";
     position: absolute;
@@ -34,7 +34,6 @@
     border: solid $success-400;
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
-
   }
 }
 
@@ -55,7 +54,7 @@
         position: relative;
         display: inline-block;
         cursor: pointer;
-
+        background-color: $primary-200;
         // background-color: transparent;
         border: 2px solid $primary-200;
 
@@ -69,7 +68,9 @@
         &:active {
             background-color: $primary-200;
         }
-
+        &:focus {
+            background-color: $primary-200;
+        }
         &.disabled {
             background: $neutral-300;
             border-radius: 3px;
@@ -161,6 +162,7 @@
                 border: solid $success-400;
                 border-width: 0 2px 2px 0;
                 transform: rotate(45deg);
+                background-color: $neutral-400;
             }
         }
     }

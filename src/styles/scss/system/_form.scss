@@ -18,13 +18,19 @@ form {
         gap: 24px;
     }
     .row {
-        justify-content: flex-end;
+        justify-content: flex-start;
     }
     .error {
         color: $error-300;
     }
     .form-control {
         margin-bottom: 20px;
+    }
+    .row.chekbox-container {
+
+    }
+    .chekbox-container {
+        flex-direction: row;
     }
 }
 
