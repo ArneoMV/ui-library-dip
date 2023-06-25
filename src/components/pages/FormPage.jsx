@@ -27,7 +27,6 @@ const FormPage = () => {
 
                 <div className="row">
                     <div className="padding col-5-lg">
-                        <h3>Primjer</h3>
                         <div className="column">
                             <Form />
                         </div>

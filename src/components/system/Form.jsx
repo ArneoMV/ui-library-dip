@@ -23,8 +23,8 @@ export const Form = () => {
       const response = await fetch('https://jsonplaceholder.typicode.com/users/1');
       const data = await response.json();
       setPlaceholders({
-        username: 'Batman',
-        email: data.email,
+        username: 'Add name',
+        email: 'Add mail',
       });
     };
 
