@@ -41,7 +41,6 @@ export const Form = () => {
       <form onSubmit={handleSubmit(onSubmit)} noValidate>
         <h3>Login</h3>
         <div className="column form-control">
-          <label htmlFor="username">Username</label>
           <Input
             label="Username"
             placeholder={placeholders.username}
@@ -51,34 +50,34 @@ export const Form = () => {
                 message: 'Username is required',
                 },
             })}
-            hasError={errors.username && errors.username.message}
+            error={errors.username && errors.username.type === "required" && errors.username.message}
             />
         </div>
         <div className="column form-control">
-            <label htmlFor="email">Email</label>
-            <Input
-                label="Email"
-                type="email"
-                placeholder={placeholders.email}
-                register={register('email', {
-                required: {
-                    value: true,
-                    message: 'Email is required',
+          <Input
+            label="Email"
+            type="email"
+            placeholder={placeholders.email}
+            register={register('email', {
+              required: {
+                value: true,
+                message: 'Email is required',
+              },
+              pattern: {
+                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                message: 'Invalid email format',
+              },
+              validate: {
+                notBlackListed: (fieldValue) => {
+                  return (
+                    !fieldValue.endsWith('baddomain.com') ||
+                    'This domain is not supported!'
+                  );
                 },
-                pattern: {
-                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                    message: 'Invalid email format',
-                },
-                validate: {
-                    notBlackListed: (fieldValue) => {
-                        return (
-                            !fieldValue.endsWith('baddomain.com') ||
-                            'This domain is not supported!'
-                        );
-                        },
-                },})}
-                hasError={errors.email && errors.email.message}
-            />
+              },
+            })}
+            error={errors.email && errors.email.message}
+          />
         </div>
 
         <div className="row">
