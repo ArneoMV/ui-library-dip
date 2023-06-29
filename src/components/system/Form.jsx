@@ -6,35 +6,32 @@ import Button from '../system/Button';
 import Input from '../system/Input';
 import Checkbox from '../system/Checkbox';
 
-export const Form = () => {
+const Form = () => {
   const {
     register,
     control,
     handleSubmit,
+    reset,
     formState: { errors },
-  } = useForm();
-
-  const [placeholders, setPlaceholders] = useState({
-    username: '',
-    email: '',
+  } = useForm({
+    // from the react-hook-form docs;
+    // https://react-hook-form.com/docs/useform#mode
+    // "This option allows you to configure the validation strategy before a user submits the form.
+    // (by default) The validation occurs during the onSubmit event, which is triggered by invoking the handleSubmit function."
+    mode: 'onChange', // "Validation is triggered on the changeevent for each input, leading to multiple re-renders."
+    defaultValues: {
+      username: '',
+      email: '',
+    },
   });
 
-  useEffect(() => {
-    const fetchUserData = async () => {
-      const response = await fetch('https://jsonplaceholder.typicode.com/users/1');
-      const data = await response.json();
-      setPlaceholders({
-        username: 'Add name',
-        email: 'Add mail',
-      });
-    };
-
-    fetchUserData();
-  }, []);
-
   const onSubmit = (data) => {
-    console.log('Username:', data.username);
-    console.log('Email:', data.email);
+    alert(`Username: ${data.username}\n${data.email}`);
+    if (window.confirm('Reset form data?')) {
+      // Reset the entire form state, fields reference, and subscriptions.
+      //  There are optional arguments and will allow partial form state reset.
+      reset({ username: '', email: '' });
+    }
   };
 
   return (
@@ -44,21 +41,25 @@ export const Form = () => {
         <div className="column form-control">
           <Input
             label="Username"
-            placeholder={placeholders.username}
+            placeholder="Add name"
             register={register('username', {
-                required: {
+              required: {
                 value: true,
                 message: 'Username is required',
-                },
+              },
             })}
-            error={errors.username && errors.username.type === "required" && errors.username.message}
-            />
+            error={
+              errors.username &&
+              errors.username.type === 'required' &&
+              errors.username.message
+            }
+          />
         </div>
         <div className="column form-control">
           <Input
             label="Email"
             type="email"
-            placeholder={placeholders.email}
+            placeholder="Add email"
             register={register('email', {
               required: {
                 value: true,
@@ -81,9 +82,7 @@ export const Form = () => {
           />
         </div>
         <div className="row">
-            <Checkbox
-                label="Agree to terms and conditions"
-            />
+          <Checkbox label="Agree to terms and conditions" />
         </div>
         <div className="row">
           <Button type="primary">Send</Button>
