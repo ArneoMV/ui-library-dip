@@ -10,7 +10,7 @@ const Menu = () => {
         <div className="menu-item"><NavLink to="/button">Button</NavLink></div>
         <div className="menu-item"><NavLink to="/input">Input</NavLink></div>
         <div className="menu-item"><NavLink to="/checkbox">Checkbox</NavLink></div>
-        <div className="menu-item"><NavLink to="/radio-button">Radiobutton</NavLink></div>
+        <div className="menu-item"><NavLink to="/radio">Radio</NavLink></div>
         <div className="menu-item"><NavLink to="/select">Select</NavLink></div>
         <div className="menu-item"><NavLink to="/form">Form</NavLink></div>
       </div>

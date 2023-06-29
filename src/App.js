@@ -10,7 +10,7 @@ import Overview from './components/pages/Overview.jsx';
 import ButtonPage from './components/pages/ButtonPage.jsx';
 import InputPage from './components/pages/InputPage.jsx';
 import CheckboxPage from './components/pages/CheckboxPage.jsx';
-import RadiobuttonPage from './components/pages/RadiobuttonPage.jsx';
+import RadioPage from './components/pages/RadioPage.jsx';
 import SelectPage from './components/pages/SelectPage.jsx';
 import FormPage from './components/pages/FormPage.jsx';
 
@@ -29,7 +29,7 @@ const App = () => {
               <Route path="/button" element={<ButtonPage />} />
               <Route path="/input" element={<InputPage />} />
               <Route path="/checkbox" element={<CheckboxPage />} />
-              <Route path="/radio-button" element={<RadiobuttonPage />} />
+              <Route path="/radio" element={<RadioPage />} />
               <Route path="/select" element={<SelectPage />} />
               <Route path="/form" element={<FormPage />} />
             </Routes>

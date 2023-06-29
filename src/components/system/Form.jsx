@@ -55,7 +55,7 @@ const Form = () => {
             }
           />
         </div>
-        <div className="column form-control">
+        <div className="column form">
           <Input
             label="Email"
             type="email"
