@@ -9,16 +9,17 @@ const Overview = () => {
         <p>Metro sadrži komponenti korisničkog sučelja za obogaćivanje vaših web aplikacija, a mi ćemo dosljedno poboljšavati iskustvo komponenti.</p>
         <div className="horizontal-line"></div>
 
-        <h3>Općenito</h3>
+        <h3>Molekule</h3>
         <div className="row">
-            <ComponentCard title="Gumb" image={ComponentImage.button} />
-        </div>
-        <h3>Unos podataka</h3>
-        <div className="row">
+        <ComponentCard title="Gumb" image={ComponentImage.button} />
             <ComponentCard title="Checkbox" image={ComponentImage.checkbox} />
             <ComponentCard title="Radio-button" image={ComponentImage.radio} />
             <ComponentCard title="Input" image={ComponentImage.input} />
             <ComponentCard title="Select" image={ComponentImage.select} />
+        </div>
+        <h3>Stanice</h3>
+        <div className="row">
+            <ComponentCard title="Form" image={ComponentImage.form} />
         </div>
     </div>
   );
