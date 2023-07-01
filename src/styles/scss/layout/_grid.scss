@@ -34,7 +34,18 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
     display: flex;
     flex-direction: column;
     // gap: $base-border-radius-lg;
+    .col-gap-sm {
+        gap:  8px;
+    }
+    .col-gap-md {
+        gap:  12px;
+    }
+    .col-gap-lg {
+        gap:  24px;
+    }
 }
+
+
 .row {
     display: flex;
     flex-flow: row;

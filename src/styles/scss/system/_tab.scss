@@ -1,0 +1,31 @@
+.tab-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tab-row {
+  display: flex;
+}
+
+.tab-option {
+  background: white;
+  border: 1px solid black;
+  border-radius: 4px;
+  color: black;
+  padding: 4px;
+  cursor: pointer;
+
+  &.active {
+    background: lightblue;
+    color: darkblue;
+  }
+
+  &:hover {
+    color: lightblue;
+  }
+
+  &:not(:last-child) {
+    border-right: 1px solid black;
+  }
+}

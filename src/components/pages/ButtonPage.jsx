@@ -12,7 +12,7 @@ const ButtonPage = () => {
         { cell1: 'disabled', cell2: 'Zastavica za onemogućavanje tipke', cell3: 'bool', cell4: 'false' },
     ];
   return (
-    <div className="page-structure">
+    <div className="page-structure button-page">
         <h2>Gumb</h2>
         <p>Služi za pokretanje operacije.</p>
 
@@ -45,8 +45,8 @@ const ButtonPage = () => {
 
             <div className="padding column">
                 <h3>Primjeri</h3>
-                <div className="column ">
-                    <div className="row ">
+                <div className="column col-gap-lg">
+                    <div className="row">
                         <h5 className="example-title">Primary</h5>
                         <Button type="primary">Normal</Button>
                         <Button type="primary" className="hover">Hover</Button>

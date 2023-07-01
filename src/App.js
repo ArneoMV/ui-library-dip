@@ -13,6 +13,7 @@ import CheckboxPage from './components/pages/CheckboxPage.jsx';
 import RadioPage from './components/pages/RadioPage.jsx';
 import SelectPage from './components/pages/SelectPage.jsx';
 import FormPage from './components/pages/FormPage.jsx';
+import TabPage from './components/pages/TabPage.jsx';
 
 const App = () => {
   return (
@@ -32,6 +33,7 @@ const App = () => {
               <Route path="/radio" element={<RadioPage />} />
               <Route path="/select" element={<SelectPage />} />
               <Route path="/form" element={<FormPage />} />
+              <Route path="/tab" element={<TabPage />} />
             </Routes>
           </div>
         </main>

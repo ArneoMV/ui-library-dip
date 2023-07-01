@@ -7,13 +7,13 @@
   border: none;
   border-radius: $base-border-radius-md;
   cursor: pointer;
-  text-transform: uppercase;
+  // text-transform: uppercase;
 
-  font-family: Sofia Sans;
+  font-family: "Rubik", sans-serif;
   color: $primary-600;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1.6;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.4;
   letter-spacing: 0.07em;
   text-align: left;
 }
@@ -86,5 +86,15 @@
     color: $neutral-500;
     text-decoration: none;
     cursor: not-allowed;
+  }
+}
+
+
+// Button page
+.button-page {
+  .example-section {
+    .padding {
+      
+    }
   }
 }
