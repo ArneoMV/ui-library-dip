@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ui-librery-dip/static/css/main.28aa8180.css",
-    "main.js": "/ui-librery-dip/static/js/main.dca3c86e.js",
+    "main.css": "/ui-librery-dip/static/css/main.ef8c7a98.css",
+    "main.js": "/ui-librery-dip/static/js/main.f425103b.js",
     "static/media/Button.jpg": "/ui-librery-dip/static/media/Button.c57cbf5922a01b0fa6ed.jpg",
     "static/media/Checkbox.jpg": "/ui-librery-dip/static/media/Checkbox.7fd6131602c85fb302c3.jpg",
     "static/media/Input.jpg": "/ui-librery-dip/static/media/Input.823b3b0797a7b3174305.jpg",
@@ -11,11 +11,11 @@
     "index.html": "/ui-librery-dip/index.html",
     "static/media/check.svg": "/ui-librery-dip/static/media/check.71b556b4aa0a8feb05cb2737093a1797.svg",
     "static/media/Arrow-down.svg": "/ui-librery-dip/static/media/Arrow-down.70e98558673716fe6313f1c36c845a7f.svg",
-    "main.28aa8180.css.map": "/ui-librery-dip/static/css/main.28aa8180.css.map",
-    "main.dca3c86e.js.map": "/ui-librery-dip/static/js/main.dca3c86e.js.map"
+    "main.ef8c7a98.css.map": "/ui-librery-dip/static/css/main.ef8c7a98.css.map",
+    "main.f425103b.js.map": "/ui-librery-dip/static/js/main.f425103b.js.map"
   },
   "entrypoints": [
-    "static/css/main.28aa8180.css",
-    "static/js/main.dca3c86e.js"
+    "static/css/main.ef8c7a98.css",
+    "static/js/main.f425103b.js"
   ]
 }
