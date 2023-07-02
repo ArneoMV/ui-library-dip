@@ -1,3 +1,6 @@
+@use '../abstract/color' as *;
+@use '../base/variable' as *;
+
 .tab-container {
   display: flex;
   align-items: center;
@@ -6,12 +9,13 @@
 
 .tab-row {
   display: flex;
+  border: $base-border-thickness solid $neutral-700;
+  border-radius: 50px;
+  outline: auto;
 }
 
 .tab-option {
   background: white;
-  border: 1px solid black;
-  border-radius: 4px;
   color: black;
   padding: 4px;
   cursor: pointer;
@@ -27,5 +31,12 @@
 
   &:not(:last-child) {
     border-right: 1px solid black;
+  }
+  &:first-child {
+    border-radius: 50px 0 0 50px;
+  }
+
+  &:last-child {
+    border-radius: 0 50px 50px 0;
   }
 }
