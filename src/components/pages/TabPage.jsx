@@ -10,7 +10,7 @@ const TabPage = () => {
         { cell1: 'children', cell2: 'Sadržaj unutar tipke', cell3: 'node', cell4: '-' },
         { cell1: 'disabled', cell2: 'Zastavica za onemogućavanje tipke', cell3: 'bool', cell4: 'false' },
     ];
-    const options = ['Polje 1', 'Polje 2', 'Polje 3', 'Polje 4'];
+    const options = ['JSX', 'SCSS', 'Copy'];
     return (
         <div className="modular-page-structure">
             <h2>Tab</h2>
