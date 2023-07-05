@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import '../../styles/scss/system/_tab.scss';
+import Prism from "prismjs";
+import "../../styles/prism.css";
 
 const Tab = ({ options = [], content = [] }) => {
   const [activeTab, setActiveTab] = useState(0);
@@ -12,6 +14,7 @@ const Tab = ({ options = [], content = [] }) => {
 
   return (
     <div className="tab-container">
+      <div className='row'>
       <div className="tab-row">
         {options &&
           options.map((option, index) => (
@@ -23,6 +26,7 @@ const Tab = ({ options = [], content = [] }) => {
               {option}
             </div>
           ))}
+      </div>
       </div>
       <div className="tab-content">
         <pre className="language-javascript"><code>{activeContent}</code></pre> 

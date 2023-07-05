@@ -4,11 +4,16 @@
 $border-radius-sm: 7px;
 $border-radius-lg: 10px;
 
+
 .tab-container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  .row {
+    justify-content: flex-start;
+    width: 100%;
+  }
 }
 
 

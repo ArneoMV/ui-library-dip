@@ -6,15 +6,25 @@ import Table from '../system/Table';
 
 const TabPage = () => {
     const [fileContent, setFileContent] = useState('');
+    const [secondTabContent, setSecondTabContent] = useState('');
 
     useEffect(() => {
-        // Fetch the .txt file content when the component mounts
-        fetch('./components/system/tab/tab.txt')
-            .then(response => response.text())
-            .then(content => setFileContent(content))
-            .catch(error => console.log(error));
+        fetchTextContent('./tab/tab_jsx', setFileContent);
     }, []);
-    console.log(fileContent)
+
+    const fetchTextContent = (url, setContent) => {
+        fetch(url)
+            .then(response => response.text())
+            .then(content => setContent(content))
+            .catch(error => console.log(error));
+    };
+
+    const handleTabClick = (tabIndex) => {
+        if (tabIndex === 1 && !secondTabContent) {
+            fetchTextContent('./tab/tab_scss', setSecondTabContent);
+        }
+    };
+
     const data = [
         { cell1: 'type', cell2: 'Vrsta tipke', cell3: 'string', cell4: 'default' },
         { cell1: 'children', cell2: 'Sadržaj unutar tipke', cell3: 'node', cell4: '-' },
@@ -23,8 +33,8 @@ const TabPage = () => {
     const options_1 = ['JSX', 'SCSS', 'Copy'];
     const options_2 = ['JSX', 'SCSS', 'Copy'];
     const tabContent = [
-        `${fileContent}`,
-        'Ovo je sadržaj Tab 2',
+        fileContent,
+        secondTabContent,
         'Ovo je sadržaj Tab 3'
     ];
 
@@ -42,14 +52,14 @@ const TabPage = () => {
             {/* Primjeri */}
             <div className="example-section column">
 
-                <div className="row">
+                <div className="column">
                     <div className="padding col-5-lg">
                         <div className="column">
                             <Tab options={options_1} />
                         </div>
                     </div>
-                    <div className="vertical-line"></div>
-                    <div className="col-5-lg">
+                    <div className="horizontal-line"></div>
+                    <div className="padding col-12-lg">
 
                         <div className="code-container">
                             <Tab options={options_2} content={tabContent} />
@@ -58,26 +68,7 @@ const TabPage = () => {
                     </div>
                 </div>
                 
-                <div className="horizontal-line"></div>
-
-                <div className="padding">
-                    <h3>Javascript</h3>
-                    {/* <pre className="language-javascript"><code>{``}</code></pre>  */}
-                    {`
-                        import React from 'react';
-
-                        const MyComponent = () => {
-                            return (
-                            <div>
-                                <h1>Hello, World!</h1>
-                                <p>This is a JSX code example.</p>
-                            </div>
-                            );
-                        };
-
-                        export default MyComponent;
-                    `}
-                </div>   
+  
             </div>
 
             {/* Table */}
