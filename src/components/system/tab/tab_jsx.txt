@@ -19,21 +19,21 @@ const Tab = ({ options = [], content = [] }) => {
   return (
     <div className="tab-container">
       <div className='row'>
-        <div className="tab-row">
-          {options &&
-            options.map((option, index) => (
-              <div
-                key={index}
-                className={`tab-option ${activeTab === index ? 'active' : ''}`}
-                onClick={() => handleTabClick(index)}
-              >
-                {option}
-              </div>
-            ))}
-        </div>
+      <div className="tab-row">
+        {options &&
+          options.map((option, index) => (
+            <div
+              key={index}
+              className={`tab-option ${activeTab === index ? 'active' : ''}`}
+              onClick={() => handleTabClick(index)}
+            >
+              {option}
+            </div>
+          ))}
+      </div>
       </div>
       <div className="tab-content">
-        <pre className="language-javascript"><code language="javascript">{activeContent}</code></pre> 
+        <pre className="language-javascript"><code>{activeContent}</code></pre> 
       </div>
     </div>
   );

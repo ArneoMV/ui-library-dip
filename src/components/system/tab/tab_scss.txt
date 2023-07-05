@@ -10,7 +10,6 @@ $border-radius-lg: 10px;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: $col-gap-lg;
   .row {
     justify-content: flex-start;
     width: 100%;
@@ -49,12 +48,11 @@ $border-radius-lg: 10px;
 }
 
 .tab-content {
-  display: flex;
-  justify-content: flex-start;
-  width: 100%;
+  margin-top: 10px;
 }
 
 .code-container {
+  border: 1px solid red;
   height: 100%;
   width: 100%;
   display: block;
