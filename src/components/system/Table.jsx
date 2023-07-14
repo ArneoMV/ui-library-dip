@@ -1,27 +1,25 @@
 import React from 'react';
 import '../../styles/scss/system/_table.scss';
 
-const Table = ({ data }) => {
+const Table = ({ data, headers }) => {
   return (
-    <table className="table">
+    <table>
       <thead>
         <tr>
-          <th>Svojtsvo</th>
-          <th>Opis</th>
-          <th>Vrsta</th>
-          <th>Zadano</th>
+          {headers.map((header, index) => (
+            <th key={index}>{header}</th>
+          ))}
         </tr>
       </thead>
-    <tbody>
-      {data.map((item, index) => (
-        <tr key={index}>
-          <td>{item.cell1}</td>
-          <td>{item.cell2}</td>
-          <td>{item.cell3}</td>
-          <td>{item.cell4}</td>
-        </tr>
-      ))}
-    </tbody>
+      <tbody>
+        {data.map((row, index) => (
+          <tr key={index}>
+            {headers.map((header, index) => (
+              <td key={index}>{row[`cell${index + 1}`]}</td>
+            ))}
+          </tr>
+        ))}
+      </tbody>
     </table>
   );
 };

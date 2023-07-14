@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import Tab from '../system/Tab';
 import Table from '../system/Table';
-import tab_jsx from '../system/tab/tab_jsx.txt';
-import tab_scss from '../system/tab/tab_scss.txt';
+import Tab from '../system/Tab';
+import tab_jsx from './tab/tab_jsx.txt';
+import tab_scss from './tab/tab_scss.txt';
  
 const TabPage = () => {
-    const [fileContent, setFileContent] = useState('');
-    const [secondTabContent, setSecondTabContent] = useState('');
+    const [JSXfileContent, setFileContent] = useState('');
+    const [SCSSfileContent, setSecondTabContent] = useState('');
  
     useEffect(() => {
         fetchTextContent(tab_jsx, setFileContent);
@@ -26,29 +26,35 @@ const TabPage = () => {
     //     }
     // };
  
-    const tableData = [
-        { cell1: 'type', cell2: 'Vrsta tipke', cell3: 'string', cell4: 'default' },
-        { cell1: 'children', cell2: 'Sadržaj unutar tipke', cell3: 'node', cell4: '-' },
-        { cell1: 'disabled', cell2: 'Zastavica za onemogućavanje tipke', cell3: 'bool', cell4: 'false' },
+    
+    const tableHeaders = ['Svojtsvo', 'Opis', 'Vrsta', 'Zadano'];
+    const tableConent = [
+        { cell1: 'options', cell2: 'Popis opcija tabova koje će se prikazati', cell3: 'array', cell4: 'options_2' },
+        { cell1: 'content', cell2: 'Popis sadržaja koji će se prikazati za svaki tab', cell3: 'array', cell4: 'tabContent' },
     ];
-    const options_1 = ['JSX', 'SCSS', 'Copy'];
-    const options_2 = ['JSX', 'SCSS', 'Copy'];
-    const tabContent = [
-        fileContent,
-        secondTabContent,
+    const tabHeaders_1 = ['Tab 1', 'Tab 2', 'Tab 3'];
+    const tabHeaders_2 = ['JSX', 'SCSS', 'Copy'];
+    const tabContent_2 = [
+        JSXfileContent,
+        SCSSfileContent,
         'Ovo je sadržaj Tab 3'
+    ];
+    const tabContent_1 = [
+        'Tab 1',
+        'Tab 2',
+        'Tab 3'
     ];
  
     return (
         <div className="modular-page-structure">
-            <h2>Tab</h2>
-            <p>Komponenta obrasca visokih performansi s upravljanjem opsegom podataka. Uključujući prikupljanje podataka, provjeru i stilove.</p>
-            <ul>
-                <h4>Kada korisiti tab koristiti</h4>
-                <li>Kada trebate stvoriti instancu ili prikupiti informacije.</li>
-                <li>Kada trebate potvrditi polja u određenim pravilima.</li>
-            </ul>
-            <h3>Kada korisiti formu</h3>
+            <article>
+                <h2>Tab</h2>
+                <p>Olakšavaju prebacivanje između različitih prikaza. Tab komponentu možete koristiti unutar vaše React aplikacije, posebno ako želite organizirati sadržaj na više tabova. Može se koristiti na različitim stranicama, modulima ili dijelovima aplikacije gdje je potrebno prikazati više sadržaja grupiranih u tabove.</p>
+                <ul>
+                    <h4>Kada korisiti tab</h4>
+                    <li>Kada želite prikazati više tabova s različitim sadržajem</li>
+                </ul>
+            </article>
  
             {/* Primjeri */}
             <div className="example-section column">
@@ -56,24 +62,22 @@ const TabPage = () => {
                 <div className="column">
                     <div className="padding col-5-lg">
                         <div className="column">
-                            <Tab options={options_1} />
+                            <Tab options={tabHeaders_1} content={tabContent_1}/>
                         </div>
                     </div>
                     <div className="horizontal-line"></div>
                     <div className="padding col-12-lg">
  
                         <div className="code-container">
-                            <Tab options={options_2} content={tabContent} />
+                            <Tab options={tabHeaders_2} content={tabContent_2} />
                         </div>
  
                     </div>
                 </div>
- 
- 
             </div>
  
             {/* Table */}
-            <Table data={tableData} />
+            <Table data={tableConent} headers={tableHeaders}/>
         </div>
     );
 };

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Checkbox from '../system/Checkbox';
 import CheckboxHover from '../system/checkbox/CheckboxHover';
 import CheckboxActive from '../system/checkbox/CheckboxActive';
@@ -6,14 +6,43 @@ import CheckboxDisabled from '../system/checkbox/CheckboxDisabled';
 import Table from '../system/Table';
 import Prism from "prismjs";
 import "../../styles/prism.css";
+import Tab from '../system/Tab';
+import codeJsx from './checkbox/checkbox_jsx.txt';
+import codeScss from './checkbox/checkbox_scss.txt';
 
 const CheckboxPage = () => {
-    const [isChecked, setIsChecked] = useState(false);
 
+    // Checkbox component
+    const [isChecked, setIsChecked] = useState(false);
     const handleCheckboxChange = (event) => {
       setIsChecked(event.target.checked);
     };
-    const data = [
+    
+    // Tab component
+    const [JSXfileContent, setFileContent] = useState('');
+    const [SCSSfileContent, setSecondTabContent] = useState('');
+
+    useEffect(() => {
+        fetchTextContent(codeJsx, setFileContent);
+        fetchTextContent(codeScss, setSecondTabContent);
+    }, []);
+
+    const fetchTextContent = (url, setContent) => {
+        fetch(url)
+            .then((response) => response.text())
+            .then((content) => setContent(content))
+            .catch((error) => console.log(error));
+    };
+    const tabHeaders = ['JSX', 'SCSS', ' - '];
+    const tabContent = [
+        JSXfileContent,
+        SCSSfileContent,
+        '-'
+    ];
+
+    // Table data
+    const tableHeaders = ['Svojtsvo', 'Opis', 'Vrsta', 'Zadano'];
+    const tableConetnt = [
         { cell1: 'label', cell2: 'Label for the checkbox', cell3: 'string', cell4: '-' },
         { cell1: 'checked', cell2: 'Indicates whether checkbox is checked', cell3: 'boolean', cell4: 'false' },
         { cell1: 'onChange', cell2: 'Callback function for checkbox change', cell3: 'function', cell4: '-' },
@@ -22,21 +51,23 @@ const CheckboxPage = () => {
   
     return (
         <div className="page-structure">
-            <h2>Checkbox</h2>
-            <p>Komponenta potvrdnog okvira</p>
-    
-            <h3>Kada ga koristiti</h3>
-            <ul>
-                <li>Koristi se za odabir više vrijednosti iz nekoliko opcija.</li>
-                <li>Ako koristite samo jedan potvrdni okvir, to je isto kao da koristite Switch za prebacivanje između dva stanja. Razlika je u tome što će Switch izravno pokrenuti promjenu stanja, ali potvrdni okvir samo označava stanje kao promijenjeno i to je potrebno poslati.</li>
-            </ul>
-    
-            <div className="example-section column">
+            <article>
+                <h2>Checkbox</h2>
+                <p>Komponenta potvrdnog okvira</p>
+                <ul>
+                    <h4>Kada korisiti tab</h4>
+                    <li>Koristi se za odabir više vrijednosti iz nekoliko opcija.</li>
+                    <li>Ako koristite samo jedan potvrdni okvir, to je isto kao da koristite Switch za prebacivanje između dva stanja. Razlika je u tome što će Switch izravno pokrenuti promjenu stanja, ali potvrdni okvir samo označava stanje kao promijenjeno i to je potrebno poslati.</li>
+                </ul>
+            </article>
 
-                {/* Exampla section */}
-                <div className="padding column">
-                    <h3>Primjeri</h3>
-                    <div className="row">
+
+            {/* Primjeri */}
+            <div className="example-section column">
+ 
+                <div className="column">
+                    <div className="padding col-5-lg">
+                        <div className="row">
                         <Checkbox
                             label="Normal"
                         />
@@ -51,28 +82,21 @@ const CheckboxPage = () => {
                          <CheckboxDisabled
                             label="Disabled"
                         />
-
+                        </div>
+                    </div>
+                    <div className="horizontal-line"></div>
+                    <div className="padding col-12-lg">
+ 
+                        <div className="code-container">
+                            <Tab options={tabHeaders} content={tabContent} />
+                        </div>
+ 
                     </div>
                 </div>
-                <div className="horizontal-line"></div>
-    
-                {/* JSX Code example */}
-                <div className="padding">
-                    <h3>Javascript</h3>
-                    <pre className="language-javascript"><code>{`
- <Checkbox
- label="Normal"
- checked={isChecked}
- onChange={handleCheckboxChange}
-/>
-`}</code></pre> 
-                </div>
-
             </div>
-
-             {/* Table   */}
-             <Table data={data} />
-
+ 
+            {/* Table */}
+            <Table data={tableConetnt} headers={tableHeaders}/>
 
         </div>
       );

@@ -1,11 +1,15 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Select from '../system/Select';
 import Table from '../system/Table';
 import Prism from "prismjs";
 import "../../styles/prism.css";
+import Tab from '../system/Tab';
+import codeJsx from './select/select_jsx.txt';
+import codeScss from './select/select_scss.txt';
+ 
 
 const SelectPage = () => {
-  // Data
+  // Select component
   const options_1 = [
     { label: 'Placeholder 1' },
     { label: 'Placeholder 2' },
@@ -31,9 +35,31 @@ const SelectPage = () => {
     console.log('Checkbox:', selectedOption);
   };
 
-    
+
+    // Tab component
+    const [JSXfileContent, setFileContent] = useState('');
+    const [SCSSfileContent, setSecondTabContent] = useState('');
+
+    useEffect(() => {
+        fetchTextContent(codeJsx, setFileContent);
+        fetchTextContent(codeScss, setSecondTabContent);
+    }, []);
+
+    const fetchTextContent = (url, setContent) => {
+        fetch(url)
+            .then((response) => response.text())
+            .then((content) => setContent(content))
+            .catch((error) => console.log(error));
+    };
+    const tabHeaders = ['JSX', 'SCSS', ' - '];
+    const tabContent = [
+        JSXfileContent,
+        SCSSfileContent,
+        '-'
+    ];
     // Table data
-    const data = [
+    const tableHeaders = ['Svojtsvo', 'Opis', 'Vrsta', 'Zadano'];
+    const tableContent = [
         { cell1: 'title', cell2: 'Funkcija za obradu odabira', cell3: 'string', cell4: 'Default' },
         { cell1: 'type', cell2: 'Vrsta select komponente', cell3: 'string', cell4: 'Default' },
         { cell1: 'options', cell2: 'Opcije za select', cell3: 'array', cell4: 'options_1' },
@@ -45,71 +71,54 @@ const SelectPage = () => {
     ];
   
     return (
-        <div className="page-structure">
+        <div className="modular-page-structure">
+          <article>
             <h2>Select</h2>
-            <p>Radio</p>
-    
+            <p>Odaberite komponentu za odabir vrijednosti iz opcija.</p>
             <h3>Kada ga koristiti</h3>
             <ul>
-                <li>Koristi se za odabir jednog stanja iz više opcija.</li>
-                <li>Razlika od Selecta je što je Radio vidljiv korisniku i može olakšati usporedbu izbora, što znači da ih ne bi trebalo biti previše.</li>
+              <li>Koristi se za odabir jednog stanja iz više opcija.</li>
+              <li>Razlika od Selecta je što je Radio vidljiv korisniku i može olakšati usporedbu izbora, što znači da ih ne bi trebalo biti previše.</li>
             </ul>
+          </article>
+             {/* Primjeri */}
             <div className="example-section column">
-                {/* Exampla section */}
-                <div className="padding column">
-                    <h3>Primjeri</h3>
-                    <div className="row">
-                    <Select
-                        title="Default"
-                        type="default"
-                        options={options_1}
-                        isOpen={isOpen1}
-                        toggleOpen={toggleOpen1}
-                        onSelect={handleOptionSelect1}
-                        selectNumber={1}
-                    />
-                     <Select
-                        title="Checkbox"
-                        type="checkbox"
-                        options={options_2}
-                        isOpen={isOpen2}
-                        toggleOpen={toggleOpen2}
-                        onSelect={handleOptionSelect2}
-                        selectNumber={2}
-                    />               
+              <div className="column">
+                    <div className="padding col-5-lg">
+                        <div className="row">
+                          <Select
+                            title="Default"
+                            type="default"
+                            options={options_1}
+                            isOpen={isOpen1}
+                            toggleOpen={toggleOpen1}
+                            onSelect={handleOptionSelect1}
+                            selectNumber={1}
+                          />
+                          <Select
+                            title="Checkbox"
+                            type="checkbox"
+                            options={options_2}
+                            isOpen={isOpen2}
+                            toggleOpen={toggleOpen2}
+                            onSelect={handleOptionSelect2}
+                            selectNumber={2}
+                          /> 
+                        </div>
+                    </div>
+                    <div className="horizontal-line"></div>
+                    <div className="padding col-12-lg">
+ 
+                        <div className="code-container">
+                            <Tab options={tabHeaders} content={tabContent} />
+                        </div>
+ 
                     </div>
                 </div>
-                <div className="horizontal-line"></div>
-    
-                {/* JSX Code example */}
-                <div className="padding">
-                    <h3>Javascript</h3>
-                    <pre className="language-javascript"><code>{`
-<Select
-    title="Default"
-    type="default"
-    options={options_1}
-    isOpen={isOpen1}
-    toggleOpen={toggleOpen1}
-    onSelect={handleOptionSelect1}
-    selectNumber={1}
-/>
-<Select
-    title="Checkbox"
-    type="checkbox"
-    options={options_2}
-    isOpen={isOpen2}
-    toggleOpen={toggleOpen2}
-    onSelect={handleOptionSelect2}
-    selectNumber={2}
-/>    
-`}</code></pre> 
-                </div>
-
             </div>
 
              {/* Table   */}
-             <Table data={data} />
+             <Table data={tableContent} headers={tableHeaders}/>
 
 
         </div>

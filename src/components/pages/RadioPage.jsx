@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import RadioButton from '../system/RadioButton';
 // import RadiobuttonHover from '../system/radiobutton/RadiobuttonHover';
 // import RadiobuttonActive from '../system/radiobutton/RadiobuttonActive';
@@ -6,6 +6,10 @@ import RadioButton from '../system/RadioButton';
 import Table from '../system/Table';
 import Prism from "prismjs";
 import "../../styles/prism.css";
+import Tab from '../system/Tab';
+import codeJsx from './radio/radio_jsx.txt';
+import codeScss from './radio/radio_scss.txt';
+
 
 const RadiobuttonPage = () => {
     const [selectedValue, setSelectedValue] = useState('Normal');
@@ -13,7 +17,33 @@ const RadiobuttonPage = () => {
     const handleRadioButtonChange = (value) => {
       setSelectedValue(value);
     };
-    const data = [
+
+
+    // Tab component
+    const [JSXfileContent, setFileContent] = useState('');
+    const [SCSSfileContent, setSecondTabContent] = useState('');
+
+    useEffect(() => {
+        fetchTextContent(codeJsx, setFileContent);
+        fetchTextContent(codeScss, setSecondTabContent);
+    }, []);
+
+    const fetchTextContent = (url, setContent) => {
+        fetch(url)
+            .then((response) => response.text())
+            .then((content) => setContent(content))
+            .catch((error) => console.log(error));
+    };
+    const tabHeaders = ['JSX', 'SCSS', ' - '];
+    const tabContent = [
+        JSXfileContent,
+        SCSSfileContent,
+        '-'
+    ];
+
+    // Table data
+    const tableHeaders = ['Svojtsvo', 'Opis', 'Vrsta', 'Zadano'];
+    const tableContent = [
         { cell1: 'label', cell2: 'Label for the input field', cell3: 'string', cell4: '-' },
         { cell1: 'placeholder', cell2: 'Placeholder text for the input field', cell3: 'string', cell4: '-' },
         { cell1: 'type', cell2: 'Type of the input field', cell3: 'string', cell4: 'text' },
@@ -23,60 +53,53 @@ const RadiobuttonPage = () => {
     ];
   
     return (
-        <div className="page-structure">
-            <h2>Radio</h2>
-            <p>Radio</p>
-    
-            <h3>Kada ga koristiti</h3>
-            <ul>
-                <li>Koristi se za odabir jednog stanja iz više opcija.</li>
-                <li>Razlika od Selecta je što je Radio vidljiv korisniku i može olakšati usporedbu izbora, što znači da ih ne bi trebalo biti previše.</li>
-            </ul>
-    
+        <div className="modular-page-structure">
+            <article>
+                <h2>Tab</h2>
+                <p>Olakšavaju prebacivanje između različitih prikaza. Tab komponentu možete koristiti unutar vaše React aplikacije, posebno ako želite organizirati sadržaj na više tabova. Može se koristiti na različitim stranicama, modulima ili dijelovima aplikacije gdje je potrebno prikazati više sadržaja grupiranih u tabove.</p>
+                <ul>
+                    <h4>Kada korisiti tab</h4>
+                    <li>Koristi se za odabir jednog stanja iz više opcija.</li>
+                    <li>Razlika od Selecta je što je Radio vidljiv korisniku i može olakšati usporedbu izbora, što znači da ih ne bi trebalo biti previše.</li>
+                </ul>
+            </article>
+
+            {/* Primjeri */}
             <div className="example-section column">
-
-                {/* Exampla section */}
-                <div className="padding column">
-                    <h3>Primjeri</h3>
-                    <div className="row">
-                    <RadioButton
-                        label="Normal"
-                        checked={selectedValue === 'Normal'}
-                        onChange={handleRadioButtonChange}
-                    />
-                    <RadioButton
-                        label="Checked"
-                        checked={selectedValue === 'Checked'}
-                        onChange={handleRadioButtonChange}
-                    />
-                    <RadioButton
-                        label="Disabled"
-                        checked={selectedValue === 'Disabled'}
-                        onChange={handleRadioButtonChange}
-                    />
-
+ 
+                <div className="column">
+                    <div className="padding col-5-lg">
+                        <div className="column">
+                        <RadioButton
+                            label="Normal"
+                            checked={selectedValue === 'Normal'}
+                            onChange={handleRadioButtonChange}
+                        />
+                        <RadioButton
+                            label="Checked"
+                            checked={selectedValue === 'Checked'}
+                            onChange={handleRadioButtonChange}
+                        />
+                        <RadioButton
+                            label="Disabled"
+                            checked={selectedValue === 'Disabled'}
+                            onChange={handleRadioButtonChange}
+                        />
+                        </div>
+                    </div>
+                    <div className="horizontal-line"></div>
+                    <div className="padding col-12-lg">
+ 
+                        <div className="code-container">
+                            <Tab options={tabHeaders} content={tabContent} />
+                        </div>
+ 
                     </div>
                 </div>
-                <div className="horizontal-line"></div>
-    
-                {/* JSX Code example */}
-                <div className="padding">
-                    <h3>Javascript</h3>
-                    <pre className="language-javascript"><code>{`
-<RadioButton
-    label="Normal"
-    checked={selectedValue === 'Normal'}
-    onChange={handleRadioButtonChange}
-/>
-`}</code></pre> 
-                </div>
-
             </div>
-
-             {/* Table   */}
-             <Table data={data} />
-
-
+ 
+            {/* Table */}
+            <Table data={tableContent} headers={tableHeaders}/>
         </div>
       );
 
