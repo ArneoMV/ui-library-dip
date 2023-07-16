@@ -62,7 +62,8 @@ const TypographyPage = () => {
                 <h3>Vrste</h3>
                 <p>Postoje primarni gumb, zadani gumb, isprekidani gumb, tekstualni gumb i gumb za vezu</p>
             </article>
-
+            {/* Table */}
+            <Table data={tableContent} headers={tableHeaders}/>
             {/* Heading */}
             <div className="example-section column">
                 <div className="column">
@@ -111,8 +112,14 @@ const TypographyPage = () => {
                
                 <div className="column">
                     <div className="padding padding-top">
-                        <div className="column col-gap-lg">
-                            <p>Objašnjenje stilova</p>
+                        <div className="column col-gap-lg col-7-lg">
+                            <h3>Stilovi</h3>
+                            <p>SCSS kod automatski računa i primjenjuje veličine fonta za različite razine naslova 
+                                na temelju odabranog omjera veličina fonta. Također postavlja zadane stilove za đ
+                                paragrafe, liste i naslove (<span className='bold'>h1, h2, h3, h4</span>), te omogućuje prilagodbu putem klase .typo 
+                                i <span className='bold'>.caption</span>. Uvezene SCSS datoteke (<span className='bold'>mixin.scss, variable.scss, color.scss</span>) vjerojatno 
+                                sadrže dodatne mixin-ove, varijable i definicije boja koje doprinose ukupnom 
+                                stiliziranju tipografije.</p>
                         </div>
                     </div>
 
@@ -125,10 +132,6 @@ const TypographyPage = () => {
                 </div>
             </div>
 
-
-
-            {/* Table */}
-            <Table data={tableContent} headers={tableHeaders}/>
         </div>
     );
 };
