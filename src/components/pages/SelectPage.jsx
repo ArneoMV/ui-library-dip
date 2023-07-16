@@ -4,8 +4,8 @@ import Table from '../system/Table';
 import Prism from "prismjs";
 import "../../styles/prism.css";
 import Tab from '../system/Tab';
-import codeJsx from './select/select_jsx.txt';
-import codeScss from './select/select_scss.txt';
+import codeJsx from './codeExamples/select/select_jsx.txt';
+import codeScss from './codeExamples/select/select_scss.txt';
  
 
 const SelectPage = () => {

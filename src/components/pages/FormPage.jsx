@@ -4,8 +4,8 @@ import Prism from "prismjs";
 import "../../styles/prism.css";
 import Table from '../system/Table';
 import Tab from '../system/Tab';
-import codeJsx from './form/form_jsx.txt';
-import codeScss from './form/form_scss.txt';
+import codeJsx from './codeExamples/form/form_jsx.txt';
+import codeScss from './codeExamples/form/form_scss.txt';
 
 const FormPage = () => {
 

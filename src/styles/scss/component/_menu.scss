@@ -10,7 +10,12 @@
   width: inherit;
   height: 100%;
   overflow-y: auto;
-
+  p {
+    font-weight: bold;
+  }
+  .pregled {
+    font-weight: bold;
+  }
   .menu-items {
     width: 100%;
     list-style: none;

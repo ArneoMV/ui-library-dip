@@ -4,8 +4,8 @@ import Prism from "prismjs";
 import "../../styles/prism.css";
 import Table from '../system/Table';
 import Tab from '../system/Tab';
-import codeJsx from './button/button_jsx.txt';
-import codeScss from './button/button_scss.txt';
+import codeJsx from './codeExamples/button/button_jsx.txt';
+import codeScss from './codeExamples/button/button_scss.txt';
 
 const ButtonPage = () => {
     // Tab component

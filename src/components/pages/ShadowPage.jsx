@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import Input from '../system/Input';
+import Shadow from '../system/Shadow';
 import Prism from "prismjs";
 import "../../styles/prism.css";
 import Table from '../system/Table';
 import Tab from '../system/Tab';
-import codeJsx from './codeExamples/input/input_jsx.txt';
-import codeScss from './codeExamples/input/input_scss.txt';
+import codeJsx from './codeExamples/shadow/shadow_jsx.txt';
+import codeScss from './codeExamples/shadow/shadow_scss.txt';
 
 
-const InputPage = () => {
+const ShadowPage = () => {
     // Tab component
     const [JSXfileContent, setFileContent] = useState('');
     const [SCSSfileContent, setSecondTabContent] = useState('');
@@ -44,9 +44,9 @@ const InputPage = () => {
 
 
     return (
-        <div className="page-structure">
+        <div className="modular-page-structure">
             <article>
-                <h2>Input</h2>
+                <h2>Shadow</h2>
                 <p>Osnovni widget za primanje korisničkog unosa je tekstualno polje. Tipkovnica i miš mogu se koristiti za unos ili promjenu podataka.</p>
                 <ul>
                     <h4>Kada korisiti tab</h4>
@@ -63,10 +63,7 @@ const InputPage = () => {
                 <div className="column">
                     <div className="padding col-5-lg">
                         <div className="col">
-                        <Input label="Normal Input" placeholder="Enter text" type="text" />
-                        <Input label="success Input" placeholder="Enter password" success />
-                        <Input label="Error Input" placeholder="Enter password" error="Invalid input" />
-                        <Input label="Disabled Input" placeholder="Enter text" disabled />
+                            <Shadow></Shadow>
                         </div>
                     </div>
                     <div className="horizontal-line"></div>
@@ -86,4 +83,4 @@ const InputPage = () => {
     );
 };
 
-export default InputPage;
+export default ShadowPage;

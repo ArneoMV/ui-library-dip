@@ -14,6 +14,10 @@ import RadioPage from './components/pages/RadioPage.jsx';
 import SelectPage from './components/pages/SelectPage.jsx';
 import FormPage from './components/pages/FormPage.jsx';
 import TabPage from './components/pages/TabPage.jsx';
+import IconPage from './components/pages/IconPage.jsx';
+import ColorPage from './components/pages/ColorPage.jsx';
+import TypographyPage from './components/pages/TypographyPage.jsx';
+import ShadowPage from './components/pages/ShadowPage.jsx';
 
 const App = () => {
   return (
@@ -34,6 +38,10 @@ const App = () => {
               <Route path="/select" element={<SelectPage />} />
               <Route path="/form" element={<FormPage />} />
               <Route path="/tab" element={<TabPage />} />
+              <Route path="/icon" element={<IconPage />} />
+              <Route path="/color" element={<ColorPage />} />
+              <Route path="/typography" element={<TypographyPage />} />
+              <Route path="/shadow" element={<ShadowPage />} />
             </Routes>
           </div>
         </main>

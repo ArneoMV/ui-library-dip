@@ -140,3 +140,14 @@ body {
   color: $neutral-700;
 }
 
+.typo {
+  // ... your existing styles ...
+
+  &.caption {
+    font-size: 14px;
+    font-weight: 500;
+    // Add your custom fancy styles here;
+    border-radius: 4px;
+    padding: 8px 12px;
+  }
+}

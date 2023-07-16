@@ -7,8 +7,8 @@ import Table from '../system/Table';
 import Prism from "prismjs";
 import "../../styles/prism.css";
 import Tab from '../system/Tab';
-import codeJsx from './checkbox/checkbox_jsx.txt';
-import codeScss from './checkbox/checkbox_scss.txt';
+import codeJsx from './codeExamples/checkbox/checkbox_jsx.txt';
+import codeScss from './codeExamples/checkbox/checkbox_scss.txt';
 
 const CheckboxPage = () => {
 

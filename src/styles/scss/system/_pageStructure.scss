@@ -27,6 +27,7 @@
       gap: $base-gap;
     }
   }
+
 }
 
 .modular-page-structure {
@@ -49,6 +50,10 @@
       border: 1px solid $neutral-500;
       overflow: auto;
   
+      .margin {
+        margin-top: $base-padding;
+        margin-bottom: $base-padding;
+      }
       pre {
         width: 100%;
       }

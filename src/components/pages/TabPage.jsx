@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Table from '../system/Table';
 import Tab from '../system/Tab';
-import tab_jsx from './tab/tab_jsx.txt';
-import tab_scss from './tab/tab_scss.txt';
+import tab_jsx from './codeExamples/tab/tab_jsx.txt';
+import tab_scss from './codeExamples/tab/tab_scss.txt';
  
 const TabPage = () => {
     const [JSXfileContent, setFileContent] = useState('');

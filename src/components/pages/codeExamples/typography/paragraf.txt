@@ -1,0 +1,21 @@
+export const Paragraf = ({ size, color, uppercase, lowercase, link, children }) => {
+  const className = 'typo paragraph';
+  const textTransform = uppercase ? 'uppercase' : lowercase ? 'lowercase' : 'none';
+
+  const style = {
+    fontSize: size || 'inherit',
+    fontWeight: 'var(--text-thickness)',
+    textTransform,
+    color: color ? `var(--${color})` : 'inherit',
+  };
+
+  return link ? (
+    <a href={link} className={className} style={style}>
+      {children}
+    </a>
+  ) : (
+    <p className={className} style={style}>
+      {children}
+    </p>
+  );
+};
