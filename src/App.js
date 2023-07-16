@@ -4,20 +4,20 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import './styles/scss/index.scss';
 
-import Navigation from './components/Navigation.jsx';
-import Menu from './components/Menu.jsx';
-import Overview from './components/pages/Overview.jsx';
-import ButtonPage from './components/pages/ButtonPage.jsx';
-import InputPage from './components/pages/InputPage.jsx';
-import CheckboxPage from './components/pages/CheckboxPage.jsx';
-import RadioPage from './components/pages/RadioPage.jsx';
-import SelectPage from './components/pages/SelectPage.jsx';
-import FormPage from './components/pages/FormPage.jsx';
-import TabPage from './components/pages/TabPage.jsx';
-import IconPage from './components/pages/IconPage.jsx';
-import ColorPage from './components/pages/ColorPage.jsx';
-import TypographyPage from './components/pages/TypographyPage.jsx';
-import ShadowPage from './components/pages/ShadowPage.jsx';
+import Navigation from './components/Homepage/Navigation.jsx';
+import Menu from './components/Homepage/Menu.jsx';
+import Overview from './components/Overview/Overview.jsx'; 
+import ButtonPage from './components/Button/ButtonPage.jsx';
+import InputPage from './components/Input/InputPage.jsx';
+import CheckboxPage from './components/Checkbox/CheckboxPage.jsx';
+import RadioPage from './components/Radio/RadioPage.jsx';
+import SelectPage from './components/Select/SelectPage.jsx';
+import FormPage from './components/Form/FormPage.jsx';
+import TabPage from './components/Tab/TabPage.jsx';
+import IconPage from './components/Icon/IconPage.jsx';
+import ColorPage from './components/Color/ColorPage.jsx';
+import TypographyPage from './components/Typography/TypographyPage.jsx';
+import ShadowPage from './components/Shadow/ShadowPage.jsx';
 
 const App = () => {
   return (
