@@ -23,19 +23,16 @@ export const Title = ({ level, color, uppercase, lowercase, link, children }) =>
   );
 };
 
-export const Paragraf = ({ size, color, uppercase, lowercase, link, type, disabled, mark, code, keyboard, underline, delete: deleteText, strong, italic, children }) => {
-  const baseClassName = 'typo paragraph';
+export const Paragraf = ({ size, color, uppercase, lowercase, link, type, disabled, mark, code, keyboard, underline, delete: deleteText, strong, italic, primary, children }) => {
+  const baseClassName = 'paragraph';
   const textTransform = uppercase ? 'uppercase' : lowercase ? 'lowercase' : 'none';
 
-  const style = {
-    fontSize: size || 'inherit',
-    fontWeight: 'var(--text-thickness)',
-    textTransform,
-    color: color ? `var(--${color})` : 'inherit',
-  };
 
   let className = baseClassName;
 
+  if (type) {
+    className += ` ${baseClassName}-${type}`;
+  }
   if (type) {
     className += ` ${baseClassName}-${type}`;
   }
@@ -73,11 +70,11 @@ export const Paragraf = ({ size, color, uppercase, lowercase, link, type, disabl
   }
 
   return link ? (
-    <a href={link} className={className} style={style}>
+    <a href={link} className={className}>
       {children}
     </a>
   ) : (
-    <p className={className} style={style}>
+    <p className={className}>
       {children}
     </p>
   );
@@ -93,11 +90,11 @@ export const Button = ({ color, uppercase, lowercase, link, children }) => {
   };
 
   return link ? (
-    <a href={link} className={className} style={style}>
+    <a href={link} className={className}>
       {children}
     </a>
   ) : (
-    <button className={className} style={style}>
+    <button className={className}>
       {children}
     </button>
   );
@@ -112,7 +109,7 @@ export const Caption = ({ color, uppercase, lowercase, className, children }) =>
     textTransform,
   };
 
-  return <span className={finalClassName} style={style}>{children}</span>;
+  return <span className={finalClassName}>{children}</span>;
 };
 
 export const Link = ({ href, target, color, uppercase, lowercase, className, children }) => {
@@ -125,7 +122,7 @@ export const Link = ({ href, target, color, uppercase, lowercase, className, chi
   };
 
   return (
-    <a href={href} target={target} className={finalClassName} style={style}>
+    <a href={href} target={target} className={finalClassName}>
       {children}
     </a>
   );

@@ -1,24 +1,23 @@
+
 import React, { useEffect, useState } from 'react';
 import Checkbox from './Checkbox';
-import CheckboxHover from './CheckboxHover';
-import CheckboxActive from './CheckboxActive';
-import CheckboxDisabled from './CheckboxDisabled';
 import Table from '../Table/Table';
 import Tab from '../Tab/Tab';
 import codeJsx from './Code/checkbox_jsx.txt';
 import codeScss from './Code/checkbox_scss.txt';
+import DividerH from '../Divider/DividerH';
 // import Prism from "prismjs";
 // import "../../styles/prism.css";
 
 
 const CheckboxPage = () => {
-
-    // Checkbox component
-    const [isChecked, setIsChecked] = useState(false);
-    const handleCheckboxChange = (event) => {
-      setIsChecked(event.target.checked);
-    };
     
+    // Checkbox
+    const handleCheckboxChange = (checked) => {
+        console.log('Checkbox state changed:', checked);
+        // Ovdje možete postaviti logiku za rukovanje promjenom stanja checkboxa
+      };
+
     // Tab component
     const [JSXfileContent, setFileContent] = useState('');
     const [SCSSfileContent, setSecondTabContent] = useState('');
@@ -34,31 +33,38 @@ const CheckboxPage = () => {
             .then((content) => setContent(content))
             .catch((error) => console.log(error));
     };
-    const tabHeaders = ['JSX', 'SCSS', ' - '];
+    const tabHeaders = [ ' - ', 'JSX', 'SCSS'];
     const tabContent = [
+        '.',
         JSXfileContent,
-        SCSSfileContent,
-        '-'
+        SCSSfileContent
     ];
 
     // Table data
     const tableHeaders = ['Svojtsvo', 'Opis', 'Vrsta', 'Zadano'];
     const tableConetnt = [
-        { cell1: 'label', cell2: 'Label for the checkbox', cell3: 'string', cell4: '-' },
-        { cell1: 'checked', cell2: 'Indicates whether checkbox is checked', cell3: 'boolean', cell4: 'false' },
-        { cell1: 'onChange', cell2: 'Callback function for checkbox change', cell3: 'function', cell4: '-' },
-        { cell1: 'disabled', cell2: 'Disables the checkbox', cell3: 'boolean', cell4: 'false' },
+        { cell1: 'label', cell2: 'Tekst koji se prikazuje uz checkbox', cell3: 'string', cell4: '-' },
+        { cell1: 'checked', cell2: 'Označava da li je checkbox označen', cell3: 'boolean', cell4: 'false' },
+        { cell1: 'onChange', cell2: 'Callback funkcija koja se poziva na promjenu označenosti checkboxa', cell3: 'function', cell4: '-' },
+        { cell1: 'disabled', cell2: 'Označava da li je checkbox onemogućen', cell3: 'boolean', cell4: 'false' },
+        { cell1: 'error', cell2: '	Označava da li checkbox ima grešku', cell3: 'boolean', cell4: 'false' },
     ];
   
     return (
-        <div className="page-structure">
+        <div className="modular-page-structure">
             <article>
                 <h2>Checkbox</h2>
-                <p>Komponenta potvrdnog okvira</p>
+                <p>Checkbox koristite kada želite omogućiti korisniku da izabere jednu ili više opcija između dvije ili više mogućnosti.</p>
                 <ul>
-                    <h4>Kada korisiti tab</h4>
-                    <li>Koristi se za odabir više vrijednosti iz nekoliko opcija.</li>
-                    <li>Ako koristite samo jedan potvrdni okvir, to je isto kao da koristite Switch za prebacivanje između dva stanja. Razlika je u tome što će Switch izravno pokrenuti promjenu stanja, ali potvrdni okvir samo označava stanje kao promijenjeno i to je potrebno poslati.</li>
+                    <h4>Kada korisiti checkbox</h4>
+                    <li>Potvrđivanje uvjeta ili uslova</li>
+                    <li>Filtriranje rezultata</li>
+                    <li>ostavke i podešavanja</li>
+                </ul>
+                <ul>
+                    <h4>Kako korisiti checkbox</h4>
+                    <li>Kreirajte novu datoteku Checkbox.js i kopirajte kod za Checkbox komponentu u tu datoteku.</li>
+                    <li> Smjestite Checkbox.js u odgovarajući direktorij vašeg projekta, obično unutar components direktorija.</li>
                 </ul>
             </article>
 
@@ -67,25 +73,15 @@ const CheckboxPage = () => {
             <div className="example-section column">
  
                 <div className="column">
-                    <div className="padding col-5-lg">
+                    <div className="padding col-7-lg">
                         <div className="row">
-                        <Checkbox
-                            label="Normal"
-                        />
-                         <CheckboxHover
-                            label="Hover"
-                        />
-                        <CheckboxActive
-                            label="Active"
-                            checked={isChecked}
-                            onChange={handleCheckboxChange}
-                        />
-                         <CheckboxDisabled
-                            label="Disabled"
-                        />
+                        <Checkbox label="Normal" />
+                        <Checkbox label="Checked" checked={true} />
+                        <Checkbox label="Disabled" disabled />
+                        <Checkbox label="Error" error />
                         </div>
                     </div>
-                    <div className="horizontal-line"></div>
+                    <DividerH />
                     <div className="padding col-12-lg">
  
                         <div className="code-container">

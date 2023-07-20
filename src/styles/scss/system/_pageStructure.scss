@@ -67,8 +67,18 @@
         gap: $base-gap;
       }
     }
-    ul li {
-      list-style-type: disc;
-      list-style-position: inside;
+    ul {
+      display: flex;
+      flex-direction: column;
+      li {
+        list-style-type: disc;
+        list-style-position: outside;
+        line-height: 1.5;
+        font-size: 0.9em;
+        font-weight: 400;
+        word-break: break-all;
+        word-spacing: 5px;
+        padding-bottom: 12px;
     }
+  }
 }

@@ -38,7 +38,7 @@ const Form = () => {
     <div>
       <form onSubmit={handleSubmit(onSubmit)} noValidate>
         <h3>Login</h3>
-        <div className="column form-control">
+        <div className="column form-control padding">
           <Input
             label="Username"
             placeholder="Add name"

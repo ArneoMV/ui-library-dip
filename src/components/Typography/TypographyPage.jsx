@@ -30,51 +30,55 @@ const TypographyPage = () => {
           .catch((error) => console.log(error));
     };
 
-    const tabHeaders_1 = ['JSX', ' - '];
-    const tabContent_1 = [codeTitle, ' - '];
-    const tabHeaders_2 = ['JSX', ' - '];
-    const tabContent_2 = [codeParagraf, ' - '];
-    const tabHeaders_3 = ['Styles', ' - '];
-    const tabContent_3 = [codeStyles, ' - '];
+    const tabHeaders_1 = [ ' - ', 'JSX',];
+    const tabContent_1 = [' - ', codeTitle];
+    const tabHeaders_2 = [' - ', 'JSX'];
+    const tabContent_2 = [' - ', codeParagraf];
+    const tabHeaders_3 = [' - ', 'Styles'];
+    const tabContent_3 = [' - ', codeStyles];
 
     // Table data
     const tableHeaders = ['Svojtsvo', 'Opis', 'Vrsta', 'Zadano'];
     const tableContent = [
-        { cell1: 'level', cell2: 'Nivo naslova (H1-H6)', cell3: 'Title', cell4: '-' },
-        { cell1: 'color', cell2: 'Boja teksta', cell3: 'string', cell4: 'inherit' },
-        { cell1: 'uppercase', cell2: 'Pretvori tekst u velika slova', cell3: 'Title, Paragraf, Button, Caption', cell4: 'false' },
-        { cell1: 'lowercase', cell2: 'Pretvori tekst u mala slova', cell3: 'Title, Paragraf, Button, Caption', cell4: 'false' },
-        { cell1: 'link', cell2: 'URL za link (samo za Title, Paragraf, Button)', cell3: 'Title, Paragraf, Button', cell4: '-' },
-        { cell1: 'size', cell2: 'Veličina fonta (samo za Paragraf)', cell3: 'Paragraf', cell4: 'inherit' },
-        { cell1: 'className', cell2: 'Dodatna CSS klasa', cell3: 'Caption', cell4: '-' }, 
+        { cell1: 'children', cell2: 'Tekst koji će biti prikazan unutar paragrafa', cell3: 'String', cell4: '-' },
+        { cell1: 'type', cell2: 'Definiše vrstu paragrafa (primarna, uspjeh, upozorenje, opasnost)', cell3: 'String', cell4: 'default' },
+        { cell1: 'disabled', cell2: 'Onemogućava interakciju s paragrafom', cell3: 'Boolean', cell4: 'false' },
+        { cell1: 'mark', cell2: 'Označava tekst kao markiranu oznaku (highlight)', cell3: 'Boolean', cell4: 'false' },
+        { cell1: 'code', cell2: 'Označava tekst kao kod (monospaced font)', cell3: 'Boolean', cell4: 'false' },
+        { cell1: 'keyboard', cell2: 'Označava tekst kao tastaturu (monospaced font)', cell3: 'Boolean', cell4: 'false' },
+        { cell1: 'underline', cell2: 'Podvlači tekst', cell3: 'Boolean', cell4: 'false' }, 
+        { cell1: 'delete', cell2: 'Označava tekst kao obrisano (strikethrough)', cell3: 'Boolean', cell4: 'false' }, 
+        { cell1: 'strong', cell2: 'Označava tekst kao podebljan (bold)', cell3: 'Boolean', cell4: 'false' }, 
+        { cell1: 'italic', cell2: 'Označava tekst kao kurziv (italic)', cell3: 'Boolean', cell4: 'false' }, 
+        { cell1: 'href', cell2: 'URL na koji će se preusmjeriti korisnika ako je paragraf Link tipa', cell3: 'Boolean', cell4: 'false' }, 
+        { cell1: 'target', cell2: 'Postavlja metu otvaranja veze (npr. _blank za otvaranje u novom prozoru)', cell3: 'Boolean', cell4: 'false' }, 
     ];
 
 
     return (
         <div className="modular-page-structure">
-            <article>
+            <article className='col-7-lg'>
                 <h2>Typography</h2>
-                <p>Osnovni widget za primanje korisničkog unosa je tekstualno polje. Tipkovnica i miš mogu se koristiti za unos ili promjenu podataka.</p>
+                <p>Napravljene su komponente Title (1/6), Paragraf i Link s korištenjem fluidne skale fonta kako bi se postiglo responzivno ponašanje teksta na različitim uređajima.</p>
                 <ul>
                     <h4>Kada korisiti tab</h4>
-                    <li>Potreban je korisnički unos u polje obrasca.</li>
-                    <li>Potreban je unos za pretraživanje.</li>
+                    <li>Tipografija se koristi u svim oblicima tiskanih i digitalnih materijala kako bi poboljšala čitljivost, privukla pažnju i stvorila estetski doživljaj.</li>
+                    <li>Kvalitetna tipografija poboljšava korisničko iskustvo, čini sadržaj jasnijim i doprinosi prepoznatljivosti i profesionalnosti brenda.</li>
+                    <li>Pravilno odabrana tipografija može izraziti različite emocije i tonalitete, primjerice ozbiljnost, veselje, modernost, eleganciju ili tradiciju</li>
                 </ul>
                 <h3>Vrste</h3>
                 <p>Postoje primarni gumb, zadani gumb, isprekidani gumb, tekstualni gumb i gumb za vezu</p>
             </article>
-            {/* Table */}
-            <Table data={tableContent} headers={tableHeaders}/>
             {/* Heading */}
             <div className="example-section column">
                 <div className="column">
                         <div className="column col-gap-lg padding margin">
-                            <Title level={1} color="neutral-700">.h1 Metro Design </Title>
-                            <Title level={2} color="neutral-700">.h2 Metro Design </Title>
-                            <Title level={3} color="neutral-700">.h3 Metro Design </Title>
-                            <Title level={4} color="neutral-700">.h4 Metro Design </Title>
-                            <Title level={5} color="neutral-700">.h5 Metro Design </Title>
-                            <Title level={6} color="neutral-700">.h6 Metro Design </Title>
+                            <Title level={1} color="neutral-700">.t1 Metro Design </Title>
+                            <Title level={2} color="neutral-700">.t2 Metro Design </Title>
+                            <Title level={3} color="neutral-700">.t3 Metro Design </Title>
+                            <Title level={4} color="neutral-700">.t4 Metro Design </Title>
+                            <Title level={5} color="neutral-700">.t5 Metro Design </Title>
+                            <Title level={6} color="neutral-700">.t6 Metro Design </Title>
                         </div>
                         <DividerH />
                     <div className="padding col-12-lg">
@@ -87,10 +91,10 @@ const TypographyPage = () => {
              {/* Paragraf */}
             <div className="example-section column">
                 <div className="column">
-                    <div className="padding padding-top col-6-lg">
+                    <div className="padding padding-top col-2-lg">
                         <div className="column col-gap-lg ">
                             <Paragraf>Typo (default)</Paragraf>
-                            <Paragraf type="secondary">Typo (secondary)</Paragraf>
+                            <Paragraf type="primary">Typo (primary)</Paragraf>
                             <Paragraf type="success">Typo (success)</Paragraf>
                             <Paragraf type="warning">Typo (warning)</Paragraf>
                             <Paragraf type="danger">Typo (danger)</Paragraf>
@@ -102,9 +106,7 @@ const TypographyPage = () => {
                             <Paragraf delete>Typo (delete)</Paragraf>
                             <Paragraf strong>Typo (strong)</Paragraf>
                             <Paragraf italic>Typo (italic)</Paragraf>
-                            <Link href="https://ant.design" target="_blank">
-                            Typo (Link)
-                            </Link>
+                            <Link href="https://www.youtube.com/watch?v=bXpiXEV-XNo" target="_blank">Typo (Link)</Link>
                         </div>
                     </div>
                     <DividerH />
@@ -115,7 +117,8 @@ const TypographyPage = () => {
                     </div>
                 </div>
             </div>
-
+            {/* Table */}
+            <Table data={tableContent} headers={tableHeaders}/>
             {/* Style */}
             <div className="example-section column">
                

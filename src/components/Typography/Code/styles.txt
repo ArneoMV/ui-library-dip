@@ -1,8 +1,8 @@
 
 @use "../base/mixin.scss" as *;
 @use "../base/variable.scss" as *;
-@use "./color.scss" as *;
-
+@use './color.scss' as *;
+// @import './color.scss';
 
 //     Font minimum, preferred and maximum value
 //     font-size: clamp(var(--min), var(--val), var(--max));
@@ -94,6 +94,18 @@ $level-size: $type-base-size;
   @return map-get($type-styles, $key);
 }
 
+
+
+
+
+body {
+  // Ensure base applied as default for all other elements
+  font-size: $type-base-size;
+  font-family: "Rubik", sans-serif;
+  line-height: 1.5;
+  color: $neutral-700;
+}
+
 // Test retrieving heading style value from the map
 // @debug "h3:" #{type-style(h3)};
 
@@ -130,15 +142,57 @@ p {
     letter-spacing: 0.9px;
     font-weight: 400;
     //padding-top: 1.5px;
+    font-weight: 400;
+}
+.paragraph  {
+  &-default {
+    color: $neutral-900;
+  }
+  &-primary {
+    color: $primary-500;
+  }
+  &-success {
+    color: $success-400;
+  }
+  &-warning {
+    color: $warning-400;
+  }
+  &-danger {
+    color: $error-400;
+  }
+  &-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    color: $neutral-600;
+  }
+  &-mark {
+    background-color: #ffd700;
+    padding: 2px 4px;
+  }
+  &-code {
+    font-family: monospace;
+    background-color: #f5f5f5;
+    padding: 2px 4px;
+  }
+  &-keyboard {
+    font-family: monospace;
+    background-color: #f5f5f5;
+    padding: 2px 4px;
+  }
+  &-underline {
+    text-decoration: underline;
+  }
+  &-delete {
+    text-decoration: line-through;
+  }
+  &-strong {
+    font-weight: 700;
+  }
+  &-italic {
+    font-style: italic;
+  }
 }
 
-body {
-  // Ensure base applied as default for all other elements
-  font-size: $type-base-size;
-  font-family: "Rubik", sans-serif;
-  line-height: 1.5;
-  color: $neutral-700;
-}
 
 .typo {
   // ... your existing styles ...
@@ -150,4 +204,13 @@ body {
     border-radius: 4px;
     padding: 8px 12px;
   }
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.link {
+  color: $primary-300;
+  text-decoration: underline;
 }

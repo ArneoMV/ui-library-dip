@@ -1,19 +1,18 @@
 @use '../../styles/scss/abstract/color' as *;
 @use '../../styles/scss/base/variable' as *;
 
-
-
+// Mixins
 @mixin checkbox-base {
-    width: 1em;
-    height: 1em;
+    width: 1.2em;
+    height: 1.2em;
     border-radius: 4px;
     box-sizing: border-box;
 }
 @mixin checkboxInput {
     @include checkbox-base();
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 2px;
+    left: 5px;
     position: absolute;
     opacity: 0;
     cursor: pointer;
@@ -22,169 +21,88 @@
 @mixin checkboxCheckmark {
     @include checkbox-base();
     transition: background-color 0.3s ease-in-out;
-    
-  &:after {
-    content: "";
-    position: absolute;
-    display: none;
-    left: 3.5px;
-    top: 1.5px;
-    width: 3px;
-    height: 7px;
-    border: solid $success-400;
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
-  }
+    &:after {
+        content: "";
+        position: absolute;
+        display: none;
+        left: 3px;
+        top: 1.5px;
+        width: 3px;
+        height: 7px;
+        border: solid $success-400;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+    }   
 }
 
-.chekbox-container {
+
+
+.checkbox-container {
     display: flex;
     gap: 8px;
     align-items: center;
-    flex-direction: column;
-    p {
-        font-size: 14px;
-    }
-    .active {
-        background-color: $primary-200; 
-        box-shadow: $shadow-sm; 
-    }
-    .checkbox {
-        @include checkbox-base();
-        position: relative;
-        display: inline-block;
-        cursor: pointer;
-        background-color: $primary-200;
-        // background-color: transparent;
-        border: 2px solid $primary-200;
-
-        &:hover {
-            box-sizing: border-box;
-            background-color: $primary-200;
-            border: 2px solid $primary-200;
-            box-shadow: $shadow-sm;
-        }
-
-        &:active {
-            background-color: $primary-200;
-        }
-        &:focus {
-            background-color: $primary-200;
-        }
-        &.disabled {
-            background: $neutral-300;
-            border-radius: 3px;
-            cursor: not-allowed;
-        }
-        &.error {
-            background: $error-300;
-            border-radius: 3px;
-            cursor: pointer;
-        }
-
-        input {
-            @include checkboxInput();
-        }
-
-        .checkmark {
-            @include checkboxCheckmark();
-        }
-
-        input:checked ~ .checkmark {
-            background-color: $primary-200;
-        }
-
-        input:checked ~ .checkmark:after {
-            display: block;
-        }
-    }
 }
 
-// Examples
-.checkbox-frame {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    flex-direction: column;
-    p {
-        font-size: 14px;
-    }
-    .checkbox-hover {
-        @include checkbox-base();
-        position: relative;
-        display: inline-block;
-        cursor: pointer;
+.checkbox {
+    @include checkbox-base();
+    background-color: $primary-100;
+    position: relative;
+    cursor: pointer;
+    margin-right: 8px;
 
+    &:checked .checkmark::after {
+        display: block;
         background-color: $primary-200;
-        border: 2px solid $primary-200;
-        box-shadow: $shadow-sm;
-        input {
-            @include checkbox-base();
-            position: absolute;
-            top: 0;
-            left: 0;
-            opacity: 0;
-            cursor: pointer;
-            background-color: $success-200;
-        }
-        .checkmark {
-            @include checkbox-base();
-        }
     }
-    .checkbox-active {
-        @include checkbox-base();
-        position: relative;
-        display: inline-block;
-        cursor: pointer;
 
-        background-color: $primary-200;
-        border: 2px solid $primary-200;
-        box-shadow: $shadow-sm;
-        input {
-            @include checkbox-base();
-            position: absolute;
-            top: 0;
-            left: 0;
-            opacity: 0;
-            cursor: pointer;
-            background-color: $success-200;
-        }
-        .checkmark {
-            @include checkbox-base();
-            &:after {
-                content: "";
-                position: absolute;
-                display: block;
-                left: 3.5px;
-                top: 1.5px;
-                width: 3px;
-                height: 7px;
-                border: solid $success-400;
-                border-width: 0 2px 2px 0;
-                transform: rotate(45deg);
-                background-color: $neutral-400;
-            }
-        }
-    }
-    .checkbox-disabled {
-        @include checkbox-base();
-        background: $neutral-300;
-        border-radius: 3px;
+    &--disabled {
+        background-color: $neutral-300;
         cursor: not-allowed;
-        position: relative;
+    }
 
-        input {
-            @include checkbox-base();
-            cursor: not-allowed;
+    &--error {
+        background-color: $error-100;
+    }
+
+    &:hover {
+        background-color: $primary-300;
+    }
+
+    &--active {
+        background-color: $primary-250;
+    }
+
+    // input {
+    //     @include checkboxInput(); 
+    // }
+    input[type="checkbox"] {
+        @include checkboxInput(); 
+      }
+      
+
+    .checkmark {
+        @include checkbox-base();
+        transition: background-color 0.3s ease-in-out;
+        &:after {
+            content: "";
             position: absolute;
-            top: 0;
-            left: 0;
-            opacity: 0;
-            background-color: $success-200;
+            display: none;
+            left: 8px;
+            top: 4px;
+            width: 3px;
+            height: 8px;
+            border: solid $success-400;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
         }
-        .checkmark {
-            @include checkbox-base();
-        }
+    }
+    input:checked ~ .checkmark {
+        background-color: $primary-200;
+    }
+
+    input:checked ~ .checkmark:after {
+        display: block;
     }
 }
 
+  

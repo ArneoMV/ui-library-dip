@@ -22,7 +22,7 @@ const Menu = () => {
           <div className="menu-item"><NavLink to="/form">Form</NavLink></div>
           <div className="menu-item"><NavLink to="/tab">Tab</NavLink></div>
         <div className="menu-item"><p>Tamplates</p></div>
-        <div className="menu-item"><p>PAges</p></div>
+        <div className="menu-item"><p>Pages</p></div>
 
       </div>
     </div>

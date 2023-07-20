@@ -1,122 +1,108 @@
-@use '../abstract/color' as *;
-@use '../base/variable' as *;
+@use '../../styles/scss/abstract/color' as *;
+@use '../../styles/scss/base/variable' as *;
 
-
-
-.select {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  height: 38px;
-  width: 100%;
-  gap: 6px;
-
-  .select-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 38px; /* Set the height of the select-header */
-    width: 100%; /* Set the width to occupy the entire available space */
-    padding: 0.5rem;
-    border: 1px solid $neutral-300;
-    border-radius: $base-border-radius-sm;
+// Mixins
+@mixin checkbox-base {
+    width: 1.2em;
+    height: 1.2em;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+@mixin checkboxInput {
+    @include checkbox-base();
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    position: absolute;
+    opacity: 0;
     cursor: pointer;
+    background-color: $success-200;
+}
+@mixin checkboxCheckmark {
+    @include checkbox-base();
+    transition: background-color 0.3s ease-in-out;
+    &:after {
+        content: "";
+        position: absolute;
+        display: none;
+        left: 3px;
+        top: 1.5px;
+        width: 3px;
+        height: 7px;
+        border: solid $success-400;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+    }   
+}
 
-    .select-label {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        min-width: 0; /* Add this line to allow text to wrap */
-    }
 
-    .select-arrow {
-      width: auto;
-      fill: $neutral-500;
-      transition: transform 0.3s ease-in-out;
-      transform: rotate(0deg);
 
-      &.up {
-        transform: rotate(180deg);
-      }
+.checkbox-container {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
 
-      svg {
+.checkbox {
+    @include checkbox-base();
+    background-color: $primary-100;
+    position: relative;
+    cursor: pointer;
+    margin-right: 8px;
+
+    &:checked .checkmark::after {
         display: block;
-        margin: 0 auto; // Center the arrow horizontally
+        background-color: $primary-200;
+    }
+
+    &--disabled {
+        background-color: $neutral-300;
+        cursor: not-allowed;
+    }
+
+    &--error {
+        background-color: $error-100;
+    }
+
+    &:hover {
+        background-color: $primary-300;
+    }
+
+    &--active {
+        background-color: $primary-250;
+    }
+
+    // input {
+    //     @include checkboxInput(); 
+    // }
+    input[type="checkbox"] {
+        @include checkboxInput(); 
       }
-    }
-  }
+      
 
-  &.open {
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-  .select-options {
-    z-index: 10;
-    background-color: $neutral-100;
-    border: 1px solid $neutral-300;
-    box-shadow: $shadow-sm;
-    border-top: none;
-    border-bottom-right-radius: $base-border-radius-sm;
-    border-bottom-left-radius: $base-border-radius-sm;
-
-    .select-option {
-        padding: 0.5rem;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        cursor: pointer;
-        gap: 24px;
-        justify-content: space-between;
-        .option-label {
-            color: black;
-        }
-        .link {
-            color: $neutral-600;
-            text-decoration: none;
-        }
-        &:hover {
-            background-color: $neutral-200;
-            .link {
-                color: $primary-600;
-            }
-        }
-
-        &.selected {
-            color: $neutral-600;
-            .link {
-                color: $primary-500;
-            }
-            p {
-                color: $primary-500;
-            }
-            &.checkbox {
-                .option-icon {
-                    filter: invert(1) brightness(1.5);
-                }
-            }
+    .checkmark {
+        @include checkbox-base();
+        transition: background-color 0.3s ease-in-out;
+        &:after {
+            content: "";
+            position: absolute;
+            display: none;
+            left: 8px;
+            top: 4px;
+            width: 3px;
+            height: 8px;
+            border: solid $success-400;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
         }
     }
-
-    .select-checkbox-icon {
-      width: 20px;
-      height: 20px;
-      cursor: pointer;
-      transition: background-color 0.3s ease-in-out;
-      &.checked {
-        .option-icon {
-            filter: invert(41%) sepia(62%) saturate(4064%) hue-rotate(142deg) brightness(89%) contrast(89%);
-            fill: $success-400;
-        }
-      }
+    input:checked ~ .checkmark {
+        background-color: $primary-200;
     }
-  }
+
+    input:checked ~ .checkmark:after {
+        display: block;
+    }
 }
 
-
-.link, .option-label {
-    font-family: 'Sofia Sans', sans-serif;
-    font-size: 14px;
-    line-height: 18px;
-    letter-spacing: 0.04em;
-    font-weight: 600; // SemiBold
-}
+  

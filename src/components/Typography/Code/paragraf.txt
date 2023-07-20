@@ -1,20 +1,55 @@
-export const Paragraf = ({ size, color, uppercase, lowercase, link, children }) => {
-  const className = 'typo paragraph';
+export const Paragraf = ({ size, color, uppercase, lowercase, link, type, disabled, mark, code, keyboard, underline, delete: deleteText, strong, italic, primary, children }) => {
+  const baseClassName = 'paragraph';
   const textTransform = uppercase ? 'uppercase' : lowercase ? 'lowercase' : 'none';
 
-  const style = {
-    fontSize: size || 'inherit',
-    fontWeight: 'var(--text-thickness)',
-    textTransform,
-    color: color ? `var(--${color})` : 'inherit',
-  };
+
+  let className = baseClassName;
+
+  if (type) {
+    className += ` ${baseClassName}-${type}`;
+  }
+  if (type) {
+    className += ` ${baseClassName}-${type}`;
+  }
+
+  if (disabled) {
+    className += ` ${baseClassName}-disabled`;
+  }
+
+  if (mark) {
+    className += ` ${baseClassName}-mark`;
+  }
+
+  if (code) {
+    className += ` ${baseClassName}-code`;
+  }
+
+  if (keyboard) {
+    className += ` ${baseClassName}-keyboard`;
+  }
+
+  if (underline) {
+    className += ` ${baseClassName}-underline`;
+  }
+
+  if (deleteText) {
+    className += ` ${baseClassName}-delete`;
+  }
+
+  if (strong) {
+    className += ` ${baseClassName}-strong`;
+  }
+
+  if (italic) {
+    className += ` ${baseClassName}-italic`;
+  }
 
   return link ? (
-    <a href={link} className={className} style={style}>
+    <a href={link} className={className}>
       {children}
     </a>
   ) : (
-    <p className={className} style={style}>
+    <p className={className}>
       {children}
     </p>
   );
