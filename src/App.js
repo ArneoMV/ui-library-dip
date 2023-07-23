@@ -18,6 +18,7 @@ import IconPage from './components/Icon/IconPage.jsx';
 import ColorPage from './components/Color/ColorPage.jsx';
 import TypographyPage from './components/Typography/TypographyPage.jsx';
 import ShadowPage from './components/Shadow/ShadowPage.jsx';
+import AlertPage from './components/Alert/AlertPage.jsx';
 
 const App = () => {
   return (
@@ -42,6 +43,7 @@ const App = () => {
               <Route path="/color" element={<ColorPage />} />
               <Route path="/typography" element={<TypographyPage />} />
               <Route path="/shadow" element={<ShadowPage />} />
+              <Route path="/alert" element={<AlertPage />} />
             </Routes>
           </div>
         </main>

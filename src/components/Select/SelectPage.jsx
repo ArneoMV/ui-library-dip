@@ -51,11 +51,11 @@ const SelectPage = () => {
             .then((content) => setContent(content))
             .catch((error) => console.log(error));
     };
-    const tabHeaders = ['JSX', 'SCSS', ' - '];
+    const tabHeaders = [' - ', 'JSX', 'SCSS'];
     const tabContent = [
+        ' - ',
         JSXfileContent,
         SCSSfileContent,
-        '-'
     ];
     // Table data
     const tableHeaders = ['Svojtsvo', 'Opis', 'Vrsta', 'Zadano'];

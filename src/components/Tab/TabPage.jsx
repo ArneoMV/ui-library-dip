@@ -33,11 +33,11 @@ const TabPage = () => {
         { cell1: 'content', cell2: 'Popis sadržaja koji će se prikazati za svaki tab', cell3: 'array', cell4: 'tabContent' },
     ];
     const tabHeaders_1 = ['Tab 1', 'Tab 2', 'Tab 3'];
-    const tabHeaders_2 = ['JSX', 'SCSS', 'Copy'];
+    const tabHeaders_2 = [' - ', 'JSX', 'SCSS'];
     const tabContent_2 = [
+        ' - ',
         JSXfileContent,
         SCSSfileContent,
-        'Ovo je sadržaj Tab 3'
     ];
     const tabContent_1 = [
         'Tab 1',

@@ -1,0 +1,137 @@
+@use '../../styles/scss/abstract/color' as *;
+@use '../../styles/scss/base/variable' as *;
+
+.hide {
+    display: none;
+  }
+//   .alert {
+//     position: relative;
+//     padding: 1rem 1rem;
+//     margin-bottom: 1rem;
+//     border: 1px solid transparent;
+//     border-radius: 0.25rem;
+//   }
+  .error {
+    color: #842029;
+    background-color: #f8d7da;
+    border-color: #f5c2c7;
+  }
+  
+  .success {
+    color: #0f5132;
+    background-color: #d1e7dd;
+    border-color: #badbcc;
+  }
+  
+  .warning {
+    color: #664d03;
+    background-color: #fff3cd;
+    border-color: #ffecb5;
+  }
+  .primary {
+    color: #084298;
+    background-color: #cfe2ff;
+    border-color: #b6d4fe;
+  }
+  
+  .secondary {
+    color: #41464b;
+    background-color: #e2e3e5;
+    border-color: #d3d6d8;
+  }
+  
+  .info {
+    color: #055160;
+    background-color: #cff4fc;
+    border-color: #b6effb;
+  }
+  /* The close button */
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  /* When moving the mouse over the close button */
+  .closebtn:hover {
+    color: black;
+  }
+
+
+/* new */
+
+.alert-container {
+    position: fixed;
+    top: 76px;
+    left: 45%;
+    width: auto;
+    height: auto;
+    background-color: transparent; /* Make it transparent */
+    z-index: 9999; /* Set a high z-index to bring it above other elements */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: $col-gap-md;
+
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.alert {
+    background-color: $neutral-100;
+    height: 50px;
+    min-width: auto;
+    padding: $pading-md $pading-md;
+    border-radius: $base-border-radius-md;
+    box-shadow: $shadow-lg;
+    display: flex;
+    flex: row;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+
+    // transition: all 0.3s ease-in-out; /* Add the transition property */
+    animation-duration: 5000ms;
+    animation-name: slideDown;
+    animation-direction: alternate;
+
+    img {
+        height: 18px;
+        width: auto;
+    }
+
+}
+
+@keyframes slideDown {
+    from {
+        position: relative;
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    10% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    80% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+
+.alert-success {
+    fill: $success-300; /* Add the desired color here */
+}

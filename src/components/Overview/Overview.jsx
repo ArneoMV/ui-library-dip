@@ -1,6 +1,6 @@
 import React from "react";
 import ComponentCard from '../ComponentCard/ComponentCard';
-import ComponentImage from '../../utilities/images';
+import { ComponentImage, IconImage } from '../../utilities/images';
 
 const Overview = () => {
   return (
@@ -11,11 +11,11 @@ const Overview = () => {
 
         <h3>Molekule</h3>
         <div className="row">
-        <ComponentCard title="Gumb" image={ComponentImage.button} />
-            <ComponentCard title="Checkbox" image={ComponentImage.checkbox} />
-            <ComponentCard title="Radio-button" image={ComponentImage.radio} />
-            <ComponentCard title="Input" image={ComponentImage.input} />
-            <ComponentCard title="Select" image={ComponentImage.select} />
+          <ComponentCard title="Gumb" image={ComponentImage.button} />
+          <ComponentCard title="Checkbox" image={ComponentImage.checkbox} />
+          <ComponentCard title="Radio-button" image={ComponentImage.radio} />
+          <ComponentCard title="Input" image={ComponentImage.input} />
+          <ComponentCard title="Select" image={ComponentImage.select} />
         </div>
         <h3>Stanice</h3>
         <div className="row">

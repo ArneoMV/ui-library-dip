@@ -1,11 +1,11 @@
 import React from 'react';
 import './_button.scss';
 
-const Button = ({ type = 'default', children, disabled }) => {
+const Button = ({ type = 'default', children, disabled, onClick }) => {
   const buttonClassName = `button ${type} ${disabled ? 'disabled' : ''}`;
 
   return (
-    <button className={buttonClassName} disabled={disabled}>
+    <button className={buttonClassName} onClick={onClick} disabled={disabled}>
       {children}
     </button>
   );

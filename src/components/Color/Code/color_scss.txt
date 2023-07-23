@@ -1,59 +1,38 @@
-@use '../abstract/color' as *;
-@use '../base/variable' as *;
-
-$border-radius-sm: 7px;
-$border-radius-lg: 10px;
-
-
-.tab-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  .row {
-    justify-content: flex-start;
-    width: 100%;
-  }
-}
-
-
-.tab-row {
-  display: flex;
-  border: 1px solid $neutral-300;
-  border-radius: $border-radius-lg;
-}
-
-.tab-option {
-  background: $neutral-100;
-  color: $primary-600;
-  padding: 6px;
-  margin: 3px;
-  cursor: pointer;
-  font-size: 0.8rem;
-  font-weight: 400;
-  letter-spacing: 2px;
-  border-radius: $border-radius-sm;
-
-  &.active {
-    background: $primary-100;
-    color: $primary-500;
-    font-weight: 500;
-  }
-
-  &:hover {
-    color: $primary-600;
-    background: $primary-100;
-    border-radius: $border-radius-sm;
-  }
-}
-
-.tab-content {
-  margin-top: 10px;
-}
-
-.code-container {
-  border: 1px solid red;
-  height: 100%;
-  width: 100%;
-  display: block;
-}
+// Primary Colors
+$primary-100: #d8edff;
+$primary-200: #D3E9FE;
+$primary-225: #c7dfff;
+$primary-250: #adcbf4;
+$primary-300: #94b9e9;
+$primary-400: #83A9DA;
+$primary-500: #5688C9;
+$primary-600: #275B9D;
+// Neutral Colors
+$neutral-100: #FFFEFE;
+$neutral-200: #F8F8F8;
+$neutral-300: #EDEDED;
+$neutral-400: #D6D6D6;
+$neutral-500: #BBBBBB;
+$neutral-600: #73777B;
+$neutral-700: #2e2d2d;
+$neutral-900: #060606;
+// Error Colors
+$error-100: #FEE7E4;
+$error-200: #FDAC9F;
+$error-300: #F06D57;
+$error-400: #D73F28;
+$error-500: #A73321;
+// Success Colors
+$success-100: #CFF1E9;
+$success-200: #86D7C3;
+$success-300: #32B695;
+$success-400: #1F9577;
+$success-500: #0F5F4B;
+// Warning Colors
+$warning-100: #FAF0CD;
+$warning-200: #FFE689;
+$warning-300: #FFDE66;
+$warning-400: #DAB93E;
+$warning-500: #A68A20;
+// Gradient
+$gradient: linear-gradient(45deg, #CFF1E9, #FEE7E4, #E9E9FC);
