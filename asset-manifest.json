@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ui-librery-dip/static/css/main.d782244f.css",
-    "main.js": "/ui-librery-dip/static/js/main.5624ef5d.js",
+    "main.css": "/ui-librery-dip/static/css/main.c2894fc2.css",
+    "main.js": "/ui-librery-dip/static/js/main.2279a1ec.js",
     "static/media/Button.jpg": "/ui-librery-dip/static/media/Button.c57cbf5922a01b0fa6ed.jpg",
     "static/media/Checkbox.jpg": "/ui-librery-dip/static/media/Checkbox.7fd6131602c85fb302c3.jpg",
     "static/media/Input.jpg": "/ui-librery-dip/static/media/Input.823b3b0797a7b3174305.jpg",
@@ -18,27 +18,34 @@
     "static/media/input_scss.txt": "/ui-librery-dip/static/media/input_scss.9215c7a2695dcee73df8.txt",
     "static/media/radio_scss.txt": "/ui-librery-dip/static/media/radio_scss.9215c7a2695dcee73df8.txt",
     "static/media/select_scss.txt": "/ui-librery-dip/static/media/select_scss.9215c7a2695dcee73df8.txt",
+    "static/media/alert_scss.txt": "/ui-librery-dip/static/media/alert_scss.a147e5f8c842c4b05be3.txt",
     "static/media/checkbox_scss.txt": "/ui-librery-dip/static/media/checkbox_scss.66d8472cda99a8ae0789.txt",
     "static/media/checkbox_jsx.txt": "/ui-librery-dip/static/media/checkbox_jsx.d9af4e7f50144553e521.txt",
     "static/media/form_scss.txt": "/ui-librery-dip/static/media/form_scss.3ebdac7fe4fd842fc0a7.txt",
     "static/media/paragraf.txt": "/ui-librery-dip/static/media/paragraf.44871987f7dbffbd0e50.txt",
-    "static/media/color_jsx.txt": "/ui-librery-dip/static/media/color_jsx.174d026ffb797486d32c.txt",
     "static/media/icon_jsx.txt": "/ui-librery-dip/static/media/icon_jsx.174d026ffb797486d32c.txt",
     "static/media/shadow_jsx.txt": "/ui-librery-dip/static/media/shadow_jsx.174d026ffb797486d32c.txt",
     "static/media/tab_jsx.txt": "/ui-librery-dip/static/media/tab_jsx.174d026ffb797486d32c.txt",
-    "static/media/color_scss.txt": "/ui-librery-dip/static/media/color_scss.0ce7892cfa8477f272aa.txt",
+    "static/media/alert_jsx.txt": "/ui-librery-dip/static/media/alert_jsx.2342beaec29889b4cedc.txt",
+    "static/media/color_jsx.txt": "/ui-librery-dip/static/media/color_jsx.619be84a6d53f7138dae.txt",
     "static/media/icon_scss.txt": "/ui-librery-dip/static/media/icon_scss.0ce7892cfa8477f272aa.txt",
     "static/media/shadow_scss.txt": "/ui-librery-dip/static/media/shadow_scss.0ce7892cfa8477f272aa.txt",
     "static/media/tab_scss.txt": "/ui-librery-dip/static/media/tab_scss.0ce7892cfa8477f272aa.txt",
+    "static/media/color_scss.txt": "/ui-librery-dip/static/media/color_scss.324bf498836aef94d6e6.txt",
+    "static/media/error.svg": "/ui-librery-dip/static/media/error.aa915169c5fd574249ce6c8358746c10.svg",
+    "static/media/info.svg": "/ui-librery-dip/static/media/info.2ff7cc13c98421a2cbc1089011067ad5.svg",
+    "static/media/warning.svg": "/ui-librery-dip/static/media/warning.d8e960e47a52a21a1f5ba5871b3e42dc.svg",
+    "static/media/success.svg": "/ui-librery-dip/static/media/success.b711108890babbe39bff988e83eb554c.svg",
+    "static/media/check-circle.svg": "/ui-librery-dip/static/media/check-circle.fe3787085f8c2ee80f493ef968252509.svg",
     "index.html": "/ui-librery-dip/index.html",
     "static/media/title.txt": "/ui-librery-dip/static/media/title.e86fedb8aa8947e5ede9.txt",
-    "static/media/check.svg": "/ui-librery-dip/static/media/check.71b556b4aa0a8feb05cb2737093a1797.svg",
+    "static/media/check.svg": "/ui-librery-dip/static/media/check.15ddb170cf253451e7df00fccd1dfffe.svg",
     "static/media/Arrow-down.svg": "/ui-librery-dip/static/media/Arrow-down.70e98558673716fe6313f1c36c845a7f.svg",
-    "main.d782244f.css.map": "/ui-librery-dip/static/css/main.d782244f.css.map",
-    "main.5624ef5d.js.map": "/ui-librery-dip/static/js/main.5624ef5d.js.map"
+    "main.c2894fc2.css.map": "/ui-librery-dip/static/css/main.c2894fc2.css.map",
+    "main.2279a1ec.js.map": "/ui-librery-dip/static/js/main.2279a1ec.js.map"
   },
   "entrypoints": [
-    "static/css/main.d782244f.css",
-    "static/js/main.5624ef5d.js"
+    "static/css/main.c2894fc2.css",
+    "static/js/main.2279a1ec.js"
   ]
 }
