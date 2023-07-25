@@ -1,12 +1,17 @@
 {
   "files": {
-    "main.css": "/ui-librery-dip/static/css/main.c2894fc2.css",
-    "main.js": "/ui-librery-dip/static/js/main.2279a1ec.js",
+    "main.css": "/ui-librery-dip/static/css/main.bd36f654.css",
+    "main.js": "/ui-librery-dip/static/js/main.7157b800.js",
     "static/media/Button.jpg": "/ui-librery-dip/static/media/Button.c57cbf5922a01b0fa6ed.jpg",
+    "static/media/color_primary.jpg": "/ui-librery-dip/static/media/color_primary.b1e92ec23f3ef4ba3959.jpg",
+    "static/media/form.jpg": "/ui-librery-dip/static/media/form.d395d6c467c9c224076f.jpg",
+    "static/media/alert.jpg": "/ui-librery-dip/static/media/alert.bcc5786c5083ab932a4d.jpg",
+    "static/media/tab.jpg": "/ui-librery-dip/static/media/tab.8793f4ccedc9e58905fd.jpg",
     "static/media/Checkbox.jpg": "/ui-librery-dip/static/media/Checkbox.7fd6131602c85fb302c3.jpg",
-    "static/media/Input.jpg": "/ui-librery-dip/static/media/Input.823b3b0797a7b3174305.jpg",
     "static/media/Radio.jpg": "/ui-librery-dip/static/media/Radio.704751b348de4cd91bac.jpg",
-    "static/media/Form.png": "/ui-librery-dip/static/media/Form.1cd508e889584c481180.png",
+    "static/media/construction.jpg": "/ui-librery-dip/static/media/construction.f955e196d78ca93c839b.jpg",
+    "static/media/typo.jpg": "/ui-librery-dip/static/media/typo.34bef8e5e4e9686ac874.jpg",
+    "static/media/Input.jpg": "/ui-librery-dip/static/media/Input.6efe3eaa1bcc7a91a625.jpg",
     "static/media/Select.jpg": "/ui-librery-dip/static/media/Select.d661a91142bdd590c00f.jpg",
     "static/media/styles.txt": "/ui-librery-dip/static/media/styles.b2042321cd6594d8a2ba.txt",
     "static/media/form_jsx.txt": "/ui-librery-dip/static/media/form_jsx.f41e64ae24b0c1d43889.txt",
@@ -23,13 +28,9 @@
     "static/media/checkbox_jsx.txt": "/ui-librery-dip/static/media/checkbox_jsx.d9af4e7f50144553e521.txt",
     "static/media/form_scss.txt": "/ui-librery-dip/static/media/form_scss.3ebdac7fe4fd842fc0a7.txt",
     "static/media/paragraf.txt": "/ui-librery-dip/static/media/paragraf.44871987f7dbffbd0e50.txt",
-    "static/media/icon_jsx.txt": "/ui-librery-dip/static/media/icon_jsx.174d026ffb797486d32c.txt",
-    "static/media/shadow_jsx.txt": "/ui-librery-dip/static/media/shadow_jsx.174d026ffb797486d32c.txt",
     "static/media/tab_jsx.txt": "/ui-librery-dip/static/media/tab_jsx.174d026ffb797486d32c.txt",
     "static/media/alert_jsx.txt": "/ui-librery-dip/static/media/alert_jsx.2342beaec29889b4cedc.txt",
     "static/media/color_jsx.txt": "/ui-librery-dip/static/media/color_jsx.619be84a6d53f7138dae.txt",
-    "static/media/icon_scss.txt": "/ui-librery-dip/static/media/icon_scss.0ce7892cfa8477f272aa.txt",
-    "static/media/shadow_scss.txt": "/ui-librery-dip/static/media/shadow_scss.0ce7892cfa8477f272aa.txt",
     "static/media/tab_scss.txt": "/ui-librery-dip/static/media/tab_scss.0ce7892cfa8477f272aa.txt",
     "static/media/color_scss.txt": "/ui-librery-dip/static/media/color_scss.324bf498836aef94d6e6.txt",
     "static/media/error.svg": "/ui-librery-dip/static/media/error.aa915169c5fd574249ce6c8358746c10.svg",
@@ -41,11 +42,15 @@
     "static/media/title.txt": "/ui-librery-dip/static/media/title.e86fedb8aa8947e5ede9.txt",
     "static/media/check.svg": "/ui-librery-dip/static/media/check.15ddb170cf253451e7df00fccd1dfffe.svg",
     "static/media/Arrow-down.svg": "/ui-librery-dip/static/media/Arrow-down.70e98558673716fe6313f1c36c845a7f.svg",
-    "main.c2894fc2.css.map": "/ui-librery-dip/static/css/main.c2894fc2.css.map",
-    "main.2279a1ec.js.map": "/ui-librery-dip/static/js/main.2279a1ec.js.map"
+    "static/media/icon_jsx.txt": "/ui-librery-dip/static/media/icon_jsx.31d6cfe0d16ae931b73c.txt",
+    "static/media/icon_scss.txt": "/ui-librery-dip/static/media/icon_scss.31d6cfe0d16ae931b73c.txt",
+    "static/media/shadow_jsx.txt": "/ui-librery-dip/static/media/shadow_jsx.31d6cfe0d16ae931b73c.txt",
+    "static/media/shadow_scss.txt": "/ui-librery-dip/static/media/shadow_scss.31d6cfe0d16ae931b73c.txt",
+    "main.bd36f654.css.map": "/ui-librery-dip/static/css/main.bd36f654.css.map",
+    "main.7157b800.js.map": "/ui-librery-dip/static/js/main.7157b800.js.map"
   },
   "entrypoints": [
-    "static/css/main.c2894fc2.css",
-    "static/js/main.2279a1ec.js"
+    "static/css/main.bd36f654.css",
+    "static/js/main.7157b800.js"
   ]
 }
