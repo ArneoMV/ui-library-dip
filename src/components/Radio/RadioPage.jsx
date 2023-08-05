@@ -51,7 +51,7 @@ const RadiobuttonPage = () => {
     return (
         <div className="modular-page-structure">
             <article>
-                <h2>Tab</h2>
+                <h2>Radio</h2>
                 <p>Olakšavaju prebacivanje između različitih prikaza. Tab komponentu možete koristiti unutar vaše React aplikacije, posebno ako želite organizirati sadržaj na više tabova. Može se koristiti na različitim stranicama, modulima ili dijelovima aplikacije gdje je potrebno prikazati više sadržaja grupiranih u tabove.</p>
                 <ul>
                     <h4>Kada korisiti tab</h4>

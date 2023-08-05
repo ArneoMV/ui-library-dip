@@ -1,19 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import Shadow from './Shadow';
+import './shadow.scss';
 import Table from '../Table/Table';
 import Tab from '../Tab/Tab';
-import codeJsx from './Code/shadow_jsx.txt';
 import codeScss from './Code/shadow_scss.txt';
 // import Prism from "prismjs";
 // import "../../styles/prism.css";
 
 const ShadowPage = () => {
     // Tab component
-    const [JSXfileContent, setFileContent] = useState('');
     const [SCSSfileContent, setSecondTabContent] = useState('');
 
     useEffect(() => {
-        fetchTextContent(codeJsx, setFileContent);
         fetchTextContent(codeScss, setSecondTabContent);
     }, []);
 
@@ -23,9 +20,8 @@ const ShadowPage = () => {
             .then((content) => setContent(content))
             .catch((error) => console.log(error));
     };
-    const tabHeaders = ['JSX', 'SCSS', ' - '];
+    const tabHeaders = ['SCSS', ' - '];
     const tabContent = [
-        JSXfileContent,
         SCSSfileContent,
         '-'
     ];
@@ -33,24 +29,23 @@ const ShadowPage = () => {
     // Table data
     const tableHeaders = ['Svojtsvo', 'Opis', 'Vrsta', 'Zadano'];
     const tableContent = [
-        { cell1: 'label', cell2: 'Label for the input field', cell3: 'string', cell4: '-' },
-        { cell1: 'placeholder', cell2: 'Placeholder text for the input field', cell3: 'string', cell4: '-' },
-        { cell1: 'type', cell2: 'Type of the input field', cell3: 'string', cell4: 'text' },
-        { cell1: 'success', cell2: 'Indicates a successful input', cell3: 'bool', cell4: 'false' },
-        { cell1: 'error', cell2: 'Error message for invalid input', cell3: 'string', cell4: '-' },
-        { cell1: 'disabled', cell2: 'Disables the input field', cell3: 'bool', cell4: 'false' }, 
+        { cell1: '$shadow-sm', cell2: 'Manja sjena koja daje suptilan osjećaj dubine', cell3: 'Box shadow', cell4: '1px 1px 4px 0px rgba(22, 24, 27, 0.16)' },
+        { cell1: '$shadow-md', cell2: 'Srednje velika sjena koja nudi umjereni prikaz dubine', cell3: 'Box shadow', cell4: '1px 1px 4px 0px rgba(22, 24, 27, 0.13)' },
+        { cell1: '$shadow-lg', cell2: 'Veća sjena koja stvara upečatljivu dimenzionalnost', cell3: 'Box shadow', cell4: '1px 5px 30px 0px rgba(22, 24, 27, 0.1)' },
+        { cell1: '$shadow-primary', cell2: 'Posebna sjena s prilagođenim bojama', cell3: 'Box shadow', cell4: '3px 3px 12px 0px rgba(131, 169, 218, 0.4)' },
     ];
 
 
     return (
         <div className="modular-page-structure">
             <article>
-                <h2>Shadow</h2>
-                <p>Osnovni widget za primanje korisničkog unosa je tekstualno polje. Tipkovnica i miš mogu se koristiti za unos ili promjenu podataka.</p>
+                <h2>Sjena</h2>
+                <p>Na web stranici koja opisuje sjene, mogu se pronaći četiri različite vrste sjena, svaka s vlastitim intenzitetom i bojom, što pruža fleksibilnost u oblikovanju i estetici elemenata na webu. Sjene igraju ključnu ulogu u stvaranju vizualne privlačnosti i hijerarhije među elementima, pridonoseći kohezivnosti i profesionalnosti dizajna. Zadane vrijednosti sjena pružaju nježne prijelaze i umjereni dojam dubine, ali moguće je prilagoditi boje i dimenzije kako bi se dodatno istaknuli određeni elementi u skladu s potrebama dizajna.</p>
                 <ul>
-                    <h4>Kada korisiti tab</h4>
-                    <li>Potreban je korisnički unos u polje obrasca.</li>
-                    <li>Potreban je unos za pretraživanje.</li>
+                    <h4>Kada korisiti sjenu</h4>
+                    <li>Sjena se često koristi kako bi se vizualno podigao element iznad ostalih na web stranici. To može biti primijenjeno na gumbima, karticama, izbornicima i drugim interaktivnim elementima kako bi se naglasila njihova interaktivnost.</li>
+                    <li>Može dodati dojam slojevitosti u dizajnu, što doprinosi hijerarhiji elemenata i čini stranicu vizualno zanimljivijom.</li>
+                    <li>Koristi se kako bi se naglasili određeni dijelovi dizajna, poput važnih poruka, obavijesti ili važnih dijelova sadržaja.</li>
                 </ul>
                 <h3>Vrste</h3>
                 <p>Postoje primarni gumb, zadani gumb, isprekidani gumb, tekstualni gumb i gumb za vezu</p>
@@ -60,10 +55,11 @@ const ShadowPage = () => {
             <div className="example-section column">
  
                 <div className="column">
-                    <div className="padding col-5-lg">
-                        <div className="col">
-                            <Shadow></Shadow>
-                        </div>
+                    <div className="padding row">
+                        <div className='shadow shadow-sm'></div>
+                        <div className='shadow shadow-md'></div>
+                        <div className='shadow shadow-lg'></div>
+                        <div className='shadow shadow-primary'></div>
                     </div>
                     <div className="horizontal-line"></div>
                     <div className="padding col-12-lg">

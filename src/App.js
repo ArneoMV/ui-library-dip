@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import './styles/scss/index.scss';
 
 import Navigation from './components/Homepage/Navigation.jsx';
 import Menu from './components/Homepage/Menu.jsx';
-import Overview from './components/Overview/Overview.jsx'; 
+import Pregled from './components/Pregled/Pregled.jsx'; 
 import ButtonPage from './components/Button/ButtonPage.jsx';
 import InputPage from './components/Input/InputPage.jsx';
 import CheckboxPage from './components/Checkbox/CheckboxPage.jsx';
@@ -31,7 +31,12 @@ const App = () => {
           </div>
           <div className='content col-8-sm col-8-md col-8-lg'>
             <Routes>
-              <Route path="/overview" element={<Overview />} />
+              {/* Uklonite element atribut */}
+              <Route path="/" />
+              {/* Dodajte Route koji će sadržavati element atribut */}
+              <Route path="/ui-librery-dip" element={<Pregled />} />
+              <Route path="/pregled" element={<Pregled />} />
+              {/* Dodatne rute */}
               <Route path="/button" element={<ButtonPage />} />
               <Route path="/input" element={<InputPage />} />
               <Route path="/checkbox" element={<CheckboxPage />} />
@@ -52,5 +57,6 @@ const App = () => {
   );
 };
 
-export default App;
+ReactDOM.render(<App />, document.getElementById('root'));
 
+export default App;

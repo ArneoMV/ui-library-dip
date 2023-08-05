@@ -3,6 +3,7 @@
 
 // COMPONENT STYLES
 @mixin Button {
+  max-width: fit-content;
   padding: 6px 14px;
   border: none;
   border-radius: $base-border-radius-md;

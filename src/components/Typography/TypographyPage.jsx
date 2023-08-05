@@ -6,7 +6,6 @@ import DividerH from '../Divider/DividerH';
 import codeTitleTextFile from './Code/title.txt';
 import codeParagrafTextFile from './Code/paragraf.txt';
 import codeStylesTextFile from './Code/styles.txt';
-
 // import Prism from "prismjs";
 // import "../../styles/prism.css";
 
@@ -57,7 +56,7 @@ const TypographyPage = () => {
 
     return (
         <div className="modular-page-structure">
-            <article className='col-7-lg'>
+            <article className='col-10-lg'>
                 <h2>Typography</h2>
                 <p>Napravljene su komponente Title (1/6), Paragraf i Link s korištenjem fluidne skale fonta kako bi se postiglo responzivno ponašanje teksta na različitim uređajima.</p>
                 <ul>
@@ -70,7 +69,7 @@ const TypographyPage = () => {
                 <p>Postoje primarni gumb, zadani gumb, isprekidani gumb, tekstualni gumb i gumb za vezu</p>
             </article>
             {/* Heading */}
-            <div className="example-section column">
+            <div className="example-section column col-10-lg">
                 <div className="column">
                         <div className="column col-gap-lg padding margin">
                             <Title level={1} color="neutral-700">.t1 Metro Design </Title>
@@ -81,7 +80,7 @@ const TypographyPage = () => {
                             <Title level={6} color="neutral-700">.t6 Metro Design </Title>
                         </div>
                         <DividerH />
-                    <div className="padding col-12-lg">
+                    <div className="padding col-10-lg">
                         <div className="code-container">
                             <Tab options={tabHeaders_1} content={tabContent_1} />
                         </div>
@@ -89,16 +88,18 @@ const TypographyPage = () => {
                 </div>  
             </div>
              {/* Paragraf */}
-            <div className="example-section column">
+            <div className="example-section column col-10-lg">
                 <div className="column">
-                    <div className="padding padding-top col-2-lg">
+                    <div className="padding padding-top">
                         <div className="column col-gap-lg ">
+
+                            {/* Paragraf */}
                             <Paragraf>Typo (default)</Paragraf>
                             <Paragraf type="primary">Typo (primary)</Paragraf>
                             <Paragraf type="success">Typo (success)</Paragraf>
                             <Paragraf type="warning">Typo (warning)</Paragraf>
                             <Paragraf type="danger">Typo (danger)</Paragraf>
-                            <Paragraf disabled>Ant Design (disabled)</Paragraf>
+                            <Paragraf disabled>Typo (disabled)</Paragraf>
                             <Paragraf mark>Typo (mark)</Paragraf>
                             <Paragraf code>Typo (code)</Paragraf>
                             <Paragraf keyboard>Typo (keyboard)</Paragraf>
@@ -106,6 +107,8 @@ const TypographyPage = () => {
                             <Paragraf delete>Typo (delete)</Paragraf>
                             <Paragraf strong>Typo (strong)</Paragraf>
                             <Paragraf italic>Typo (italic)</Paragraf>
+
+                            {/* Link */}
                             <Link href="https://www.youtube.com/watch?v=bXpiXEV-XNo" target="_blank">Typo (Link)</Link>
                         </div>
                     </div>
@@ -147,6 +150,7 @@ const TypographyPage = () => {
                     </div>
                 </div>
             </div>
+
 
         </div>
     );

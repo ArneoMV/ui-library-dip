@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { DevTool } from '@hookform/devtools';
 
+import './_form.scss';
 import Button from '../Button/Button';
 import Input from '../Input/Input';
 import Checkbox from '../Checkbox/Checkbox';
+
 
 const Form = () => {
   const {
@@ -37,9 +39,9 @@ const Form = () => {
   return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)} noValidate>
+        <div className="column form">
         <h3>Login</h3>
-        <div className="column form-control padding">
-          <Input
+        <Input
             label="Username"
             placeholder="Add name"
             register={register('username', {
@@ -54,8 +56,6 @@ const Form = () => {
               errors.username.message
             }
           />
-        </div>
-        <div className="column form">
           <Input
             label="Email"
             type="email"
@@ -80,12 +80,8 @@ const Form = () => {
             })}
             error={errors.email && errors.email.message}
           />
-        </div>
-        <div className="row">
-          <Checkbox label="Agree to terms and conditions" />
-        </div>
-        <div className="row">
-          <Button type="primary">Send</Button>
+           <Checkbox label="Agree to terms and conditions" />
+           <Button type="primary">Send</Button>
         </div>
       </form>
       <DevTool control={control} />
