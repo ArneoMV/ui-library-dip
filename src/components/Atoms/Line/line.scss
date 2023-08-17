@@ -1,0 +1,9 @@
+@use '../../../styles/scss/abstract/color' as *;
+@use '../../../styles/scss/base/variable' as *;
+
+.line {
+    width: 100px;
+    height: 100px;
+    border-radius: 99px;
+    background: $neutral-100;
+}

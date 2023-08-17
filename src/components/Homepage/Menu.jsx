@@ -12,6 +12,7 @@ const Menu = () => {
           <div className="menu-item"><NavLink to="/color">Boja</NavLink></div>
           <div className="menu-item"><NavLink to="/typography">Tipografija</NavLink></div>
           <div className="menu-item"><NavLink to="/shadow">Sjena</NavLink></div>
+          <div className="menu-item"><NavLink to="/line">Linija</NavLink></div>
         <div className="menu-item"><p>Molecules</p></div>
           <div className="menu-item"><NavLink to="/button">Gumbi</NavLink></div>
           <div className="menu-item"><NavLink to="/input">Unos</NavLink></div>

@@ -11,6 +11,7 @@ import IconPage from './components/Atoms/Icon/IconPage.jsx';
 import ColorPage from './components/Atoms/Color/ColorPage.jsx';
 import TypographyPage from './components/Atoms/Typography/TypographyPage.jsx';
 import ShadowPage from './components/Atoms/Shadow/ShadowPage.jsx';
+import LinePage from './components/Atoms/Line/LinePage.jsx';
 // Moleculs
 import ButtonPage from './components/Molecules/Button/ButtonPage.jsx';
 import InputPage from './components/Molecules/Input/InputPage.jsx';
@@ -55,6 +56,7 @@ const App = () => {
               <Route path="/typography" element={<TypographyPage />} />
               <Route path="/shadow" element={<ShadowPage />} />
               <Route path="/alert" element={<AlertPage />} />
+              <Route path="/line" element={<LinePage />} />
             </Routes>
           </div>
         </main>

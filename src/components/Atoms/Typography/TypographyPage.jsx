@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Title, Paragraf, Button, Caption, Link } from './Typography';
 import Table from '../../Organism/Table/Table';
 import Tab from '../../Organism/Tab/Tab';
-import DividerH from '../Divider/DividerH';
+import Line from '../Line/Line';
 
 import codeTitleTextFile from './Code/title.txt';
 import codeParagrafTextFile from './Code/paragraf.txt';
@@ -80,7 +80,7 @@ const TypographyPage = () => {
                             <Title level={5} color="neutral-700">.t5 Metro Design </Title>
                             <Title level={6} color="neutral-700">.t6 Metro Design </Title>
                         </div>
-                        <DividerH />
+                        <Line />
                     <div className="padding col-10-lg">
                         <div className="code-container">
                             <Tab options={tabHeaders_1} content={tabContent_1} />
@@ -113,7 +113,7 @@ const TypographyPage = () => {
                             <Link href="https://www.youtube.com/watch?v=bXpiXEV-XNo" target="_blank">Typo (Link)</Link>
                         </div>
                     </div>
-                    <DividerH />
+                    <Line />
                     <div className="padding col-12-lg">
                         <div className="code-container">
                             <Tab options={tabHeaders_2} content={tabContent_2} />
@@ -143,7 +143,7 @@ const TypographyPage = () => {
                         </div>
                     </div>
 
-                    <DividerH />
+                    <Line />
                     <div className="padding col-12-lg">
                         <div className="code-container">
                             <Tab options={tabHeaders_3} content={tabContent_3} />

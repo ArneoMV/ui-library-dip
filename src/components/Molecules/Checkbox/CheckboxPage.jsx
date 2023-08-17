@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import DividerH from '../../Atoms/Divider/DividerH';
+import Line from '../../Atoms/Line/Line';
 import Table from '../../Organism/Table/Table';
 import Tab from '../../Organism/Tab/Tab';
 
@@ -81,7 +81,7 @@ const CheckboxPage = () => {
                         <Checkbox label="Error" error />
                         </div>
                     </div>
-                    <DividerH />
+                    <Line />
                     <div className="padding col-12-lg">
  
                         <div className="code-container">

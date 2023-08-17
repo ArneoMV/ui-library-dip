@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react';
 
 
-import DividerH from '../../Atoms/Divider/DividerH';
+import Line from '../../Atoms/Line/Line';
 import Button from '../../Molecules/Button/Button.jsx';
 import Tab from '../../Organism/Tab/Tab';
 import Table from '../../Organism/Table/Table';
@@ -92,7 +92,7 @@ const AlertPage = () => {
 
                     </div>
 
-                    <DividerH />
+                    <Line />
                     <div className="padding col-12-lg">
  
                         <div className="code-container">

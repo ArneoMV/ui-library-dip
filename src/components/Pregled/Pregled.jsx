@@ -10,10 +10,11 @@ const Pregled = () => {
         <div className="horizontal-line"></div>
         <h3>Atomi</h3>
         <div className="row">
-          <ComponentCard title="Icon" image={ComponentImage.construction} />
-          <ComponentCard title="Color" image={ComponentImage.color_primary} />
+          <ComponentCard title="Icon" image={ComponentImage.icon} />
+          <ComponentCard title="Color" image={ComponentImage.color} />
           <ComponentCard title="Typography" image={ComponentImage.typo} />
           <ComponentCard title="Shadow" image={ComponentImage.shadow} />
+          <ComponentCard title="Line" image={ComponentImage.line} />
         </div>
         <h3>Molekule</h3>
         <div className="row">

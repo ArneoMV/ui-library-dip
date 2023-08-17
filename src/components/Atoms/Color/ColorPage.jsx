@@ -9,7 +9,7 @@ import Tab from '../../Organism/Tab/Tab';
 import codeJsx from './Code/color_jsx.txt';
 import codeScss from './Code/color_scss.txt';
 import { Title, Paragraf, Button, Caption, Link } from '../Typography/Typography.jsx';
-import DividerH from '../Divider/DividerH';
+import Line from '../Line/Line';
 
 
 const ColorPage = () => {
@@ -117,7 +117,7 @@ const ColorPage = () => {
                             <ColorCard colorName="Neutral 900" colorHex="#060606" onClick={handleShowAlert} />
                         </div>
                     </div>
-                    <DividerH />
+                    <Line />
                     <div className="padding col-12-lg">
  
                         <div className="code-container">

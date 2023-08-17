@@ -1,18 +1,20 @@
 
 // images.jsx
 const ComponentImage = {
-  button: require('../image/component/Button.jpg'),
+  button: require('../image/component/Button.png'),
   checkbox: require('../image/component/Checkbox.jpg'),
-  input: require('../image/component/Input.jpg'),
+  input: require('../image/component/Input.png'),
   radio: require('../image/component/Radio.jpg'),
-  select: require('../image/component/Select.jpg'),
-  form: require('../image/component/form.jpg'),
-  color_primary: require('../image/component/color_primary.jpg'),
+  select: require('../image/component/Select.png'),
+  form: require('../image/component/form.png'),
+  color: require('../image/component/color.png'),
   construction: require('../image/component/construction.jpg'),
-  typo: require('../image/component/typo.jpg'),
-  alert: require('../image/component/alert.jpg'),
-  tab: require('../image/component/tab.jpg'),
+  typo: require('../image/component/typo.png'),
+  alert: require('../image/component/alert.png'),
+  tab: require('../image/component/tab.png'),
   shadow: require('../image/component/Shadow.png'),
+  icon: require('../image/component/Icon.png'),
+  line: require('../image/component/line.png'),
 };
 
 const IconImage = {
