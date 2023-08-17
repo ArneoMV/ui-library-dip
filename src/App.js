@@ -3,22 +3,28 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import './styles/scss/index.scss';
-
 import Navigation from './components/Homepage/Navigation.jsx';
 import Menu from './components/Homepage/Menu.jsx';
 import Pregled from './components/Pregled/Pregled.jsx'; 
-import ButtonPage from './components/Button/ButtonPage.jsx';
-import InputPage from './components/Input/InputPage.jsx';
-import CheckboxPage from './components/Checkbox/CheckboxPage.jsx';
-import RadioPage from './components/Radio/RadioPage.jsx';
-import SelectPage from './components/Select/SelectPage.jsx';
-import FormPage from './components/Form/FormPage.jsx';
-import TabPage from './components/Tab/TabPage.jsx';
-import IconPage from './components/Icon/IconPage.jsx';
-import ColorPage from './components/Color/ColorPage.jsx';
-import TypographyPage from './components/Typography/TypographyPage.jsx';
-import ShadowPage from './components/Shadow/ShadowPage.jsx';
-import AlertPage from './components/Alert/AlertPage.jsx';
+// Atoms
+import IconPage from './components/Atoms/Icon/IconPage.jsx';
+import ColorPage from './components/Atoms/Color/ColorPage.jsx';
+import TypographyPage from './components/Atoms/Typography/TypographyPage.jsx';
+import ShadowPage from './components/Atoms/Shadow/ShadowPage.jsx';
+// Moleculs
+import ButtonPage from './components/Molecules/Button/ButtonPage.jsx';
+import InputPage from './components/Molecules/Input/InputPage.jsx';
+import CheckboxPage from './components/Molecules/Checkbox/CheckboxPage.jsx';
+import RadioPage from './components/Molecules/Radio/RadioPage.jsx';
+import SelectPage from './components/Molecules/Select/SelectPage.jsx';
+
+// Organism
+import AlertPage from './components/Organism/Alert/AlertPage.jsx';
+import FormPage from './components/Organism/Form/FormPage.jsx';
+import TabPage from './components/Organism/Tab/TabPage.jsx';
+// Tamplates
+
+// Pages
 
 const App = () => {
   return (

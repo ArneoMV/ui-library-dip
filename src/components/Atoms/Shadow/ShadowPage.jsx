@@ -1,0 +1,82 @@
+import React, { useEffect, useState } from 'react';
+import './shadow.scss';
+import Table from '../../Organism/Table/Table';
+import Tab from '../../Organism/Tab/Tab';
+
+import codeScss from './Code/shadow_scss.txt';
+// import Prism from "prismjs";
+// import "../../styles/prism.css";
+
+const ShadowPage = () => {
+    // Tab component
+    const [SCSSfileContent, setSecondTabContent] = useState('');
+
+    useEffect(() => {
+        fetchTextContent(codeScss, setSecondTabContent);
+    }, []);
+
+    const fetchTextContent = (url, setContent) => {
+        fetch(url)
+            .then((response) => response.text())
+            .then((content) => setContent(content))
+            .catch((error) => console.log(error));
+    };
+    const tabHeaders = ['SCSS', ' - '];
+    const tabContent = [
+        SCSSfileContent,
+        '-'
+    ];
+
+    // Table data
+    const tableHeaders = ['Svojtsvo', 'Opis', 'Vrsta', 'Zadano'];
+    const tableContent = [
+        { cell1: '$shadow-sm', cell2: 'Manja sjena koja daje suptilan osjećaj dubine', cell3: 'Box shadow', cell4: '1px 1px 4px 0px rgba(22, 24, 27, 0.16)' },
+        { cell1: '$shadow-md', cell2: 'Srednje velika sjena koja nudi umjereni prikaz dubine', cell3: 'Box shadow', cell4: '1px 1px 4px 0px rgba(22, 24, 27, 0.13)' },
+        { cell1: '$shadow-lg', cell2: 'Veća sjena koja stvara upečatljivu dimenzionalnost', cell3: 'Box shadow', cell4: '1px 5px 30px 0px rgba(22, 24, 27, 0.1)' },
+        { cell1: '$shadow-primary', cell2: 'Posebna sjena s prilagođenim bojama', cell3: 'Box shadow', cell4: '3px 3px 12px 0px rgba(131, 169, 218, 0.4)' },
+    ];
+
+
+    return (
+        <div className="modular-page-structure">
+            <article>
+                <h2>Sjena</h2>
+                <p>Na web stranici koja opisuje sjene, mogu se pronaći četiri različite vrste sjena, svaka s vlastitim intenzitetom i bojom, što pruža fleksibilnost u oblikovanju i estetici elemenata na webu. Sjene igraju ključnu ulogu u stvaranju vizualne privlačnosti i hijerarhije među elementima, pridonoseći kohezivnosti i profesionalnosti dizajna. Zadane vrijednosti sjena pružaju nježne prijelaze i umjereni dojam dubine, ali moguće je prilagoditi boje i dimenzije kako bi se dodatno istaknuli određeni elementi u skladu s potrebama dizajna.</p>
+                <ul>
+                    <h4>Kada korisiti sjenu</h4>
+                    <li>Sjena se često koristi kako bi se vizualno podigao element iznad ostalih na web stranici. To može biti primijenjeno na gumbima, karticama, izbornicima i drugim interaktivnim elementima kako bi se naglasila njihova interaktivnost.</li>
+                    <li>Može dodati dojam slojevitosti u dizajnu, što doprinosi hijerarhiji elemenata i čini stranicu vizualno zanimljivijom.</li>
+                    <li>Koristi se kako bi se naglasili određeni dijelovi dizajna, poput važnih poruka, obavijesti ili važnih dijelova sadržaja.</li>
+                </ul>
+                <h3>Vrste</h3>
+                <p>Postoje primarni gumb, zadani gumb, isprekidani gumb, tekstualni gumb i gumb za vezu</p>
+            </article>
+
+            {/* Primjeri */}
+            <div className="example-section column">
+ 
+                <div className="column">
+                    <div className="padding row">
+                        <div className='shadow shadow-sm'></div>
+                        <div className='shadow shadow-md'></div>
+                        <div className='shadow shadow-lg'></div>
+                        <div className='shadow shadow-primary'></div>
+                    </div>
+                    <div className="horizontal-line"></div>
+                    <div className="padding col-12-lg">
+ 
+                        <div className="code-container">
+                            <Tab options={tabHeaders} content={tabContent} />
+                        </div>
+ 
+                    </div>
+                </div>
+            </div>
+ 
+            {/* Table */}
+            <Table data={tableContent} headers={tableHeaders}/>
+        </div>
+    );
+};
+
+export default ShadowPage;
