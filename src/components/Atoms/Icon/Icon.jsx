@@ -1,10 +1,22 @@
 import React from 'react';
+import { Images } from './Images';
+import '../../../styles/scss/abstract/_color.scss';
 
-const Icon = () => {
+const Icon = ({ name, width = '20px', height = '20px', color }) => {
+  const IconComponent = Images[name];
+
+  if (!IconComponent) {
+    return null;
+  }
+
+  const iconStyle = {
+    width,
+    height,
+    fill: color || 'var(--neutral-900)',
+  };
+
   return (
-    <div className="test">
-      {/* Add any other content you want here */}
-    </div>
+    <IconComponent style={iconStyle} />
   );
 };
 

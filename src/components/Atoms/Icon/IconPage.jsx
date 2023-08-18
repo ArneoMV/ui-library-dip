@@ -2,11 +2,9 @@ import React, { useEffect, useState } from 'react';
 import Table from '../../Organism/Table/Table';
 import Tab from '../../Organism/Tab/Tab';
 
-import Icon from './Icon';
+import IconComponent from './Icon';
 import codeJsx from './Code/icon_jsx.txt';
 import codeScss from './Code/icon_scss.txt';
-// import Prism from "prismjs";
-// import "../../styles/prism.css";
 
 const IconPage = () => {
     // Tab component
@@ -63,7 +61,11 @@ const IconPage = () => {
                 <div className="column">
                     <div className="padding col-5-lg">
                         <div className="col">
-                            <Icon></Icon>
+                             {/* Prikaz ikone "icon1" */}
+                             <IconComponent name="icon1" />
+                            
+                            {/* Prikaz ikone "icon2" s drugačijom bojom */}
+                            {/* <Icon name="icon2" color="red" /> */}
                         </div>
                     </div>
                     <div className="horizontal-line"></div>
