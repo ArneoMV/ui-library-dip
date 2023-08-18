@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Table from '../../Organism/Table/Table';
 import Tab from '../../Organism/Tab/Tab';
-
-import IconComponent from './Icon';
+import Icon from './Icon';
+import './icon.scss';
 import codeJsx from './Code/icon_jsx.txt';
 import codeScss from './Code/icon_scss.txt';
 
@@ -30,26 +30,26 @@ const IconPage = () => {
     ];
 
     // Table data
-    const tableHeaders = ['Svojtsvo', 'Opis', 'Vrsta', 'Zadano'];
+    const tableHeaders = ['Svojtsvo', 'Opis', 'Zadano'];
     const tableContent = [
-        { cell1: 'label', cell2: 'Label for the input field', cell3: 'string', cell4: '-' },
-        { cell1: 'placeholder', cell2: 'Placeholder text for the input field', cell3: 'string', cell4: '-' },
-        { cell1: 'type', cell2: 'Type of the input field', cell3: 'string', cell4: 'text' },
-        { cell1: 'success', cell2: 'Indicates a successful input', cell3: 'bool', cell4: 'false' },
-        { cell1: 'error', cell2: 'Error message for invalid input', cell3: 'string', cell4: '-' },
-        { cell1: 'disabled', cell2: 'Disables the input field', cell3: 'bool', cell4: 'false' }, 
+        { cell1: 'name', cell2: 'Naziv ikone koji se koristi za odabir slike', cell4: '-' },
+        { cell1: 'width', cell2: 'Širina ikone', cell4: '20px' },
+        { cell1: 'height', cell2: 'Visina ikone', cell4: '20px' },
+        { cell1: 'color', cell2: 'Boja ikone', cell4: 'neutral-900' }
     ];
 
 
     return (
-        <div className="modular-page-structure">
+        <div className="modular-page-structure icon">
             <article>
                 <h2>Icon</h2>
-                <p>Osnovni widget za primanje korisničkog unosa je tekstualno polje. Tipkovnica i miš mogu se koristiti za unos ili promjenu podataka.</p>
+                <p>Ikone su grafički elementi koji predstavljaju određenu vizualnu ilustraciju ili simbol. 
+                    U Reactu, ikone se obično koriste kao zamjene za tekstualne oznake kako bi se poboljšala vizualna privlačnost i prepoznatljivost korisničkog sučelja.</p>
                 <ul>
                     <h4>Kada korisiti tab</h4>
-                    <li>Potreban je korisnički unos u polje obrasca.</li>
-                    <li>Potreban je unos za pretraživanje.</li>
+                    <li>Zamjenjuju tekstualne oznake radi bolje estetike i jasnoće.</li>
+                    <li>Povećavaju prepoznatljivost i privlačnost korisničkog sučelja.</li>
+                    <li>Često se koriste u gumbima, navigaciji, upozorenjima i drugim komponentama</li>
                 </ul>
                 <h3>Vrste</h3>
                 <p>Postoje primarni gumb, zadani gumb, isprekidani gumb, tekstualni gumb i gumb za vezu</p>
@@ -60,9 +60,37 @@ const IconPage = () => {
  
                 <div className="column">
                     <div className="padding col-5-lg">
-                        <div className="col">
+                        <div className="row">
                              {/* Prikaz ikone "icon1" */}
-                             <IconComponent name="icon1" />
+                             <Icon name="arrowDown" />
+                             <Icon name="arrowLeftShortFill" />
+                             <Icon name="arrowRightShortFill" />
+                             <Icon name="arrowUp" />
+                             <Icon name="bookmarkCheckFill" />
+                             <Icon name="bookmarkPlusFill" />
+                             <Icon name="calendarAllFill" />
+                             <Icon name="check2" />
+                             <Icon name="checkCircleFill" />
+                             <Icon name="chevronCompactLeft" />
+                             <Icon name="chevronCompactRight" />
+                             <Icon name="chevronLeft2" />
+                             <Icon name="chevronRight2" />
+                             <Icon name="exclamationCircleFill" />
+                             <Icon name="exclamationDiamondFill" />
+                             <Icon name="forwardFill" />
+                             <Icon name="houseFill" />
+                             <Icon name="imageFill" />
+                             <Icon name="infoCircleFill" />
+                             <Icon name="patchCheckFill" />
+                             <Icon name="pencilFill" />
+                             <Icon name="personFill" />
+                             <Icon name="plusCircleFill" />
+                             <Icon name="plus" />
+                             <Icon name="search" />
+                             <Icon name="threeDotsVertical" />
+                             <Icon name="threeDots" />
+                             <Icon name="xCircleFill" />
+                             <Icon name="x" />
                             
                             {/* Prikaz ikone "icon2" s drugačijom bojom */}
                             {/* <Icon name="icon2" color="red" /> */}

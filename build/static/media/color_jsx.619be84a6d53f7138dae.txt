@@ -1,0 +1,55 @@
+.color-page {
+    .example-section {
+        .color-palette {
+
+        }
+        // Define the default styles for the div
+        .color-palette {
+            width: 100px;
+            height: 50px;
+            background-color: blue;
+            transition: width 0.3s ease; // Add a transition to the width property
+        }
+        
+        // Add a hover style to increase the width to 140px
+        .color-palette:hover {
+            width: 140px;
+        }
+    }
+}
+  .color-card {
+    position: relative;
+    height: 44px;
+    margin-right: 4px;
+    padding: 0 12px;
+    font-size: 14px;
+    font-family: Consolas,sans-serif;
+    line-height: 44px;
+    cursor: pointer;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+
+    .color-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        height: 100%;
+
+    }
+}
+  .color-card:hover {
+    margin-right: -8px;
+    border-radius: 0 4px 4px 0;
+}
+
+
+
+.color-name {
+margin-right: 16px;
+}
+
+.color-hex {
+font-weight: normal;
+}
+  

@@ -1,0 +1,20 @@
+export const Title = ({ level, color, uppercase, lowercase, link, children }) => {
+  const HeadingTag = `h${level}`;
+  const className = `typo title-${level}`;
+  const textTransform = uppercase ? 'uppercase' : lowercase ? 'lowercase' : 'none';
+
+  const style = {
+    color: color ? `var(--${color})` : 'inherit',
+    textTransform,
+  };
+
+  return link ? (
+    <a href={link} className={className} style={style}>
+      {children}
+    </a>
+  ) : (
+    <HeadingTag className={className} style={style}>
+      {children}
+    </HeadingTag>
+  );
+};

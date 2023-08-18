@@ -1,22 +1,21 @@
 import React from 'react';
-import { Images } from './Images';
+import { IconImage } from './Images';
 import '../../../styles/scss/abstract/_color.scss';
 
-const Icon = ({ name, width = '20px', height = '20px', color }) => {
-  const IconComponent = Images[name];
-
-  if (!IconComponent) {
+const Icon = ({ name }) => {
+  const iconImageSrc = IconImage[name];
+  
+  if (!iconImageSrc) {
     return null;
   }
 
   const iconStyle = {
-    width,
-    height,
-    fill: color || 'var(--neutral-900)',
+    width: '20px', // Set the desired width here
+    height: '20px', // Set the desired height here
   };
 
   return (
-    <IconComponent style={iconStyle} />
+    <img src={iconImageSrc} alt={`Icon ${name}`} style={iconStyle} />
   );
 };
 
