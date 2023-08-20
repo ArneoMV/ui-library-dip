@@ -1,28 +1,28 @@
 
 // images.jsx
 const ComponentImage = {
-  button: require('../image/component/Button.png'),
-  checkbox: require('../image/component/Checkbox.jpg'),
-  input: require('../image/component/Input.png'),
-  radio: require('../image/component/Radio.jpg'),
-  select: require('../image/component/Select.png'),
-  form: require('../image/component/form.png'),
-  color: require('../image/component/color.png'),
-  construction: require('../image/component/construction.jpg'),
-  typo: require('../image/component/typo.png'),
-  alert: require('../image/component/alert.png'),
-  tab: require('../image/component/tab.png'),
-  shadow: require('../image/component/Shadow.png'),
-  icon: require('../image/component/Icon.png'),
-  line: require('../image/component/line.png'),
+  button: require('../assets/component/Button.png'),
+  checkbox: require('../assets/component/Checkbox.jpg'),
+  input: require('../assets/component/Input.png'),
+  radio: require('../assets/component/Radio.jpg'),
+  select: require('../assets/component/Select.png'),
+  form: require('../assets/component/form.png'),
+  color: require('../assets/component/color.png'),
+  construction: require('../assets/component/construction.jpg'),
+  typo: require('../assets/component/typo.png'),
+  alert: require('../assets/component/alert.png'),
+  tab: require('../assets/component/tab.png'),
+  shadow: require('../assets/component/Shadow.png'),
+  icon: require('../assets/component/Icon.png'),
+  line: require('../assets/component/line.png'),
 };
 
 const IconImage = {
-  checkCircle: require('../image/icon/check-circle.svg').default,
-  info: require('../image/icon/info.svg').default,
-  success: require('../image/icon/success.svg').default,
-  warning: require('../image/icon/warning.svg').default,
-  error: require('../image/icon/error.svg').default,
+  checkCircle: require('../assets/icon/check-circle.svg').default,
+  info: require('../assets/icon/info.svg').default,
+  success: require('../assets/icon/success.svg').default,
+  warning: require('../assets/icon/warning.svg').default,
+  error: require('../assets/icon/error.svg').default,
   // Add more icon images as needed
 };
 

@@ -1,6 +1,14 @@
+
+@use '../../../styles/scss/abstract/color' as *;
+@use '../../../styles/scss/base/variable' as *;
+
 .icon {
     .row {
         flex-direction: row;
         flex-wrap: wrap;
     }
+}
+
+  .icon-color {
+    fill: $neutral-300;
 }

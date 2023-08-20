@@ -98,6 +98,14 @@ const ButtonPage = () => {
                             <Button type="link" className="focus">Focused</Button>
                             <Button type="link" disabled>Disabled</Button>
                         </div>
+                        <div className="row padding">
+                            <h5 className="example-title">Icon</h5>
+                            <Button type="icon" iconName="arrowLeftShortFill" />
+                            <Button type="icon" iconName="check2" />
+                            <Button type="icon" iconName="capslockFill" />
+                            <Button type="icon" iconName="chevronRight2" />
+                            <Button type="icon" iconName="pencilFill" />
+                        </div>
                         </div>
                     </div>
                     <div className="horizontal-line"></div>

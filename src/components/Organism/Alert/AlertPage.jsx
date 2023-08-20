@@ -84,10 +84,10 @@ const AlertPage = () => {
                 <div className="column">
                     <div className="padding row">
                         <div className="row">
-                            <Button type="primary" onClick={handleShowAlertInfo}>Info Alert</Button>
-                            <Button type="primary" onClick={handleShowAlertSuccess}>Success Alert</Button>
-                            <Button type="primary" onClick={handleShowAlertWarrning}>Warning Alert</Button>
-                            <Button type="primary" onClick={handleShowAlertError}>Error Alert</Button>
+                            <Button type="link" onClick={handleShowAlertInfo}>Info Alert</Button>
+                            <Button type="link" onClick={handleShowAlertSuccess}>Success Alert</Button>
+                            <Button type="link" onClick={handleShowAlertWarrning}>Warning Alert</Button>
+                            <Button type="link" onClick={handleShowAlertError}>Error Alert</Button>
                         </div>
 
                     </div>

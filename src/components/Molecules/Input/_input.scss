@@ -75,13 +75,15 @@
 
   .input-wrapper {
     position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   }
 
   .input-field {
     @include input-base();
 
     &:hover {
-      box-sizing: border-box;
       background-color: $neutral-100;
       border: 2px solid $primary-300;
       box-shadow: $shadow-sm;

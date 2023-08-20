@@ -17,7 +17,7 @@
     align-items: center;
     justify-content: space-between;
     height: 38px; /* Set the height of the select-header */
-    width: 100%; /* Set the width to occupy the entire available space */
+    width: auto; /* Set the width to occupy the entire available space */
     padding: 0.5rem;
     border: 1px solid $neutral-300;
     border-radius: $base-border-radius-sm;
@@ -57,8 +57,7 @@
     border: 1px solid $neutral-300;
     box-shadow: $shadow-sm;
     border-top: none;
-    border-bottom-right-radius: $base-border-radius-sm;
-    border-bottom-left-radius: $base-border-radius-sm;
+    border-radius: $base-border-radius-sm;
 
     .select-option {
         padding: 0.5rem;
@@ -88,7 +87,7 @@
                 color: $primary-500;
             }
             p {
-                color: $primary-500;
+                // color: $primary-500;
             }
             &.checkbox {
                 .option-icon {

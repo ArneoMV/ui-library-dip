@@ -12,14 +12,14 @@ import codeScss from './Code/select_scss.txt';
 const SelectPage = () => {
   // Select component
   const options_1 = [
-    { label: 'Placeholder 1' },
-    { label: 'Placeholder 2' },
-    { label: 'Placeholder 3' },
+    { label: 'Liquorice cake' },
+    { label: 'Toffee soufflé wafer' },
+    { label: 'Tootsie roll candy' },
   ];
   const options_2 = [
-    { label: 'Placeholder 4' },
-    { label: 'Placeholder 5' },
-    { label: 'Placeholder 6' },
+    { label: 'Ice cream' },
+    { label: 'Lemon drop' },
+    { label: 'Halvah jelly' },
   ];
 
   const [isOpen1, setIsOpen1] = useState(false);
@@ -97,7 +97,7 @@ const SelectPage = () => {
                             selectNumber={1}
                           />
                           <Select
-                            title="Checkbox"
+                            title="Chupa chups"
                             type="checkbox"
                             options={options_2}
                             isOpen={isOpen2}

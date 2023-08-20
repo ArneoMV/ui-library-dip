@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import './_select.scss';
-import { ReactSVG } from 'react-svg';
-import arrowDownSvg from '../../../image/icon/Arrow-down.svg';
-import checkIcon from '../../../image/icon/check.svg';
+import arrowDownSvg from '../../../assets/icon/Arrow-down.svg';
+import checkIcon from '../../../assets/icon/check.svg';
+import Icon from '../../Atoms/Icon/Icon';
+import '../../Atoms/Icon/icon.scss';
+import { neutral, success } from '../../Atoms/Color/Color';
 
 const Select = ({ type, options, selectNumber, isOpen, toggleOpen, onSelect, title }) => {
   const [selectedOptions, setSelectedOptions] = useState([]);
@@ -23,11 +25,19 @@ const Select = ({ type, options, selectNumber, isOpen, toggleOpen, onSelect, tit
     onSelect(updatedOptions);
   };
 
+  const neutral500 = neutral[500];
+  const neutral300 = neutral[300];
+  const success500 = success[500];
+
   return (
     <div className={classNames('select', { 'select-checkbox': type === 'checkbox' })}>
       <div className={classNames('select-header', { open: isOpen })} onClick={toggleOpen}>
         <span className="select-label">{title}</span>
-        <ReactSVG src={arrowDownSvg} className={classNames('select-arrow', { up: isOpen })} />
+        <Icon 
+          name="arrowDown" 
+          className={classNames('select-arrow', { up: isOpen })}
+        />
+
       </div>
       {isOpen && (
   <div className="select-options">
@@ -48,7 +58,13 @@ const Select = ({ type, options, selectNumber, isOpen, toggleOpen, onSelect, tit
               })}
               onClick={() => handleOptionClick(option)}
             >
-              <img src={checkIcon} className="option-icon" alt="Check" />
+              {/* <img src={checkIcon} className="option-icon" alt="Check" /> */}
+              <Icon 
+                name="check2" 
+                className="option-icon icon"
+                // color={success}
+               />
+
             </div>
           </>
         )}

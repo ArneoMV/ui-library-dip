@@ -9,6 +9,7 @@
   border-radius: $base-border-radius-md;
   cursor: pointer;
   // text-transform: uppercase;
+  height: 34px;
 
   font-family: "Rubik", sans-serif;
   color: $primary-600;
@@ -89,7 +90,11 @@
     cursor: not-allowed;
   }
 }
-
+.button.icon {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
 
 // Button page
 .button-page {

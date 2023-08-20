@@ -5,7 +5,7 @@ import { DevTool } from '@hookform/devtools';
 import './_form.scss';
 import Button from '../../Molecules/Button/Button';
 import Input from '../../Molecules/Input/Input';
-import Checkbox from '../../Molecules/Checkbox/Checkbox';
+import { Title, Paragraf } from '../../Atoms/Typography/Typography';
 
 
 const Form = () => {
@@ -39,11 +39,17 @@ const Form = () => {
   return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)} noValidate>
-        <div className="column form">
-        <h3>Login</h3>
-        <Input
+        <div className='header'>
+          <div className='row'>
+            <Button type="icon" iconName="arrowLeftShortFill" />
+          </div>
+        </div>
+
+
+        <div className='column form-content'>
+          <Input
             label="Username"
-            placeholder="Add name"
+            placeholder="Add username"
             register={register('username', {
               required: {
                 value: true,
@@ -57,12 +63,12 @@ const Form = () => {
             }
           />
           <Input
-            label="Email"
-            type="email"
-            placeholder="Add email"
+            label="Password"
+            type="Password"
+            placeholder="Add password"
             register={register('email', {
               required: {
-                value: true,
+              value: true,
                 message: 'Email is required',
               },
               pattern: {
@@ -80,8 +86,14 @@ const Form = () => {
             })}
             error={errors.email && errors.email.message}
           />
-           <Checkbox label="Agree to terms and conditions" />
-           <Button type="primary">Send</Button>
+          <div className='row'>
+            <Title level={4} color="neutral-700">Sign In</Title>
+            <Button type="icon" iconName="chevronRight2" />
+          </div>
+          <div className='row'>
+            <Button type="link">Sign in</Button>
+            <Button type="link">Forgot password</Button>
+          </div>
         </div>
       </form>
       <DevTool control={control} />

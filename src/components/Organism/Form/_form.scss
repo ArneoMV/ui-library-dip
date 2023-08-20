@@ -3,10 +3,8 @@
 
 
 
-.form {
-    border-radius: $base-border-radius-sm;
-    padding: $base-padding;
-
+form {
+    border-radius: $base-border-radius-lg;
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -14,12 +12,10 @@
     justify-content: space-evenly;
 
     margin-bottom: 20px;
-    background-color: $neutral-200;
+    background-color: $neutral-100;
+    box-shadow: $shadow-lg;
     .column {
         gap: 24px;
-    }
-    .row {
-        justify-content: flex-start;
     }
     .error {
         color: $error-300;
@@ -30,6 +26,30 @@
     .chekbox-container {
         flex-direction: row;
     }
+}
+
+
+.header {
+  background-image: url(./assets/Forma_za_prijavu.png);
+  height: 300px;
+  width: 100%;
+  display: flex;
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: relative;
+  background-size: cover;
+  overflow: hidden;
+  border-radius: $base-border-radius-lg $base-border-radius-lg 0 0;
+  .row {
+    padding: $base-padding;
+  }
+}
+.form-content {
+  padding: $base-padding;
+  .row {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .form-input {

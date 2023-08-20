@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './_tab.scss';
-// import Prism from "prismjs";
-// import "../../styles/prism.css";
+
  
 const Tab = ({ options = [], content = [] }) => {
   const [activeTab, setActiveTab] = useState(0);
