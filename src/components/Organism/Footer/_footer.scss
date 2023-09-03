@@ -1,0 +1,27 @@
+@use '../../../styles/scss/abstract/color' as *;
+@use '../../../styles/scss/base/variable' as *;
+
+.footer {
+    width: 100%;
+    box-shadow: $shadow-lg;
+    border-radius: $base-border-radius-lg;
+    border-radius: $base-border-radius-lg $base-border-radius-lg 0 0;
+    background-color: $neutral-100;
+    .footerContainer {
+        padding: 80px 24px;
+        box-sizing: border-box;
+        width: 100%;
+        display: flex;
+        gap: 16em;
+        justify-content: center;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .logo-container {
+
+    }
+    .links-container, .cta-container {
+        display: flex;
+        gap: 24px;
+    }
+}

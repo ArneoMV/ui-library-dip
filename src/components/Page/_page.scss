@@ -1,0 +1,24 @@
+@use '../../styles/scss/abstract/color' as *;
+@use '../../styles/scss/base/variable' as *;
+
+.page {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  gap: 50px;
+  background: $gradient;
+
+  .main {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  form {
+    width: 333px;
+  }
+}
+  

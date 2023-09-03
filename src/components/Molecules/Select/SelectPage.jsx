@@ -6,8 +6,6 @@ import Select from './Select';
 import codeJsx from './Code/select_jsx.txt';
 import codeScss from './Code/select_scss.txt';
 
-// import Prism from "prismjs";
-// import "../../styles/prism.css";
 
 const SelectPage = () => {
   // Select component
@@ -64,7 +62,7 @@ const SelectPage = () => {
         { cell1: 'title', cell2: 'Funkcija za obradu odabira', cell3: 'string', cell4: 'Default' },
         { cell1: 'type', cell2: 'Vrsta select komponente', cell3: 'string', cell4: 'Default' },
         { cell1: 'options', cell2: 'Opcije za select', cell3: 'array', cell4: 'options_1' },
-        { cell1: 'selectNumber', cell2: 'Broj odabira selecta', cell3: 'number', cell4: '1' },
+        // { cell1: 'selectNumber', cell2: 'Broj odabira selecta', cell3: 'number', cell4: '1' },
         { cell1: 'isOpen', cell2: 'Zastavica za kontrolu stanja otvorenosti', cell3: 'bool', cell4: 'isOpen1' },
         { cell1: 'toggleOpen', cell2: 'Funkcija za prebacivanje stanja otvorenosti', cell3: 'func', cell4: 'toggleOpen1' },
         { cell1: 'onSelect', cell2: '	Funkcija za obradu odabira', cell3: 'func', cell4: 'handleOptionSelect1' },
@@ -94,7 +92,6 @@ const SelectPage = () => {
                             isOpen={isOpen1}
                             toggleOpen={toggleOpen1}
                             onSelect={handleOptionSelect1}
-                            selectNumber={1}
                           />
                           <Select
                             title="Chupa chups"
@@ -103,7 +100,6 @@ const SelectPage = () => {
                             isOpen={isOpen2}
                             toggleOpen={toggleOpen2}
                             onSelect={handleOptionSelect2}
-                            selectNumber={2}
                           /> 
                         </div>
                     </div>

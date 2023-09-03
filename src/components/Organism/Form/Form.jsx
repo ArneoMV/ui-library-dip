@@ -39,7 +39,7 @@ const Form = () => {
   return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)} noValidate>
-        <div className='header'>
+        <div className='form-container'>
           <div className='row'>
             <Button type="icon" iconName="arrowLeftShortFill" />
           </div>
@@ -96,7 +96,7 @@ const Form = () => {
           </div>
         </div>
       </form>
-      <DevTool control={control} />
+      {/* <DevTool control={control} /> */}
     </div>
   );
 };

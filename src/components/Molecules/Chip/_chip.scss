@@ -1,0 +1,16 @@
+@use '../../../styles/scss/abstract/color' as *;
+@use '../../../styles/scss/base/variable' as *;
+
+
+.chip {
+    background: $primary-100;
+    color: $primary-600;
+    padding: $pading-sm $pading-md;
+    margin: 3px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    border-radius: $base-border-radius-sm;
+  }
+

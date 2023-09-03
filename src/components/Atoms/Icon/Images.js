@@ -30,6 +30,8 @@ const IconImage = {
   threeDots: require('./images/three-dots.svg').default,
   xCircleFill: require('./images/x-circle-fill.svg').default,
   x: require('./images/x.svg').default,
+  threads: require('./images/threads.svg').default,
+  xTwitter: require('./images/xTwitter.svg').default,
 };
 
 export { IconImage };

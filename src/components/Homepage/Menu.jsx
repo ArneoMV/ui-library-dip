@@ -8,23 +8,26 @@ const Menu = () => {
       <div className="menu-items">
         <div className="menu-item pregled"><NavLink to="/Pregled" exact={true}>Pregled</NavLink></div>
         <div className="menu-item"><p>Atom</p></div>
-          <div className="menu-item"><NavLink to="/icon">Icon</NavLink></div>
-          <div className="menu-item"><NavLink to="/color">Color</NavLink></div>
-          <div className="menu-item"><NavLink to="/typography">Typography</NavLink></div>
-          <div className="menu-item"><NavLink to="/shadow">Shadow</NavLink></div>
-          <div className="menu-item"><NavLink to="/line">Line</NavLink></div>
-        <div className="menu-item"><p>Molecules</p></div>
-          <div className="menu-item"><NavLink to="/button">Button</NavLink></div>
-          <div className="menu-item"><NavLink to="/input">Input</NavLink></div>
-          <div className="menu-item"><NavLink to="/checkbox">Checkbox</NavLink></div>
-          <div className="menu-item"><NavLink to="/radio">Radio</NavLink></div>
-          <div className="menu-item"><NavLink to="/select">Select</NavLink></div>
-        <div className="menu-item"><p>Organisms</p></div>
-        <div className="menu-item"><NavLink to="/alert">Alert</NavLink></div>
+          <div className="menu-item"><NavLink to="/icon">Ikone</NavLink></div>
+          <div className="menu-item"><NavLink to="/color">Boja</NavLink></div>
+          <div className="menu-item"><NavLink to="/typography">Tipografija</NavLink></div>
+          <div className="menu-item"><NavLink to="/shadow">Sjena</NavLink></div>
+          <div className="menu-item"><NavLink to="/line">Linija</NavLink></div>
+        <div className="menu-item"><p>Molekule</p></div>
+          <div className="menu-item"><NavLink to="/button">Gumb</NavLink></div>
+          <div className="menu-item"><NavLink to="/input">Polje za unos</NavLink></div>
+          <div className="menu-item"><NavLink to="/checkbox">Potvrdni okvir</NavLink></div>
+          <div className="menu-item"><NavLink to="/radio">Radio gumb</NavLink></div>
+          <div className="menu-item"><NavLink to="/select">Izbornik</NavLink></div>
+          <div className="menu-item"><NavLink to="/chip">Oznaka</NavLink></div>
+        <div className="menu-item"><p>Organizam</p></div>
+        <div className="menu-item"><NavLink to="/alert">Obavijest</NavLink></div>
         <div className="menu-item"><NavLink to="/tab">Tab</NavLink></div>
-          <div className="menu-item"><NavLink to="/form">Sign in form</NavLink></div>
-        <div className="menu-item"><p>Tamplates</p></div>
-        <div className="menu-item"><p>Stranice</p></div>
+        <div className="menu-item"><NavLink to="/form">Forma za prijavu</NavLink></div>
+        <div className="menu-item"><NavLink to="/header">Zaglavlje</NavLink></div>
+        <div className="menu-item"><NavLink to="/footer">Podnožje</NavLink></div>
+        <div className="menu-item"><NavLink to="/tamplate"><p>Predložak</p></NavLink></div>
+        <div className="menu-item"><NavLink to="/page"><p>Stranica</p></NavLink></div>
 
       </div>
     </div>

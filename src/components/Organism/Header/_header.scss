@@ -1,0 +1,27 @@
+@use '../../../styles/scss/abstract/color' as *;
+@use '../../../styles/scss/base/variable' as *;
+
+.header {
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: $shadow-lg;
+    border-radius: 0 0 $base-border-radius-lg $base-border-radius-lg;
+    background-color: $neutral-100;
+    .headerContainer {
+        padding: $pading-sm $pading-lg;
+        height: 90px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .logo-container {
+
+    }
+    .links-container, .cta-container {
+        display: flex;
+        gap: 24px;
+    }
+}

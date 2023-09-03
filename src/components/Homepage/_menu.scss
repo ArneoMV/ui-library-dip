@@ -3,7 +3,7 @@
 
 .side-menu {
   position: fixed;
-  top: 10%; /* Prilagodite gornji položaj da bi se uklopio visina fiksne navigacije */
+  top: 0; /* Prilagodite gornji položaj da bi se uklopio visina fiksne navigacije */
   left: 0;
   display: flex;
   width: inherit;
@@ -16,10 +16,14 @@
     font-weight: bold;
   }
   .menu-items {
-    width: 100%;
+    width: auto;
     list-style: none;
     padding: 0 48px;
-    margin: 0;
+
+    position: fixed;
+    overflow-y: scroll;
+    top: 64px;
+    bottom: 0;
     .menu-item {
       padding: 4px 0px 4px 12px;
       margin: 8px 0;

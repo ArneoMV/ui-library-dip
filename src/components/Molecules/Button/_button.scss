@@ -68,10 +68,20 @@
 }
 
 .button.link {
-  @include Button();
+  max-width: fit-content;
+  border: none;
+  cursor: pointer;
+  height: auto;
+  font-family: "Rubik", sans-serif;
+  color: $primary-600;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.07em;
+  text-align: left;
   background-color: transparent;
-  color: $primary-400;
-
+  padding: 0;
+  text-decoration: none;
   &:hover {
     background-color: transparent;
     color: $primary-600;

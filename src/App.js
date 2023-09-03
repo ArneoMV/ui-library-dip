@@ -18,14 +18,18 @@ import InputPage from './components/Molecules/Input/InputPage.jsx';
 import CheckboxPage from './components/Molecules/Checkbox/CheckboxPage.jsx';
 import RadioPage from './components/Molecules/Radio/RadioPage.jsx';
 import SelectPage from './components/Molecules/Select/SelectPage.jsx';
+import ChipPage from './components/Molecules/Chip/ChipPage.jsx';
 
 // Organism
 import AlertPage from './components/Organism/Alert/AlertPage.jsx';
 import FormPage from './components/Organism/Form/FormPage.jsx';
 import TabPage from './components/Organism/Tab/TabPage.jsx';
+import HeaderPage from './components/Organism/Header/HeaderPage.jsx';
+import FooterPage from './components/Organism/Footer/FooterPage.jsx';
 // Tamplates
-
+import TamplatePage from './components/Tamplate/TamplatePage.jsx';
 // Pages
+import PagePage from './components/Page/PagePage.jsx';
 
 const App = () => {
   return (
@@ -34,7 +38,7 @@ const App = () => {
         <Navigation />
         <main>
           <div className='col-2-sm col-2-md col-2-lg'>
-            <Menu />
+            <Menu className='col-2-sm col-2-md col-2-lg'/>
           </div>
           <div className='content col-8-sm col-8-md col-8-lg'>
             <Routes>
@@ -57,6 +61,11 @@ const App = () => {
               <Route path="/shadow" element={<ShadowPage />} />
               <Route path="/alert" element={<AlertPage />} />
               <Route path="/line" element={<LinePage />} />
+              <Route path="/chip" element={<ChipPage />} />
+              <Route path="/header" element={<HeaderPage />} />
+              <Route path="/footer" element={<FooterPage />} />
+              <Route path="/tamplate" element={<TamplatePage />} />
+              <Route path="/page" element={<PagePage />} />
             </Routes>
           </div>
         </main>

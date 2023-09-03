@@ -65,17 +65,17 @@ const AlertPage = () => {
         <div className="modular-page-structure color-page">
             <Alert />
             <article>
-                <h2>Alert</h2>
-                <p>Alert je komponenta za prikazivanje obavijesti ili poruka korisniku u obliku prekrivajućih prozora. To omogućuje aplikaciji da privremeno prikaže važne informacije korisniku, kao što su upozorenja, potvrde, ili poruke o uspjehu.</p>
+                <h2>Obavijest</h2>
+                <p>Obavijest je komponenta za prikazivanje obavijesti ili poruka korisniku u obliku prekrivajućih prozora. To omogućuje aplikaciji da privremeno prikaže važne informacije korisniku, kao što su upozorenja, potvrde, ili poruke o uspjehu.</p>
+                <h4>Kada korisiti obavijest</h4>
+                    <p>Koristi se situacijama kada aplikacija treba obavijestiti korisnika o određenom događaju, stanju ili potrebi za akcijom. Neki primjeri kada se Alert može koristiti su:</p>
                 <ul>
-                    <h4>Kada korisiti tab</h4>
-                    <p>Alert se koristi u situacijama kada aplikacija treba obavijestiti korisnika o određenom događaju, stanju ili potrebi za akcijom. Neki primjeri kada se Alert može koristiti su:</p>
                     <li>Pri potvrdi akcije koja može imati dugotrajan ili nepovratan učinak.</li>
                     <li>Kada je potrebno prikazati poruku o grešci ili upozorenje korisniku.</li>
                     <li>Pri potvrdi uspješno završene akcije ili transakcije.</li>
                 </ul>
                 <h3>Vrste</h3>
-                <p>Postoje primarni gumb, zadani gumb, isprekidani gumb, tekstualni gumb i gumb za vezu</p>
+                <p>Postoje četiri vrste obavijesti, primary, success, warning and error</p>
             </article>
 
             {/* Primjeri */}
