@@ -1,0 +1,14 @@
+import Alert from 'metro-ui-components'
+
+const AlertPage = () => {
+  // Alert
+  const { showAlert } = useContext(AlertContext);
+  const handleShowAlertInfo = () => {
+      showAlert("This is an info alert!", "info");
+  };
+
+  return {
+    <Alert />
+    <Button type="link" onClick={handleShowAlertInfo}>Info Alert</Button>
+  }
+}

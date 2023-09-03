@@ -1,0 +1,17 @@
+import Radio from 'metro-ui-components'
+
+<RadioButton
+    label="Normal"
+    checked={selectedValue === 'Normal'}
+    onChange={handleRadioButtonChange}
+/>
+<RadioButton
+    label="Checked"
+    checked={selectedValue === 'Checked'}
+    onChange={handleRadioButtonChange}
+/>
+<RadioButton
+    label="Disabled"
+    checked={selectedValue === 'Disabled'}
+    onChange={handleRadioButtonChange}
+/>

@@ -1,0 +1,16 @@
+import Paragraf from 'metro-ui-components';
+
+
+<Paragraf>Typo (default)</Paragraf>
+<Paragraf type="primary">Typo (primary)</Paragraf>
+<Paragraf type="success">Typo (success)</Paragraf>
+<Paragraf type="warning">Typo (warning)</Paragraf>
+<Paragraf type="danger">Typo (danger)</Paragraf>
+<Paragraf disabled>Typo (disabled)</Paragraf>
+<Paragraf mark>Typo (mark)</Paragraf>
+<Paragraf code>Typo (code)</Paragraf>
+<Paragraf keyboard>Typo (keyboard)</Paragraf>
+<Paragraf underline>Typo (underline)</Paragraf>
+<Paragraf delete>Typo (delete)</Paragraf>
+<Paragraf strong>Typo (strong)</Paragraf>
+<Paragraf italic>Typo (italic)</Paragraf>
