@@ -1,21 +1,24 @@
 {
   "files": {
-    "main.css": "/ui-librery-dip/static/css/main.712b5033.css",
-    "main.js": "/ui-librery-dip/static/js/main.744eb185.js",
+    "main.css": "/ui-librery-dip/static/css/main.7c8810c9.css",
+    "main.js": "/ui-librery-dip/static/js/main.82c7d1ca.js",
     "static/media/construction.jpg": "/ui-librery-dip/static/media/construction.f955e196d78ca93c839b.jpg",
     "static/media/Shadow.png": "/ui-librery-dip/static/media/Shadow.885c0fd9cd2867bec464.png",
     "static/media/styles.txt": "/ui-librery-dip/static/media/styles.b2042321cd6594d8a2ba.txt",
     "static/media/form_jsx.txt": "/ui-librery-dip/static/media/form_jsx.f41e64ae24b0c1d43889.txt",
     "static/media/button_jsx.txt": "/ui-librery-dip/static/media/button_jsx.9d77b80226d26e5ca617.txt",
+    "static/media/chip_jsx.txt": "/ui-librery-dip/static/media/chip_jsx.9d77b80226d26e5ca617.txt",
     "static/media/input_jsx.txt": "/ui-librery-dip/static/media/input_jsx.9d77b80226d26e5ca617.txt",
     "static/media/radio_jsx.txt": "/ui-librery-dip/static/media/radio_jsx.9d77b80226d26e5ca617.txt",
     "static/media/select_jsx.txt": "/ui-librery-dip/static/media/select_jsx.9d77b80226d26e5ca617.txt",
     "static/media/button_scss.txt": "/ui-librery-dip/static/media/button_scss.9215c7a2695dcee73df8.txt",
+    "static/media/chip_scss.txt": "/ui-librery-dip/static/media/chip_scss.9215c7a2695dcee73df8.txt",
     "static/media/input_scss.txt": "/ui-librery-dip/static/media/input_scss.9215c7a2695dcee73df8.txt",
     "static/media/radio_scss.txt": "/ui-librery-dip/static/media/radio_scss.9215c7a2695dcee73df8.txt",
     "static/media/select_scss.txt": "/ui-librery-dip/static/media/select_scss.9215c7a2695dcee73df8.txt",
     "static/media/alert_scss.txt": "/ui-librery-dip/static/media/alert_scss.a147e5f8c842c4b05be3.txt",
     "static/media/checkbox_scss.txt": "/ui-librery-dip/static/media/checkbox_scss.66d8472cda99a8ae0789.txt",
+    "static/media/threads.svg": "/ui-librery-dip/static/media/threads.58eb4448e87551ce9deac98da6491efc.svg",
     "static/media/calendar-all-fill.svg": "/ui-librery-dip/static/media/calendar-all-fill.5da12f59c8970fe817c7c949ef0ca190.svg",
     "static/media/checkbox_jsx.txt": "/ui-librery-dip/static/media/checkbox_jsx.d9af4e7f50144553e521.txt",
     "static/media/image-fill.svg": "/ui-librery-dip/static/media/image-fill.f2da14a956cde5ca812dc4b0014db079.svg",
@@ -59,8 +62,10 @@
     "static/media/shadow_scss.txt": "/ui-librery-dip/static/media/shadow_scss.751456841b673b16b5e2.txt",
     "static/media/chevron-compact-left.svg": "/ui-librery-dip/static/media/chevron-compact-left.94cd597da9281e633dad87032efd98a4.svg",
     "static/media/chevron-compact-right.svg": "/ui-librery-dip/static/media/chevron-compact-right.9c654443be5fa8043611528f6931ecd0.svg",
+    "static/media/Logo.svg": "/ui-librery-dip/static/media/Logo.c27cf11e9645afa5cbdd7e69a6543e2e.svg",
     "static/media/arrow-left-short-fill.svg": "/ui-librery-dip/static/media/arrow-left-short-fill.6b731ce02b9d6528d2780d0cb9af3086.svg",
     "static/media/arrow-right-short-fill.svg": "/ui-librery-dip/static/media/arrow-right-short-fill.7c32559fccfa37cc5addab51ccc094a5.svg",
+    "static/media/xTwitter.svg": "/ui-librery-dip/static/media/xTwitter.9c2724ec48f50cdda58e42fa52b2a6d7.svg",
     "static/media/arrow-down.svg": "/ui-librery-dip/static/media/arrow-down.c4096ccabf64de3c5d3b31f546c3fdd5.svg",
     "static/media/arrow-up.svg": "/ui-librery-dip/static/media/arrow-up.90518ce0725c9e9fae09df84894c4f05.svg",
     "static/media/Arrow-down.svg": "/ui-librery-dip/static/media/Arrow-down.70e98558673716fe6313f1c36c845a7f.svg",
@@ -68,11 +73,11 @@
     "static/media/chevron-left-2.svg": "/ui-librery-dip/static/media/chevron-left-2.7d3a65cb5022fdfe9c1be7cc8890a82d.svg",
     "static/media/icon_jsx.txt": "/ui-librery-dip/static/media/icon_jsx.31d6cfe0d16ae931b73c.txt",
     "static/media/icon_scss.txt": "/ui-librery-dip/static/media/icon_scss.31d6cfe0d16ae931b73c.txt",
-    "main.712b5033.css.map": "/ui-librery-dip/static/css/main.712b5033.css.map",
-    "main.744eb185.js.map": "/ui-librery-dip/static/js/main.744eb185.js.map"
+    "main.7c8810c9.css.map": "/ui-librery-dip/static/css/main.7c8810c9.css.map",
+    "main.82c7d1ca.js.map": "/ui-librery-dip/static/js/main.82c7d1ca.js.map"
   },
   "entrypoints": [
-    "static/css/main.712b5033.css",
-    "static/js/main.744eb185.js"
+    "static/css/main.7c8810c9.css",
+    "static/js/main.82c7d1ca.js"
   ]
 }
