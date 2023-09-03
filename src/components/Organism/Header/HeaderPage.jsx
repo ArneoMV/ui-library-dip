@@ -8,19 +8,13 @@ const HeaderPage = () => {
     <div className="modular-page-structure">
             <article>
                 <h2>Zaglavlje</h2>
-                <p>Komponenta predstavlja vizualni element smješten na vrhu web stranice. 
-                    Svojom prisutnošću omogućuje korisnicima brz i lagan pristup ključnim informacijama i 
-                    funkcionalnostima unutar web aplikacije ili stranice. Zaglavlje obično sadržava logotip, 
-                    navigacijske poveznice, akcijske gumbe te druge relevantne komponente.</p>
-                
-                <p>Funkcija komponente jest osigurati dosljedan izgled i pružiti ključne informacije na 
-                    svim stranicama web mjesta. Na taj način, korisnici mogu jednostavno i bez poteškoća 
-                    pristupiti ključnim dijelovima web mjesta.</p>
+                <p>Zaglavlje (Header) je organ smješten na vrhu web stranice i predstavlja vizualni element koji omogućuje korisnicima brz i lagan pristup ključnim informacijama i funkcionalnostima unutar web aplikacije ili stranice.</p>
 
                 <h3>Kada ga koristiti</h3>
                 <ul>
-                    <li>Na Svakoj Stranici: koristi se na svakoj pojedinačnoj stranici unutar web mjesta. Ovo osigurava dosljedan izgled i pristup ključnim informacijama na svim dijelovima web mjesta.</li>
-                    <li>Mobilne Verzije: U responsivnom dizajnu, komponenta Zaglavlje često se prilagođava različitim veličinama ekrana kako bi omogućila korisnicima jednostavan pristup čak i na mobilnim uređajima.</li>
+                    <li>Logotip i Navigacija: Zaglavlje obično sadržava logotip, navigacijske poveznice i akcijske gumbe te druge relevantne komponente.</li>
+                    <li>Dosljedan Izgled: Funkcija ovog organa je osigurati dosljedan izgled i pružiti ključne informacije na svim stranicama web mjesta.</li>
+                    <li>Praktičnost i Pristup: Zaglavlje se koristi na svakoj pojedinačnoj stranici unutar web mjesta, omogućujući korisnicima jednostavan pristup ključnim dijelovima web mjesta.</li>
                 </ul>
 
             </article>

@@ -7,8 +7,6 @@ import Line from '../Line/Line';
 import codeTitleTextFile from './Code/title.txt';
 import codeParagrafTextFile from './Code/paragraf.txt';
 import codeStylesTextFile from './Code/styles.txt';
-// import Prism from "prismjs";
-// import "../../styles/prism.css";
 
 const TypographyPage = () => {
     // Tab component
@@ -58,13 +56,13 @@ const TypographyPage = () => {
     return (
         <div className="modular-page-structure">
             <article className='col-10-lg'>
-                <h2>Typography</h2>
-                <p>Napravljene su komponente Title (1/6), Paragraf i Link s korištenjem fluidne skale fonta kako bi se postiglo responzivno ponašanje teksta na različitim uređajima.</p>
+                <h2>Tipografija</h2>
+                <p>Tipografija se odnosi na odabir i stilizaciju tipografskih elemenata, uključujući fontove, veličinu, razmak između slova i stilove. Ona je ključni element dizajna koji utječe na čitljivost, percepciju i estetiku sučelja.</p>
+                <h4>Kada korisiti tab</h4>
                 <ul>
-                    <h4>Kada korisiti tab</h4>
-                    <li>Tipografija se koristi u svim oblicima tiskanih i digitalnih materijala kako bi poboljšala čitljivost, privukla pažnju i stvorila estetski doživljaj.</li>
-                    <li>Kvalitetna tipografija poboljšava korisničko iskustvo, čini sadržaj jasnijim i doprinosi prepoznatljivosti i profesionalnosti brenda.</li>
-                    <li>Pravilno odabrana tipografija može izraziti različite emocije i tonalitete, primjerice ozbiljnost, veselje, modernost, eleganciju ili tradiciju</li>
+                    <li>Pravilno odabrana tipografija omogućuje čitljivost teksta i uspostavlja hijerarhiju informacija na stranici, ističući naslove, podnaslove i tijelo teksta.</li>
+                    <li>Tipografija doprinosi stilu i prepoznatljivosti sučelja. Odabir fontova može reflektirati ozbiljnost, kreativnost ili inovativnost.</li>
+                    <li>Debljina, boja i veličina fonta se često koriste za naglašavanje važnih informacija ili akcija, poput naslova članaka ili CTA (Call to Action) gumba.</li>
                 </ul>
                 <h3>Vrste</h3>
                 <p>Postoje primarni gumb, zadani gumb, isprekidani gumb, tekstualni gumb i gumb za vezu</p>

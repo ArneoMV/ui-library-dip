@@ -8,28 +8,60 @@ const Pregled = () => {
         <h2>Pregled komponenti</h2>
         <p>Metro sadrži komponenti korisničkog sučelja za obogaćivanje vaših web aplikacija, a mi ćemo dosljedno poboljšavati iskustvo komponenti.</p>
         <div className="horizontal-line"></div>
-        <h3>Atomi</h3>
+
         <div className="row">
-          <ComponentCard title="Icon" image={ComponentImage.icon} />
-          <ComponentCard title="Color" image={ComponentImage.color} />
-          <ComponentCard title="Typography" image={ComponentImage.typo} />
-          <ComponentCard title="Shadow" image={ComponentImage.shadow} />
-          <ComponentCard title="Line" image={ComponentImage.line} />
+          <div className="column">
+            <h3>Atomi</h3>
+            <div className="row">
+              <ComponentCard title="Ikone" image={ComponentImage.icon} />
+              <ComponentCard title="Boja" image={ComponentImage.color} />
+              <ComponentCard title="Tipografija" image={ComponentImage.typo} />
+              <ComponentCard title="Sjena" image={ComponentImage.shadow} />
+              <ComponentCard title="Linija" image={ComponentImage.line} />
+            </div>
+          </div>
         </div>
-        <h3>Molekule</h3>
+
         <div className="row">
-          <ComponentCard title="Button" image={ComponentImage.button} />
-          <ComponentCard title="Input" image={ComponentImage.input} />
-          <ComponentCard title="Checkbox" image={ComponentImage.checkbox} />
-          <ComponentCard title="Radio-button" image={ComponentImage.radio} />
-          <ComponentCard title="Select" image={ComponentImage.select} />
+          <div className="column">
+            <h3>Molekule</h3>
+            <div className="row">
+              <ComponentCard title="Gumb" image={ComponentImage.button} />
+              <ComponentCard title="Polje za unos" image={ComponentImage.input} />
+              <ComponentCard title="Potvrdni okvir" image={ComponentImage.checkbox} />
+              <ComponentCard title="Radio gumb" image={ComponentImage.radio} />
+              <ComponentCard title="Izbornik" image={ComponentImage.select} />
+            </div>
+          </div>
         </div>
-        <h3>Organizmi</h3>
+        
         <div className="row">
-          <ComponentCard title="Alert" image={ComponentImage.alert} />
-          <ComponentCard title="Tab" image={ComponentImage.tab} />
-          <ComponentCard title="Form" image={ComponentImage.form} />
+          <div className="column">
+            <h3>Organizmi</h3>
+            <div className="row">
+              <ComponentCard title="Obavijest" image={ComponentImage.alert} />
+              <ComponentCard title="Tab" image={ComponentImage.tab} />
+              <ComponentCard title="Obrazac za prijavu" image={ComponentImage.form} />
+            </div>
+          </div>
         </div>
+
+        <div className="row">
+          <div className="column">
+            <h3>Predložak</h3>
+            <div className="row">
+              <ComponentCard title="Predložak" image={ComponentImage.predlozak} />
+            </div>
+          </div>
+          
+          <div className="column">
+            <h3>Stranica</h3>
+            <div className="row">
+              <ComponentCard title="Stranica" image={ComponentImage.stranica} />
+            </div>          
+          </div>
+        </div>
+
     </div>
   );
 };

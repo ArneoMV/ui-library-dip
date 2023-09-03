@@ -15,6 +15,8 @@ const ComponentImage = {
   shadow: require('../assets/component/Shadow.png'),
   icon: require('../assets/component/Icon.png'),
   line: require('../assets/component/line.png'),
+  predlozak: require('../assets/component/Predlozak.png'),
+  stranica: require('../assets/component/Stranica.png'),
 };
 
 const IconImage = {

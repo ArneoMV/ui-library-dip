@@ -4,9 +4,6 @@ import Tab from '../../Organism/Tab/Tab';
 
 import RadioButton from './RadioButton';
 import codeJsx from './Code/radio_jsx.txt';
-import codeScss from './Code/radio_scss.txt';
-// import Prism from "prismjs";
-// import "../../styles/prism.css";
 
 const RadiobuttonPage = () => {
     const [selectedValue, setSelectedValue] = useState('Normal');
@@ -15,14 +12,11 @@ const RadiobuttonPage = () => {
       setSelectedValue(value);
     };
 
-
     // Tab component
     const [JSXfileContent, setFileContent] = useState('');
-    const [SCSSfileContent, setSecondTabContent] = useState('');
 
     useEffect(() => {
         fetchTextContent(codeJsx, setFileContent);
-        fetchTextContent(codeScss, setSecondTabContent);
     }, []);
 
     const fetchTextContent = (url, setContent) => {
@@ -31,11 +25,10 @@ const RadiobuttonPage = () => {
             .then((content) => setContent(content))
             .catch((error) => console.log(error));
     };
-    const tabHeaders = [' - ', 'JSX', 'SCSS'];
+    const tabHeaders = [' - ', 'JSX'];
     const tabContent = [
         ' - ',
         JSXfileContent,
-        SCSSfileContent,
     ];
 
     // Table data
@@ -53,11 +46,12 @@ const RadiobuttonPage = () => {
         <div className="modular-page-structure">
             <article>
                 <h2>Radio</h2>
-                <p>Olakšavaju prebacivanje između različitih prikaza. Tab komponentu možete koristiti unutar vaše React aplikacije, posebno ako želite organizirati sadržaj na više tabova. Može se koristiti na različitim stranicama, modulima ili dijelovima aplikacije gdje je potrebno prikazati više sadržaja grupiranih u tabove.</p>
+                <p>Radio Gumb je molekula koja omogućuje korisnicima odabir jedne opcije iz ponuđenog skupa opcija. Radio gumbi se koriste kada je potrebno omogućiti korisnicima ekskluzivan izbor između više opcija.</p>
                 <ul>
                     <h4>Kada korisiti tab</h4>
-                    <li>Koristi se za odabir jednog stanja iz više opcija.</li>
-                    <li>Razlika od Selecta je što je Radio vidljiv korisniku i može olakšati usporedbu izbora, što znači da ih ne bi trebalo biti previše.</li>
+                    <li>Ekskluzivan Izbor: Radio gumbi omogućuju korisnicima odabir samo jedne opcije iz ponuđenog skupa, čime se postiže ekskluzivan izbor.</li>
+                    <li>Selekcija i Preglednost: Označeni radio gumbi jasno pokazuju korisnički odabir, što povećava preglednost i smanjuje zabunu.</li>
+                    <li>Upotreba u Formularima: Radio gumbi često se koriste unutar formulara, anketama i evaluacijama kako bi se prikupili specifični odgovori ili izbori.</li>
                 </ul>
             </article>
 

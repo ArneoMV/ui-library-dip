@@ -4,8 +4,6 @@ import Tab from '../../Organism/Tab/Tab';
 
 import Select from './Select';
 import codeJsx from './Code/select_jsx.txt';
-import codeScss from './Code/select_scss.txt';
-
 
 const SelectPage = () => {
   // Select component
@@ -37,11 +35,9 @@ const SelectPage = () => {
 
     // Tab component
     const [JSXfileContent, setFileContent] = useState('');
-    const [SCSSfileContent, setSecondTabContent] = useState('');
 
     useEffect(() => {
         fetchTextContent(codeJsx, setFileContent);
-        fetchTextContent(codeScss, setSecondTabContent);
     }, []);
 
     const fetchTextContent = (url, setContent) => {
@@ -50,11 +46,10 @@ const SelectPage = () => {
             .then((content) => setContent(content))
             .catch((error) => console.log(error));
     };
-    const tabHeaders = [' - ', 'JSX', 'SCSS'];
+    const tabHeaders = [' - ', 'JSX'];
     const tabContent = [
         ' - ',
         JSXfileContent,
-        SCSSfileContent,
     ];
     // Table data
     const tableHeaders = ['Svojtsvo', 'Opis', 'Vrsta', 'Zadano'];
@@ -72,12 +67,13 @@ const SelectPage = () => {
     return (
         <div className="modular-page-structure">
           <article>
-            <h2>Select</h2>
-            <p>Odaberite komponentu za odabir vrijednosti iz opcija.</p>
-            <h3>Kada ga koristiti</h3>
+            <h2>Izbornik</h2>
+            <p>Izbornik (Select) je molekula koja omogućuje korisnicima odabir jedne opcije iz padajuće liste. Izbornici su korisni za prikazivanje više opcija na ograničenom prostoru.</p>
+            <h4>Kada ga koristiti</h4>
             <ul>
-              <li>Koristi se za odabir jednog stanja iz više opcija.</li>
-              <li>Razlika od Selecta je što je Radio vidljiv korisniku i može olakšati usporedbu izbora, što znači da ih ne bi trebalo biti previše.</li>
+              <li>Odabir Iz Skupa Opcija: Izbornici omogućuju korisnicima odabir jedne opcije između više dostupnih opcija, čime se omogućava prilagodba sučelja prema korisničkim potrebama.</li>
+              <li>Organizacija Opcija: Opcije u izborniku često su organizirane po kategorijama ili abecednom redu, čime se olakšava pronalaženje željene opcije.</li>
+              <li>Smanjenje Nereda: Izbornici su korisni kada je potrebno smanjiti vizualni nered i kompaktno prikazati više opcija na sučelju, čime se poboljšava preglednost.</li>
             </ul>
           </article>
              {/* Primjeri */}

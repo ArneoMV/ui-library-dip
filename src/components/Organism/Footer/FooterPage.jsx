@@ -8,18 +8,17 @@ const FooterPage = () => {
     <div className="modular-page-structure">
             <article>
                 <h2>Podnožje</h2>
-                <p>Komponenta Podnožje poznata kao i Footer koristi se na svakoj stranici web mjesta kako bi pružila dodatne informacije, poveznice i akcijske elemente korisnicima. Nalazi se na dnu web stranice i prisutan je na svim dijelovima web mjesta kako bi osigurao dosljedan prikaz i pristup informacijama.</p>
+                <p>Podnožje (Footer) je organ koji se nalazi na dnu web stranice i služi za pružanje dodatnih informacija, poveznica i akcijskih elemenata korisnicima. Ovaj organ osigurava dosljedan prikaz i pristup informacijama na svim dijelovima web stranice.</p>
                 
                 <p>Funkcija komponente jest osigurati dosljedan izgled i pružiti ključne informacije na 
                     svim stranicama web mjesta. Na taj način, korisnici mogu jednostavno i bez poteškoća 
                     pristupiti ključnim dijelovima web mjesta.</p>
 
                 <h3>Kada ga koristiti</h3>
-                <p>Koristi se kako bi se korisnicima pružila dodatna podrška, informacije i akcijski elementi na dnu svake stranice web mjesta. Ona igra ključnu ulogu u poboljšanju korisničkog iskustva, olakšava navigaciju i pristup dodatnim sadržajima.</p>
                 <ul>
-                    <li>Dodatne Informacije: Pruža korisnicima dodatne informacije kao što su kontaktne informacije, uvjeti korištenja, pravila privatnosti i druge relevantne informacije.</li>
-                    <li>Povezivanje Funkcionalnosti: Akcijski elementi, kao što su gumbi ili ikone, mogu biti povezani s odgovarajućim funkcionalnostima, kao što su prijave, registracije ili preusmjeravanja na druge dijelove web mjesta.</li>
-                    <li>Povezivanje Funkcionalnosti: Akcijski elementi, kao što su gumbi ili ikone, mogu biti povezani s odgovarajućim funkcionalnostima, kao što su prijave, registracije ili preusmjeravanja na druge dijelove web mjesta.</li>
+                    <li>Dodatne Informacije: Podnožje pruža korisnicima dodatne informacije kao što su kontaktne informacije, uvjeti korištenja, pravila privatnosti i druge relevantne informacije.</li>
+                    <li>Povezivanje Funkcionalnosti: Akcijski elementi, kao što su gumbi ili ikone, često su povezani s odgovarajućim funkcionalnostima, kao što su prijave, registracije ili preusmjeravanja na druge dijelove web stranice.</li>
+                    <li>Dosljednost i Pristup: Organ osigurava dosljedan izgled i pristup ključnim informacijama na svim stranicama web mjesta, čime se poboljšava korisničko iskustvo.</li>
                 </ul>
             </article>
             {/* Primjeri */}

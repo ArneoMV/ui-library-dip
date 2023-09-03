@@ -43,11 +43,11 @@ const LinePage = () => {
         <div className="modular-page-structure">
             <article>
                 <h2>Linija</h2>
-                <p>Služi kako bi odvojila sadržaj.</p>
+                <p>Linija je jednostavan vizualni element koji se koristi za odvajanje, povezivanje ili definiranje različitih dijelova sučelja. Linije pružaju strukturu i jasnoću, čineći sučelje organiziranim i lako razumljivim.</p>
                 <ul>
                     <h4>Kada korisiti sjenu</h4>
-                    <li>Razdvajanje naslova i sadržaja.</li>
-                    <li>Razdvajanje poglavlja</li>
+                    <li>Linije se često koriste za fizičko razdvajanje različitih sekcija na web stranici ili za grupiranje sličnih elemenata, čime se olakšava navigacija korisnicima.</li>
+                    <li> Linije se koriste kako bi se usmjerila pažnja korisnika na određene dijelove sučelja, poput naslova, tablica ili odjeljaka s posebnim informacijama.</li>
                 </ul>
                 <h3>Vrste</h3>
             </article>

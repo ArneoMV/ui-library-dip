@@ -1,20 +1,8 @@
-export const Title = ({ level, color, uppercase, lowercase, link, children }) => {
-  const HeadingTag = `h${level}`;
-  const className = `typo title-${level}`;
-  const textTransform = uppercase ? 'uppercase' : lowercase ? 'lowercase' : 'none';
+import Title from 'metro-ui-components';
 
-  const style = {
-    color: color ? `var(--${color})` : 'inherit',
-    textTransform,
-  };
-
-  return link ? (
-    <a href={link} className={className} style={style}>
-      {children}
-    </a>
-  ) : (
-    <HeadingTag className={className} style={style}>
-      {children}
-    </HeadingTag>
-  );
-};
+<Title level={1} color="neutral-700">.t1 Metro Design </Title>
+<Title level={2} color="neutral-700">.t2 Metro Design </Title>
+<Title level={3} color="neutral-700">.t3 Metro Design </Title>
+<Title level={4} color="neutral-700">.t4 Metro Design </Title>
+<Title level={5} color="neutral-700">.t5 Metro Design </Title>
+<Title level={6} color="neutral-700">.t6 Metro Design </Title>

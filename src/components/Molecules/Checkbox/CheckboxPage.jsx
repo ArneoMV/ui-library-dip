@@ -5,9 +5,6 @@ import Tab from '../../Organism/Tab/Tab';
 
 import Checkbox from './Checkbox';
 import codeJsx from './Code/checkbox_jsx.txt';
-import codeScss from './Code/checkbox_scss.txt';
-// import Prism from "prismjs";
-// import "../../styles/prism.css";
 
 
 const CheckboxPage = () => {
@@ -20,11 +17,9 @@ const CheckboxPage = () => {
 
     // Tab component
     const [JSXfileContent, setFileContent] = useState('');
-    const [SCSSfileContent, setSecondTabContent] = useState('');
 
     useEffect(() => {
         fetchTextContent(codeJsx, setFileContent);
-        fetchTextContent(codeScss, setSecondTabContent);
     }, []);
 
     const fetchTextContent = (url, setContent) => {
@@ -33,11 +28,10 @@ const CheckboxPage = () => {
             .then((content) => setContent(content))
             .catch((error) => console.log(error));
     };
-    const tabHeaders = [ ' - ', 'JSX', 'SCSS'];
+    const tabHeaders = [ ' - ', 'JSX'];
     const tabContent = [
         '.',
         JSXfileContent,
-        SCSSfileContent
     ];
 
     // Table data
@@ -53,13 +47,13 @@ const CheckboxPage = () => {
     return (
         <div className="modular-page-structure">
             <article>
-                <h2>Checkbox</h2>
-                <p>Checkbox koristite kada želite omogućiti korisniku da izabere jednu ili više opcija između dvije ili više mogućnosti.</p>
+                <h2>Potvrdni okvir</h2>
+                <p>Potvrdni okvir (Checkbox) je molekula koja omogućuje korisnicima odabir više opcija među ponuđenim izborima. Potvrdni okviri koriste se za označavanje ili poništavanje određenih opcija.</p>
                 <ul>
-                    <h4>Kada korisiti checkbox</h4>
-                    <li>Potvrđivanje uvjeta ili uslova</li>
-                    <li>Filtriranje rezultata</li>
-                    <li>ostavke i podešavanja</li>
+                    <h4>Kada korisiti:</h4>
+                    <li>Višestruki Izbor: Potvrdni okviri omogućuju korisnicima jednostavan i istovremeni izbor više opcija iz skupa ponuđenih.</li>
+                    <li>Potvrda i Selekcija: Označeni potvrdni okviri potvrđuju korisničke odabire, pružajući povratne informacije o izborima.</li>
+                    <li>Filtriranje i Prilagodba: Potvrdni okviri su korisni u filtriranju i prilagodbi prikaza sadržaja, kao što su opcije sortiranja ili filtriranja rezultata pretrage.</li>
                 </ul>
                 <ul>
                     <h4>Kako korisiti checkbox</h4>

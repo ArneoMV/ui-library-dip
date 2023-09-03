@@ -1,0 +1,10 @@
+import Table from 'metro-ui-components'
+
+const TablePage = () => {
+
+  ];
+
+  return {
+   
+  }
+}

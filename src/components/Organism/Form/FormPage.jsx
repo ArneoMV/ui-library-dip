@@ -5,19 +5,14 @@ import Tab from '../Tab/Tab';
 
 import Form from './Form';
 import codeJsx from './Code/form_jsx.txt';
-import codeScss from './Code/form_scss.txt';
-// import Prism from "prismjs";
-// import "../../styles/prism.css";
 
 const FormPage = () => {
 
     // Tab component
     const [JSXfileContent, setFileContent] = useState('');
-    const [SCSSfileContent, setSecondTabContent] = useState('');
 
     useEffect(() => {
         fetchTextContent(codeJsx, setFileContent);
-        fetchTextContent(codeScss, setSecondTabContent);
     }, []);
 
     const fetchTextContent = (url, setContent) => {
@@ -26,11 +21,10 @@ const FormPage = () => {
             .then((content) => setContent(content))
             .catch((error) => console.log(error));
     };
-    const tabHeaders = [' - ', 'JSX', 'SCSS'];
+    const tabHeaders = [' - ', 'JSX'];
     const tabContent = [
         ' - ',
         JSXfileContent,
-        SCSSfileContent,
     ];
     // Table data
     const tableHeaders = ['API', 'Opis'];
@@ -51,13 +45,13 @@ const FormPage = () => {
     return (
         <div className="modular-page-structure">
             <article>
-                <h2>Forma</h2>
-                <p>Olakšavaju prebacivanje između različitih prikaza. Tab komponentu možete koristiti unutar vaše React aplikacije, posebno ako želite organizirati sadržaj na više tabova. Može se koristiti na različitim stranicama, modulima ili dijelovima aplikacije gdje je potrebno prikazati više sadržaja grupiranih u tabove.</p>
+                <h2>Forma za prijavu</h2>
+                <p>Obrazac za prijavu je organ koji se koristi za prikupljanje korisničkih podataka kako bi se omogućila autentikacija i pristup određenom sustavu, aplikaciji ili usluzi. Ova komponenta je ključna za korisničke interakcije i često se koristi na web stranicama koje zahtijevaju korisničke račune.</p>
                 <ul>
                     <h4>Kada korisiti formu</h4>
-                    <li>Kada želite prikazati više tabova s različitim sadržajem</li>
-                    <li>Za unos ili ažuriranje podataka u sustavima upravljanja sadržajem (CMS)</li>
-                    <li>Prikupljanje povratnih informacija, anketa ili upitnika od korisnika</li>
+                    <li>Korisnička Identifikacija: Forma za prijavu obično sadrži polja za unos korisničkog imena ili e-pošte te lozinke. Ovi podaci koriste se za identifikaciju korisnika.</li>
+                    <li>Sigurnost i Autentikacija: Ova komponenta igra ključnu ulogu u zaštiti korisničkih podataka. Osigurava da samo ovlašteni korisnici mogu pristupiti sustavu.</li>
+                    <li>Praktičnost i Korisničko Iskustvo: Kvalitetno dizajnirani obrasci za prijavu pružaju intuitivno korisničko iskustvo, s jasnim uputama i opcijama za oporavak lozinke u slučaju zaborava.</li>
                 </ul>
                 <h3>Kada korisiti formu</h3>
             </article>

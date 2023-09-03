@@ -4,16 +4,13 @@ import Tab from '../../Organism/Tab/Tab';
 import Icon from './Icon';
 import './icon.scss';
 import codeJsx from './Code/icon_jsx.txt';
-import codeScss from './Code/icon_scss.txt';
 
 const IconPage = () => {
     // Tab component
     const [JSXfileContent, setFileContent] = useState('');
-    const [SCSSfileContent, setSecondTabContent] = useState('');
 
     useEffect(() => {
         fetchTextContent(codeJsx, setFileContent);
-        fetchTextContent(codeScss, setSecondTabContent);
     }, []);
 
     const fetchTextContent = (url, setContent) => {
@@ -22,11 +19,10 @@ const IconPage = () => {
             .then((content) => setContent(content))
             .catch((error) => console.log(error));
     };
-    const tabHeaders = ['JSX', 'SCSS', ' - '];
+    const tabHeaders = [' - ', 'JSX'];
     const tabContent = [
+        '-',
         JSXfileContent,
-        SCSSfileContent,
-        '-'
     ];
 
     // Table data
@@ -42,17 +38,15 @@ const IconPage = () => {
     return (
         <div className="modular-page-structure icon">
             <article>
-                <h2>Icon</h2>
-                <p>Ikone su grafički elementi koji predstavljaju određenu vizualnu ilustraciju ili simbol. 
-                    U Reactu, ikone se obično koriste kao zamjene za tekstualne oznake kako bi se poboljšala vizualna privlačnost i prepoznatljivost korisničkog sučelja.</p>
+                <h2>Ikone</h2>
+                <p>Ikone su vizualni elementi koji predstavljaju određene pojmove, radnje ili objekte putem jednostavnih simbola. 
+                    Koriste se za jasno komuniciranje informacija korisnicima i poboljšanje korisničkog iskustva.</p>
+                <h4>Kada korisiti tab</h4>
                 <ul>
-                    <h4>Kada korisiti tab</h4>
-                    <li>Zamjenjuju tekstualne oznake radi bolje estetike i jasnoće.</li>
-                    <li>Povećavaju prepoznatljivost i privlačnost korisničkog sučelja.</li>
-                    <li>Često se koriste u gumbima, navigaciji, upozorenjima i drugim komponentama</li>
+                    <li>Ikone se često koriste u navigaciji kako bi označile različite sekcije ili funkcionalnosti web stranice ili aplikacije, pružajući vizualni trag korisnicima.</li>
+                    <li> Ikone se koriste za označavanje akcija poput "Izbriši," "Spremi," ili "Podijeli," omogućujući korisnicima brzu i intuitivnu interakciju.</li>
+                    <li> Ikone se također koriste kako bi poboljšale estetiku i privukle pažnju korisnika, čineći sučelje vizualno privlačnijim i funkcionalnijim.</li>
                 </ul>
-                <h3>Vrste</h3>
-                <p>Postoje primarni gumb, zadani gumb, isprekidani gumb, tekstualni gumb i gumb za vezu</p>
             </article>
 
             {/* Primjeri */}

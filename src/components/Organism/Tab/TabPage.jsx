@@ -2,17 +2,14 @@ import React, { useEffect, useState } from 'react';
 import Tab from './Tab';
 import Table from '../Table/Table';
 import tab_jsx from './Code/tab_jsx.txt';
-import tab_scss from './Code/tab_scss.txt';
 import { Title, Paragraf } from '../../Atoms/Typography/Typography';
 
 
 const TabPage = () => {
     const [JSXfileContent, setFileContent] = useState('');
-    const [SCSSfileContent, setSecondTabContent] = useState('');
  
     useEffect(() => {
         fetchTextContent(tab_jsx, setFileContent);
-        fetchTextContent(tab_scss, setSecondTabContent);
     }, []);
  
     const fetchTextContent = (url, setContent) => {
@@ -28,11 +25,10 @@ const TabPage = () => {
         { cell1: 'content', cell2: 'Popis sadržaja koji će se prikazati za svaki tab', cell3: 'array', cell4: 'tabContent' },
     ];
     const tabHeaders_1 = ['Tab 1', 'Tab 2', 'Tab 3'];
-    const tabHeaders_2 = [' - ', 'JSX', 'SCSS'];
+    const tabHeaders_2 = [' - ', 'JSX'];
     const tabContent_2 = [
         ' - ',
         JSXfileContent,
-        SCSSfileContent,
     ];
     const tabContent_1 = [
         <React.Fragment>
@@ -53,10 +49,12 @@ const TabPage = () => {
         <div className="modular-page-structure">
             <article>
                 <h2>Tab</h2>
-                <p>Olakšavaju prebacivanje između različitih prikaza. Tab komponentu možete koristiti unutar vaše React aplikacije, posebno ako želite organizirati sadržaj na više tabova. Može se koristiti na različitim stranicama, modulima ili dijelovima aplikacije gdje je potrebno prikazati više sadržaja grupiranih u tabove.</p>
+                <p>Tab je organ koji omogućava organizaciju i navigaciju između različitih sekcija ili kategorija na web stranici ili aplikaciji. Tabovi često koriste ikone ili tekst kako bi jasno označili svaku sekciju.</p>
                 <ul>
                     <h4>Kada korisiti tab</h4>
-                    <li>Kada želite prikazati više tabova s različitim sadržajem</li>
+                    <li>Navigacija i Kategorizacija: Tabovi omogućuju korisnicima brzu navigaciju između različitih dijelova web stranice ili aplikacije, što poboljšava korisničko iskustvo.</li>
+                    <li>Vizualna Orijentacija: Ovi organi pružaju vizualnu orijentaciju korisnicima, čineći im jasnim koje sekcije su dostupne za istraživanje.</li>
+                    <li>Intuitivna Interakcija: Klikom na tab korisnici mogu brzo prelaziti između sekcija, a odabrani tab jasno označava trenutno prikazani sadržaj.</li>
                 </ul>
             </article>
  

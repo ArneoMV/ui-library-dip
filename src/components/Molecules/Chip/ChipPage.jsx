@@ -5,17 +5,13 @@ import Table from '../../Organism/Table/Table';
 import Tab from '../../Organism/Tab/Tab';
 
 import codeJsx from './Code/chip_jsx.txt';
-import codeScss from './Code/chip_scss.txt';
-
 
 const ShadowPage = () => {
     // Tab component
     const [JSXfileContent, setFileContent] = useState('');
-    const [SCSSfileContent, setSecondTabContent] = useState('');
 
     useEffect(() => {
         fetchTextContent(codeJsx, setFileContent);
-        fetchTextContent(codeScss, setSecondTabContent);
     }, []);
 
     const fetchTextContent = (url, setContent) => {
@@ -24,12 +20,10 @@ const ShadowPage = () => {
             .then((content) => setContent(content))
             .catch((error) => console.log(error));
     };
-    const tabHeaders = [' - ', 'JSX', 'SCSS'];
+    const tabHeaders = [' - ', 'JSX'];
     const tabContent = [
         '-',
         JSXfileContent,
-        SCSSfileContent
-        
     ];
 
     // Table data
@@ -49,8 +43,9 @@ const ShadowPage = () => {
                 <p>Na web stranici koja opisuje sjene, mogu se pronaći četiri različite vrste sjena, svaka s vlastitim intenzitetom i bojom, što pruža fleksibilnost u oblikovanju i estetici elemenata na webu. Sjene igraju ključnu ulogu u stvaranju vizualne privlačnosti i hijerarhije među elementima, pridonoseći kohezivnosti i profesionalnosti dizajna. Zadane vrijednosti sjena pružaju nježne prijelaze i umjereni dojam dubine, ali moguće je prilagoditi boje i dimenzije kako bi se dodatno istaknuli određeni elementi u skladu s potrebama dizajna.</p>
                 <ul>
                     <h4>Kada korisiti oznaku</h4>
-                    <li>Koristi se za prikaz informacija.</li>
-
+                    <li>Kompaktna Prikazivanje Informacija: Oznake su korisne za prikazivanje kratkih informacija, kao što su etikete, kategorije ili ključne riječi, na pregledan način.</li>
+                    <li>Organizacija i Klasifikacija: Oznake omogućuju korisnicima da klasificiraju ili organiziraju sadržaj, čime olakšavaju prepoznavanje i praćenje.</li>
+                    <li>Brza Interakcija: Klikom na oznaku često se otvara ili pretražuje povezani sadržaj, čime se omogućava brza interakcija i pristup detaljima.</li>
                 </ul>
                 
             </article>
@@ -62,7 +57,7 @@ const ShadowPage = () => {
                     <div className="padding row">
                         <Chip text="React" />
                         <Chip text="JavaScript" />
-                        <Chip text="CSS" />
+                        <Chip text="SCSS" />
                     </div>
                     <div className="horizontal-line"></div>
                     <div className="padding col-12-lg">

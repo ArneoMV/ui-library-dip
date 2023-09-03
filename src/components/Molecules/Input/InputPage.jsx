@@ -4,18 +4,13 @@ import Tab from '../../Organism/Tab/Tab';
 
 import Input from './Input';
 import codeJsx from './Code/input_jsx.txt';
-import codeScss from './Code/input_scss.txt';
-// import Prism from "prismjs";
-// import "../../styles/prism.css";
 
 const InputPage = () => {
     // Tab component
     const [JSXfileContent, setFileContent] = useState('');
-    const [SCSSfileContent, setSecondTabContent] = useState('');
 
     useEffect(() => {
         fetchTextContent(codeJsx, setFileContent);
-        fetchTextContent(codeScss, setSecondTabContent);
     }, []);
 
     const fetchTextContent = (url, setContent) => {
@@ -24,11 +19,10 @@ const InputPage = () => {
             .then((content) => setContent(content))
             .catch((error) => console.log(error));
     };
-    const tabHeaders = [' - ', 'JSX', 'SCSS'];
+    const tabHeaders = [' - ', 'JSX'];
     const tabContent = [
         '-',
         JSXfileContent,
-        SCSSfileContent
     ];
 
     // Table data
@@ -46,12 +40,13 @@ const InputPage = () => {
     return (
         <div className="page-structure">
             <article>
-                <h2>Input</h2>
-                <p>Osnovni widget za primanje korisničkog unosa je tekstualno polje. Tipkovnica i miš mogu se koristiti za unos ili promjenu podataka.</p>
+                <h2>Polje za unos</h2>
+                <p>Polje za unos je molekula koja omogućuje korisnicima unos teksta ili podataka unutar sučelja. Polja za unos su neizostavni elementi interaktivnih formulara i dijaloga.</p>
                 <ul>
                     <h4>Kada korisiti tab</h4>
-                    <li>Potreban je korisnički unos u polje obrasca.</li>
-                    <li>Potreban je unos za pretraživanje.</li>
+                    <li>Unos Podataka: Polja za unos omogućuju korisnicima da unesu tekst, brojeve ili druge podatke, čime se omogućava interakcija s aplikacijom ili web stranicom.</li>
+                    <li>Validacija i Povratne Informacije: Unosni elementi često uključuju validaciju unesenih podataka i pružaju povratne informacije korisnicima o ispravnosti unosa.</li>
+                    <li>Raznolikost Upotrebe: Polja za unos koriste se u različitim kontekstima, od pretrage i prijave do slanja poruka i komentiranja sadržaja.</li>
                 </ul>
                 <h3>Vrste</h3>
                 <p>Postoje primarni gumb, zadani gumb, isprekidani gumb, tekstualni gumb i gumb za vezu</p>

@@ -1,55 +1,55 @@
-.color-page {
-    .example-section {
-        .color-palette {
+import Color from 'metro-ui-components';
 
-        }
-        // Define the default styles for the div
-        .color-palette {
-            width: 100px;
-            height: 50px;
-            background-color: blue;
-            transition: width 0.3s ease; // Add a transition to the width property
-        }
-        
-        // Add a hover style to increase the width to 140px
-        .color-palette:hover {
-            width: 140px;
-        }
-    }
-}
-  .color-card {
-    position: relative;
-    height: 44px;
-    margin-right: 4px;
-    padding: 0 12px;
-    font-size: 14px;
-    font-family: Consolas,sans-serif;
-    line-height: 44px;
-    cursor: pointer;
-    -webkit-transition: all 0.2s;
-    transition: all 0.2s;
+// Blue
+export const primary = {
+  100: '#d8edff',
+  200: '#D3E9FE',
+  225: '#c7dfff',
+  250: '#adcbf4',
+  300: '#94b9e9',
+  400: '#83A9DA',
+  500: '#5688C9',
+  600: '#275B9D',
+};
 
-    .color-info {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: row;
-        height: 100%;
+// Gray
+export const neutral = {
+  100: '#FFFEFE',
+  200: '#F8F8F8',
+  300: '#EDEDED',
+  400: '#D6D6D6',
+  500: '#BBBBBB',
+  600: '#73777B',
+  700: '#2e2d2d',
+  900: '#060606',
+};
 
-    }
-}
-  .color-card:hover {
-    margin-right: -8px;
-    border-radius: 0 4px 4px 0;
-}
+// Red
+export const error = {
+  100: '#FEE7E4',
+  200: '#FDAC9F',
+  300: '#F06D57',
+  400: '#D73F28',
+  500: '#A73321',
+};
 
+// Green
+export const success = {
+  100: '#CFF1E9',
+  200: '#86D7C3',
+  300: '#32B695',
+  400: '#1F9577',
+  500: '#0F5F4B',
+};
 
+// Orange
+export const warning = {
+  100: '#FAF0CD',
+  200: '#FFE689',
+  300: '#FFDE66',
+  400: '#DAB93E',
+  500: '#A68A20',
+};
 
-.color-name {
-margin-right: 16px;
-}
-
-.color-hex {
-font-weight: normal;
-}
-  
+// Gradient
+export const gradient = 'linear-gradient(45deg, #CFF1E9, #FEE7E4, #E9E9FC)';

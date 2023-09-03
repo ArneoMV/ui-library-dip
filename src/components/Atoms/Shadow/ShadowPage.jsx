@@ -41,12 +41,12 @@ const ShadowPage = () => {
         <div className="modular-page-structure">
             <article>
                 <h2>Sjena</h2>
-                <p>Na web stranici koja opisuje sjene, mogu se pronaći četiri različite vrste sjena, svaka s vlastitim intenzitetom i bojom, što pruža fleksibilnost u oblikovanju i estetici elemenata na webu. Sjene igraju ključnu ulogu u stvaranju vizualne privlačnosti i hijerarhije među elementima, pridonoseći kohezivnosti i profesionalnosti dizajna. Zadane vrijednosti sjena pružaju nježne prijelaze i umjereni dojam dubine, ali moguće je prilagoditi boje i dimenzije kako bi se dodatno istaknuli određeni elementi u skladu s potrebama dizajna.</p>
+                <p>Sjena je vizualni efekt koji dodaje dubinu i dimenzionalnost elementima sučelja, pružajući iluziju trodimenzionalnosti. Sjena igra ključnu ulogu u usmjeravanju pažnje na određene dijelove sučelja i poboljšava opću estetiku.</p>
+                <h4>Kada korisiti sjenu</h4>
                 <ul>
-                    <h4>Kada korisiti sjenu</h4>
-                    <li>Sjena se često koristi kako bi se vizualno podigao element iznad ostalih na web stranici. To može biti primijenjeno na gumbima, karticama, izbornicima i drugim interaktivnim elementima kako bi se naglasila njihova interaktivnost.</li>
-                    <li>Može dodati dojam slojevitosti u dizajnu, što doprinosi hijerarhiji elemenata i čini stranicu vizualno zanimljivijom.</li>
-                    <li>Koristi se kako bi se naglasili određeni dijelovi dizajna, poput važnih poruka, obavijesti ili važnih dijelova sadržaja.</li>
+                    <li>Sjena se često koristi kako bi naglasila aktivne elemente, poput gumba, kada ih korisnici prelaze mišem ili ih odabiru.</li>
+                    <li>Korištenjem različitih razina sjene može se postići osjećaj dubine na stranici, što pomaže u uspostavljanju hijerarhije između različitih elemenata.</li>
+                    <li>Sjena se također koristi radi poboljšanja općeg izgleda sučelja, čineći ga privlačnijim i suvremenijim.</li>
                 </ul>
                 <h3>Vrste</h3>
                 <p>Postoje primarni gumb, zadani gumb, isprekidani gumb, tekstualni gumb i gumb za vezu</p>

@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useContext } from 'react';
 
-
 import Line from '../../Atoms/Line/Line';
 import Button from '../../Molecules/Button/Button.jsx';
 import Tab from '../../Organism/Tab/Tab';
@@ -10,18 +9,15 @@ import Table from '../../Organism/Table/Table';
 import AlertContext from "./alert.context";
 import Alert from "./Alert.jsx";
 import codeJsx from './Code/alert_jsx.txt';
-import codeScss from './Code/alert_scss.txt';
 
 
 
 const AlertPage = () => {
     // Tab component
     const [JSXfileContent, setFileContent] = useState('');
-    const [SCSSfileContent, setSecondTabContent] = useState('');
 
     useEffect(() => {
         fetchTextContent(codeJsx, setFileContent);
-        fetchTextContent(codeScss, setSecondTabContent);
     }, []);
 
     const fetchTextContent = (url, setContent) => {
@@ -30,11 +26,10 @@ const AlertPage = () => {
             .then((content) => setContent(content))
             .catch((error) => console.log(error));
     };
-    const tabHeaders = [' - ', 'JSX', 'SCSS'];
+    const tabHeaders = [' - ', 'JSX'];
     const tabContent = [
         '-',
         JSXfileContent,
-        SCSSfileContent,
     ];
 
     // Table data
@@ -68,11 +63,10 @@ const AlertPage = () => {
                 <h2>Obavijest</h2>
                 <p>Obavijest je komponenta za prikazivanje obavijesti ili poruka korisniku u obliku prekrivajućih prozora. To omogućuje aplikaciji da privremeno prikaže važne informacije korisniku, kao što su upozorenja, potvrde, ili poruke o uspjehu.</p>
                 <h4>Kada korisiti obavijest</h4>
-                    <p>Koristi se situacijama kada aplikacija treba obavijestiti korisnika o određenom događaju, stanju ili potrebi za akcijom. Neki primjeri kada se Alert može koristiti su:</p>
                 <ul>
-                    <li>Pri potvrdi akcije koja može imati dugotrajan ili nepovratan učinak.</li>
-                    <li>Kada je potrebno prikazati poruku o grešci ili upozorenje korisniku.</li>
-                    <li>Pri potvrdi uspješno završene akcije ili transakcije.</li>
+                    <li>Važne Informacije: Uzbune se koriste za istaknutje i komunikaciju važnih informacija, kao što su upozorenja, obavijesti ili greške u aplikaciji.</li>
+                    <li>Jasnoća i Kontrast: Ovi organi često koriste jake boje i ikone kako bi privukli pažnju korisnika i istaknuli poruku.</li>
+                    <li>Brza Reakcija: Uzbune zahtijevaju brzu reakciju korisnika kako bi se suočili s situacijom, primjerice, zatvaranjem obavijesti ili poduzimanjem potrebnih radnji.</li>
                 </ul>
                 <h3>Vrste</h3>
                 <p>Postoje četiri vrste obavijesti, primary, success, warning and error</p>

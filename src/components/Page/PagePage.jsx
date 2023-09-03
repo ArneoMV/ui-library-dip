@@ -7,7 +7,7 @@ const PagePage = () => {
   return (
     <div className="modular-page-structure">
             <article>
-                <h2>Zaglavlje</h2>
+                <h2>Stranica</h2>
                 <p>Stranica predstavlja konkretan primjerak unutar web aplikacije koji koristi predložak za strukturiranje i prikazivanje određenog sadržaja. Svaka stranica predstavlja jedinstveno mjesto gdje korisnik može interagirati s definiranim informacijama, uslugama ili funkcionalnostima aplikacije.</p>
 
                 <h3>Primjena</h3>

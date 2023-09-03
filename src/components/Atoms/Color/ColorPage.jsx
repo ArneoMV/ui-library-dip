@@ -7,7 +7,6 @@ import Tab from '../../Organism/Tab/Tab';
 
 
 import codeJsx from './Code/color_jsx.txt';
-import codeScss from './Code/color_scss.txt';
 import { Title, Paragraf, Button, Caption, Link } from '../Typography/Typography.jsx';
 import Line from '../Line/Line';
 
@@ -15,11 +14,9 @@ import Line from '../Line/Line';
 const ColorPage = () => {
     // Tab component
     const [JSXfileContent, setFileContent] = useState('');
-    const [SCSSfileContent, setSecondTabContent] = useState('');
 
     useEffect(() => {
         fetchTextContent(codeJsx, setFileContent);
-        fetchTextContent(codeScss, setSecondTabContent);
     }, []);
 
     const fetchTextContent = (url, setContent) => {
@@ -28,11 +25,10 @@ const ColorPage = () => {
             .then((content) => setContent(content))
             .catch((error) => console.log(error));
     };
-    const tabHeaders = [' - ', 'JSX', 'SCSS'];
+    const tabHeaders = [' - ', 'JSX'];
     const tabContent = [
         '-',
         JSXfileContent,
-        SCSSfileContent,
     ];
 
     // Table data
@@ -57,15 +53,16 @@ const ColorPage = () => {
         <div className="modular-page-structure color-page">
             <Alert />
             <article>
-                <h2>Color</h2>
-                <p>Osnovni widget za primanje korisničkog unosa je tekstualno polje. Tipkovnica i miš mogu se koristiti za unos ili promjenu podataka.</p>
+                <h2>Boja</h2>
+                <p>Boja je osnovna komponenta dizajna koja igra ključnu ulogu u definiranju estetike i komunikaciji u svijetu IT-a. Boje dodaju dubinu, emocionalnu vrijednost i kontrast sučeljima, potičući korisnike na određene akcije i pružajući prepoznatljivost.</p>
+                <h4>Kada korisiti tab</h4>
                 <ul>
-                    <h4>Kada korisiti tab</h4>
-                    <li>Potreban je korisnički unos u polje obrasca.</li>
-                    <li>Potreban je unos za pretraživanje.</li>
+                    <li>Boja je od vitalnog značaja za identitet marke i njezin prepoznatljiv izgled. Primjerice, karakteristična boja može brzo asocirati korisnike s određenom tvrtkom ili proizvodom.</li>
+                    <li>Boje se koriste kako bi se postigao kontrast između teksta i pozadine, osiguravajući da su informacije lako čitljive i pristupačne.</li>
+                    <li>Različite boje izražavaju različite emocije i osjećaje. Na primjer, crvena može simbolizirati hitnost, dok plava sugerira smirenost.</li>
                 </ul>
                 <h3>Vrste</h3>
-                <p>Postoje primarni gumb, zadani gumb, isprekidani gumb, tekstualni gumb i gumb za vezu</p>
+                <p>Postoje primary, secondary, gradient</p>
             </article>
 
             {/* Primjeri */}

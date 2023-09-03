@@ -4,18 +4,13 @@ import Tab from '../../Organism/Tab/Tab';
 
 import Button from './Button';
 import codeJsx from './code/button_jsx.txt';
-import codeScss from './code/button_scss.txt';
-// import Prism from "prismjs";
-// import "../../styles/prism.css";
 
 const ButtonPage = () => {
     // Tab component
     const [JSXfileContent, setFileContent] = useState('');
-    const [SCSSfileContent, setSecondTabContent] = useState('');
 
     useEffect(() => {
         fetchTextContent(codeJsx, setFileContent);
-        fetchTextContent(codeScss, setSecondTabContent);
     }, []);
 
     const fetchTextContent = (url, setContent) => {
@@ -24,11 +19,10 @@ const ButtonPage = () => {
             .then((content) => setContent(content))
             .catch((error) => console.log(error));
     };
-    const tabHeaders = [' - ', 'JSX', 'SCSS'];
+    const tabHeaders = [' - ', 'JSX'];
     const tabContent = [
         '-',
         JSXfileContent,
-        SCSSfileContent
         
     ];
     // Table data
@@ -43,10 +37,15 @@ const ButtonPage = () => {
             <article>
                 <h2>Gumb</h2>
                 <p>Služi za pokretanje operacije.</p>
-                <p>Osnovni widget za primanje korisničkog unosa je tekstualno polje. Tipkovnica i miš mogu se koristiti za unos ili promjenu podataka.</p>
+                <p>Gumb je molekula koja predstavlja jednostavan element sučelja namijenjen interakciji korisnika. Gumbi često sadrže tekst ili ikonu i koriste se za izvođenje akcija ili prijelaz na druge dijelove sučelja.</p>
                 
                 <h3>Kada ga koristiti</h3>
-                <p>Gumb znači operaciju (ili niz operacija). Klikom na gumb pokrenut će se odgovarajuća poslovna logika.</p>
+                <ul>
+                    <li>Filtriranje i Prilagodba: Potvrdni okviri su korisni u filtriranju i prilagodbi prikaza sadržaja, kao što su opcije sortiranja ili filtriranja rezultata pretrage.</li>
+                    <li>Vizualni Indikator: Promjenom izgleda ili animacijama, gumbi pružaju vizualni indikator korisnicima da su interaktivni i moguće ih je kliknuti.</li>
+                    <li>Usmjeravanje Korisnika: Gumbi se često koriste za usmjeravanje korisnika na druge dijelove sučelja, poput odabira različitih kartica ili prelaska na nove stranice.</li>
+                </ul>
+                <p>Gumbi omogućuju korisnicima izvođenje različitih akcija, kao što su "Spremi," "Pošalji" ili "Izbriši."</p>
                 <ul>
                     <h4>Vrsta gumba</h4>
                     <li>Primarni gumb: označava glavnu radnju, najviše jedan primarni gumb u jednom odjeljku.</li>
