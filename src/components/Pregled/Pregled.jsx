@@ -6,7 +6,7 @@ const Pregled = () => {
   return (
     <div className="page-structure">
         <h2>Pregled komponenti</h2>
-        <p>Metro sadrži komponenti korisničkog sučelja za obogaćivanje vaših web aplikacija, a mi ćemo dosljedno poboljšavati iskustvo komponenti.</p>
+        <p>Metro sadrži komponente korisničkog sučelja za obogaćivanje Vaših web aplikacija.</p>
         <div className="horizontal-line"></div>
 
         <div className="row">

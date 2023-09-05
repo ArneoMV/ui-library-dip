@@ -1,0 +1,6 @@
+import Button from 'metro-ui-components';
+
+<Button type="primary">Primary</Button>
+<Button type="secondary">Secondary</Button>
+<Button type="link">Link</Button>
+<Button type="icon" iconName="check2" />

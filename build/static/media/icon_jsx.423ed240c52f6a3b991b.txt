@@ -1,0 +1,31 @@
+import Icon from 'metro-ui-components';
+
+<Icon name="arrowDown" />
+<Icon name="arrowLeftShortFill" />
+<Icon name="arrowRightShortFill" />
+<Icon name="arrowUp" />
+<Icon name="bookmarkCheckFill" />
+<Icon name="bookmarkPlusFill" />
+<Icon name="calendarAllFill" />
+<Icon name="check2" />
+<Icon name="checkCircleFill" />
+<Icon name="chevronCompactLeft" />
+<Icon name="chevronCompactRight" />
+<Icon name="chevronLeft2" />
+<Icon name="chevronRight2" />
+<Icon name="exclamationCircleFill" />
+<Icon name="exclamationDiamondFill" />
+<Icon name="forwardFill" />
+<Icon name="houseFill" />
+<Icon name="imageFill" />
+<Icon name="infoCircleFill" />
+<Icon name="patchCheckFill" />
+<Icon name="pencilFill" />
+<Icon name="personFill" />
+<Icon name="plusCircleFill" />
+<Icon name="plus" />
+<Icon name="search" />
+<Icon name="threeDotsVertical" />
+<Icon name="threeDots" />
+<Icon name="xCircleFill" />
+<Icon name="x" />

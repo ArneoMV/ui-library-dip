@@ -1,0 +1,6 @@
+import Checkbox from 'metro-ui-components';
+
+<Checkbox label="Normal" />
+<Checkbox label="Checked" checked={true} />
+<Checkbox label="Disabled" disabled />
+<Checkbox label="Error" error />

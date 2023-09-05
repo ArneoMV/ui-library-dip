@@ -1,0 +1,6 @@
+import Input from 'metro-ui-components'
+
+<Input label="Normal Input" placeholder="Enter text" type="text" />
+<Input label="success Input" placeholder="Enter password" success />
+<Input label="Error Input" placeholder="Enter password" error="Invalid input" />
+<Input label="Disabled Input" placeholder="Enter text" disabled />

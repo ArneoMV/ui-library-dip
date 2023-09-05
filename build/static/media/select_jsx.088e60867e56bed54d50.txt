@@ -1,0 +1,45 @@
+import Select from 'metro-ui-components'
+
+const SelectPage = () => {
+// Select component
+  const options_1 = [
+    { label: 'Liquorice cake' },
+    { label: 'Toffee soufflé wafer' },
+    { label: 'Tootsie roll candy' },
+  ];
+  const options_2 = [
+    { label: 'Ice cream' },
+    { label: 'Lemon drop' },
+    { label: 'Halvah jelly' },
+  ];
+
+  const [isOpen1, setIsOpen1] = useState(false);
+  const [isOpen2, setIsOpen2] = useState(false);
+
+  const toggleOpen1 = () => setIsOpen1((prevState) => !prevState);
+  const toggleOpen2 = () => setIsOpen2((prevState) => !prevState);
+
+  const handleOptionSelect1 = (selectedOption) => {
+    console.log('Default:', selectedOption);
+  };
+
+  return {
+    <Select
+      title="Default"
+      type="default"
+      options={options_1}
+      isOpen={isOpen1}
+      toggleOpen={toggleOpen1}
+      onSelect={handleOptionSelect1}
+    />
+
+    <Select
+      title="Chupa chups"
+      type="checkbox"
+      options={options_2}
+      isOpen={isOpen2}
+      toggleOpen={toggleOpen2}
+      onSelect={handleOptionSelect2}
+    /> 
+  }
+}
