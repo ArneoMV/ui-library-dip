@@ -32,6 +32,7 @@ const IconImage = {
   x: require('./images/x.svg').default,
   threads: require('./images/threads.svg').default,
   xTwitter: require('./images/xTwitter.svg').default,
+  menu: require('./images/menu.svg').default,
 };
 
 export { IconImage };

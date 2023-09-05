@@ -1,12 +1,18 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import './_menu.scss';
+import Icon from "../Atoms/Icon/Icon";
 
 const Menu = () => {
   return (
     <div className="side-menu">
       <div className="menu-items">
-        <div className="menu-item pregled"><NavLink to="/Pregled" exact={true}>Pregled</NavLink></div>
+        <div className="menu-item pregled">
+          <NavLink to="/Pregled" exact={true}>
+            Pregled
+            <Icon name="menu" />
+            </NavLink>
+        </div>
         <div className="menu-title"><p>Atom</p></div>
         <div className="menu-item"><NavLink to="/icon">Ikone</NavLink></div>
         <div className="menu-item"><NavLink to="/color">Boja</NavLink></div>

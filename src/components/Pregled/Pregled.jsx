@@ -1,6 +1,7 @@
 import React from "react";
 import ComponentCard from '../ComponentCard/ComponentCard';
 import { ComponentImage, IconImage } from '../../utilities/images';
+import { NavLink } from "react-router-dom";
 
 const Pregled = () => {
   return (
@@ -13,11 +14,12 @@ const Pregled = () => {
           <div className="column">
             <h3>Atomi</h3>
             <div className="row">
-              <ComponentCard title="Ikone" image={ComponentImage.icon} />
-              <ComponentCard title="Boja" image={ComponentImage.color} />
-              <ComponentCard title="Tipografija" image={ComponentImage.typo} />
-              <ComponentCard title="Sjena" image={ComponentImage.shadow} />
-              <ComponentCard title="Linija" image={ComponentImage.line} />
+              
+              <NavLink to="/icon"><ComponentCard title="Ikone" image={ComponentImage.icon} /></NavLink>
+              <NavLink to="/icon"><ComponentCard title="Boja" image={ComponentImage.color} /></NavLink>
+              <NavLink to="/typography"><ComponentCard title="Tipografija" image={ComponentImage.typo} /></NavLink>
+              <NavLink to="/shadow"><ComponentCard title="Sjena" image={ComponentImage.shadow} /></NavLink>
+              <NavLink to="/line"><ComponentCard title="Linija" image={ComponentImage.line} /></NavLink>
             </div>
           </div>
         </div>
@@ -26,11 +28,11 @@ const Pregled = () => {
           <div className="column">
             <h3>Molekule</h3>
             <div className="row">
-              <ComponentCard title="Gumb" image={ComponentImage.button} />
-              <ComponentCard title="Polje za unos" image={ComponentImage.input} />
-              <ComponentCard title="Potvrdni okvir" image={ComponentImage.checkbox} />
-              <ComponentCard title="Radio gumb" image={ComponentImage.radio} />
-              <ComponentCard title="Izbornik" image={ComponentImage.select} />
+              <NavLink to="/button"><ComponentCard title="Gumb" image={ComponentImage.button} /></NavLink>
+              <NavLink to="/input"><ComponentCard title="Polje za unos" image={ComponentImage.input} /></NavLink>
+              <NavLink to="/checkbox"><ComponentCard title="Potvrdni okvir" image={ComponentImage.checkbox} /></NavLink>
+              <NavLink to="/radio"><ComponentCard title="Radio gumb" image={ComponentImage.radio} /></NavLink>
+              <NavLink to="/select"><ComponentCard title="Izbornik" image={ComponentImage.select} /></NavLink>
             </div>
           </div>
         </div>
@@ -39,9 +41,9 @@ const Pregled = () => {
           <div className="column">
             <h3>Organizmi</h3>
             <div className="row">
-              <ComponentCard title="Obavijest" image={ComponentImage.alert} />
-              <ComponentCard title="Tab" image={ComponentImage.tab} />
-              <ComponentCard title="Obrazac za prijavu" image={ComponentImage.form} />
+              <NavLink to="/alert"><ComponentCard title="Obavijest" image={ComponentImage.alert} /></NavLink>
+              <NavLink to="/tab"><ComponentCard title="Tab" image={ComponentImage.tab} /></NavLink>
+              <NavLink to="/form"><ComponentCard title="Obrazac za prijavu" image={ComponentImage.form} /></NavLink>
             </div>
           </div>
         </div>
@@ -50,14 +52,14 @@ const Pregled = () => {
           <div className="column">
             <h3>Predložak</h3>
             <div className="row">
-              <ComponentCard title="Predložak" image={ComponentImage.predlozak} />
+              <NavLink to="/tamplate"><ComponentCard title="Predložak" image={ComponentImage.predlozak} /></NavLink>
             </div>
           </div>
           
           <div className="column">
             <h3>Stranica</h3>
             <div className="row">
-              <ComponentCard title="Stranica" image={ComponentImage.stranica} />
+              <NavLink to="/page"><ComponentCard title="Stranica" image={ComponentImage.stranica} /></NavLink>
             </div>          
           </div>
         </div>

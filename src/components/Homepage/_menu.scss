@@ -31,9 +31,15 @@
       a {
         text-decoration: none;
         color: $neutral-600;
-        display: block;
-      }
+        display: flex;
+        gap: 6px;
+        align-items: center;
 
+      }
+      img {
+        height: 21px !important;
+        width: 21px !important;
+      }
       &:hover {
         background-color: $neutral-200;
         a {

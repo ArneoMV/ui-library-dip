@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ui-librery-dip/static/css/main.97dde624.css",
-    "main.js": "/ui-librery-dip/static/js/main.acd009a2.js",
+    "main.js": "/ui-librery-dip/static/js/main.f7945afc.js",
     "static/media/Stranica.png": "/ui-librery-dip/static/media/Stranica.81be8f0eaba561eb1b63.png",
     "static/media/construction.jpg": "/ui-librery-dip/static/media/construction.f955e196d78ca93c839b.jpg",
     "static/media/Shadow.png": "/ui-librery-dip/static/media/Shadow.885c0fd9cd2867bec464.png",
@@ -64,10 +64,10 @@
     "static/media/line_scss.txt": "/ui-librery-dip/static/media/line_scss.87164b7bfb47b12f6e8a.txt",
     "static/media/form_jsx.txt": "/ui-librery-dip/static/media/form_jsx.9b2fe2b6c3e6f50ac9e1.txt",
     "main.97dde624.css.map": "/ui-librery-dip/static/css/main.97dde624.css.map",
-    "main.acd009a2.js.map": "/ui-librery-dip/static/js/main.acd009a2.js.map"
+    "main.f7945afc.js.map": "/ui-librery-dip/static/js/main.f7945afc.js.map"
   },
   "entrypoints": [
     "static/css/main.97dde624.css",
-    "static/js/main.acd009a2.js"
+    "static/js/main.f7945afc.js"
   ]
 }
