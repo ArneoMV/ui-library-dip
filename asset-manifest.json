@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/ui-librery-dip/static/css/main.4600b11e.css",
-    "main.js": "/ui-librery-dip/static/js/main.c75b046e.js",
+    "main.css": "/ui-librery-dip/static/css/main.b5bc9f6f.css",
+    "main.js": "/ui-librery-dip/static/js/main.d9e6c498.js",
+    "static/media/Metro.svg": "/ui-librery-dip/static/media/Metro.0bcb7ff766f86c650da8a5a7adddee75.svg",
     "static/media/Stranica.png": "/ui-librery-dip/static/media/Stranica.81be8f0eaba561eb1b63.png",
     "static/media/construction.jpg": "/ui-librery-dip/static/media/construction.f955e196d78ca93c839b.jpg",
     "static/media/Shadow.png": "/ui-librery-dip/static/media/Shadow.885c0fd9cd2867bec464.png",
@@ -64,11 +65,11 @@
     "static/media/chip_jsx.txt": "/ui-librery-dip/static/media/chip_jsx.523ab97d35fe7c5c0282.txt",
     "static/media/line_scss.txt": "/ui-librery-dip/static/media/line_scss.87164b7bfb47b12f6e8a.txt",
     "static/media/form_jsx.txt": "/ui-librery-dip/static/media/form_jsx.9b2fe2b6c3e6f50ac9e1.txt",
-    "main.4600b11e.css.map": "/ui-librery-dip/static/css/main.4600b11e.css.map",
-    "main.c75b046e.js.map": "/ui-librery-dip/static/js/main.c75b046e.js.map"
+    "main.b5bc9f6f.css.map": "/ui-librery-dip/static/css/main.b5bc9f6f.css.map",
+    "main.d9e6c498.js.map": "/ui-librery-dip/static/js/main.d9e6c498.js.map"
   },
   "entrypoints": [
-    "static/css/main.4600b11e.css",
-    "static/js/main.c75b046e.js"
+    "static/css/main.b5bc9f6f.css",
+    "static/js/main.d9e6c498.js"
   ]
 }
