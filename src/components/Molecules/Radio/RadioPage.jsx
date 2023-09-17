@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Table from '../../Organism/Table/Table';
 import Tab from '../../Organism/Tab/Tab';
-
 import RadioButton from './RadioButton';
 import codeJsx from './Code/radio_jsx.txt';
+import { Title, Paragraf } from '../../Atoms/Typography/Typography';
 
 const RadiobuttonPage = () => {
     const [selectedValue, setSelectedValue] = useState('Normal');
@@ -44,11 +44,11 @@ const RadiobuttonPage = () => {
   
     return (
         <div className="modular-page-structure">
-            <article>
-                <h2>Radio</h2>
-                <p>Radio Gumb je molekula koja omogućuje korisnicima odabir jedne opcije iz ponuđenog skupa opcija. Radio gumbi se koriste kada je potrebno omogućiti korisnicima ekskluzivan izbor između više opcija.</p>
+            <article className="col-10-lg">
+                <Title level={2} color="neutral-700">Radio</Title>
+                <Paragraf>Radio Gumb je molekula koja omogućuje korisnicima odabir jedne opcije iz ponuđenog skupa opcija. Radio gumbi se koriste kada je potrebno omogućiti korisnicima ekskluzivan izbor između više opcija.</Paragraf>
+                <Title level={4} color="neutral-700">Kada se koristi:</Title>
                 <ul>
-                    <h4>Kada korisiti tab</h4>
                     <li>Ekskluzivan Izbor: Radio gumbi omogućuju korisnicima odabir samo jedne opcije iz ponuđenog skupa, čime se postiže ekskluzivan izbor.</li>
                     <li>Selekcija i Preglednost: Označeni radio gumbi jasno pokazuju korisnički odabir, što povećava preglednost i smanjuje zabunu.</li>
                     <li>Upotreba u Formularima: Radio gumbi često se koriste unutar formulara, anketama i evaluacijama kako bi se prikupili specifični odgovori ili izbori.</li>

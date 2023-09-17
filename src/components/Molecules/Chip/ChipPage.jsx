@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
-
 import Chip from './Chip';
 import Table from '../../Organism/Table/Table';
 import Tab from '../../Organism/Tab/Tab';
-
 import codeJsx from './Code/chip_jsx.txt';
+import { Title, Paragraf } from '../../Atoms/Typography/Typography';
 
 const ShadowPage = () => {
     // Tab component
@@ -38,16 +37,15 @@ const ShadowPage = () => {
 
     return (
         <div className="modular-page-structure">
-            <article>
-                <h2>Oznaka</h2>
-                <p>Na web stranici koja opisuje sjene, mogu se pronaći četiri različite vrste sjena, svaka s vlastitim intenzitetom i bojom, što pruža fleksibilnost u oblikovanju i estetici elemenata na webu. Sjene igraju ključnu ulogu u stvaranju vizualne privlačnosti i hijerarhije među elementima, pridonoseći kohezivnosti i profesionalnosti dizajna. Zadane vrijednosti sjena pružaju nježne prijelaze i umjereni dojam dubine, ali moguće je prilagoditi boje i dimenzije kako bi se dodatno istaknuli određeni elementi u skladu s potrebama dizajna.</p>
+            <article className="col-10-lg">
+                <Title level={2} color="neutral-700">Oznaka</Title>
+                <Paragraf>Na web stranici koja opisuje sjene, mogu se pronaći četiri različite vrste sjena, svaka s vlastitim intenzitetom i bojom, što pruža fleksibilnost u oblikovanju i estetici elemenata na webu. Sjene igraju ključnu ulogu u stvaranju vizualne privlačnosti i hijerarhije među elementima, pridonoseći kohezivnosti i profesionalnosti dizajna. Zadane vrijednosti sjena pružaju nježne prijelaze i umjereni dojam dubine, ali moguće je prilagoditi boje i dimenzije kako bi se dodatno istaknuli određeni elementi u skladu s potrebama dizajna.</Paragraf>
+                <Title level={4} color="neutral-700">Kada korisiti oznaku</Title>
                 <ul>
-                    <h4>Kada korisiti oznaku</h4>
                     <li>Kompaktna Prikazivanje Informacija: Oznake su korisne za prikazivanje kratkih informacija, kao što su etikete, kategorije ili ključne riječi, na pregledan način.</li>
                     <li>Organizacija i Klasifikacija: Oznake omogućuju korisnicima da klasificiraju ili organiziraju sadržaj, čime olakšavaju prepoznavanje i praćenje.</li>
                     <li>Brza Interakcija: Klikom na oznaku često se otvara ili pretražuje povezani sadržaj, čime se omogućava brza interakcija i pristup detaljima.</li>
                 </ul>
-                
             </article>
 
             {/* Primjeri */}

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Table from '../../Organism/Table/Table';
 import Tab from '../../Organism/Tab/Tab';
-
 import Button from './Button';
 import codeJsx from './code/button_jsx.txt';
+import { Title, Paragraf } from '../../Atoms/Typography/Typography';
 
 const ButtonPage = () => {
     // Tab component
@@ -34,42 +34,37 @@ const ButtonPage = () => {
     ];
   return (
     <div className="modular-page-structure">
-            <article>
-                <h2>Gumb</h2>
-                <p>Služi za pokretanje operacije.</p>
-                <p>Gumb je molekula koja predstavlja jednostavan element sučelja namijenjen interakciji korisnika. Gumbi često sadrže tekst ili ikonu i koriste se za izvođenje akcija ili prijelaz na druge dijelove sučelja.</p>
-                
-                <h3>Kada ga koristiti</h3>
+            <article className="col-10-lg">
+                <Title level={2} color="neutral-700">Gumb</Title>
+                <Paragraf>Služi za pokretanje operacije.</Paragraf>
+                <Paragraf>Gumb je molekula koja predstavlja jednostavan element sučelja namijenjen interakciji korisnika. Gumbi često sadrže tekst ili ikonu i koriste se za izvođenje akcija ili prijelaz na druge dijelove sučelja.</Paragraf>
+                <Title level={4} color="neutral-700">Kada se gumb koristi:</Title>
                 <ul>
                     <li>Filtriranje i Prilagodba: Potvrdni okviri su korisni u filtriranju i prilagodbi prikaza sadržaja, kao što su opcije sortiranja ili filtriranja rezultata pretrage.</li>
                     <li>Vizualni Indikator: Promjenom izgleda ili animacijama, gumbi pružaju vizualni indikator korisnicima da su interaktivni i moguće ih je kliknuti.</li>
                     <li>Usmjeravanje Korisnika: Gumbi se često koriste za usmjeravanje korisnika na druge dijelove sučelja, poput odabira različitih kartica ili prelaska na nove stranice.</li>
                 </ul>
-                <p>Gumbi omogućuju korisnicima izvođenje različitih akcija, kao što su "Spremi," "Pošalji" ili "Izbriši."</p>
+                <Paragraf>Gumbi omogućuju korisnicima izvođenje različitih akcija, kao što su "Spremi," "Pošalji" ili "Izbriši."</Paragraf>
+                <Title level={4} color="neutral-700">Vrste:</Title>
                 <ul>
-                    <h4>Vrsta gumba</h4>
                     <li>Primarni gumb: označava glavnu radnju, najviše jedan primarni gumb u jednom odjeljku.</li>
-                    <li>Zadani gumb: označava niz akcija bez prioriteta.</li>
-                    <li>Crtkani gumb: obično se koristi za dodavanje radnje.</li>
-                    <li>Gumb za tekst: koristi se za najsporedniju radnju.</li>
+                    <li>Sekundarni gumb: označava niz akcija bez prioriteta.</li>
                     <li>Link gumb: koristi se za vanjske poveznice.</li>
+                    <li>Ikona: služi za prikazivanje slikovne akcije.</li>
                 </ul>
+                <Title level={4} color="neutral-700">Stanja:</Title>
                 <ul>
-                    <h4>Stanja</h4>
                     <li>error: koristi se za radnje rizika, poput brisanja ili autorizacije.</li>
                     <li>outline: koristi se u situacijama sa složenom pozadinom, obično na početnim stranicama.</li>
                     <li>disabled: kada akcije nisu dostupne.</li>
                     <li>loading: dodajte spinner za učitavanje u gumb, izbjegavajući i više podnošenja</li>
                 </ul>
             </article>
-
-            <h3>Vrste</h3>
-            <p>Postoje primarni gumb, zadani gumb, isprekidani gumb, tekstualni gumb i gumb za vezu</p>
             {/* Primjeri */}
             <div className="example-section column">
  
                 <div className="column">
-                    <div className="padding col-5-lg">
+                    <div className="padding col-8-lg">
                         <div className="col">
                         <div className="row padding">
                             <h5 className="example-title">Primary</h5>

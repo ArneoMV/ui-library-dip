@@ -1,11 +1,12 @@
 import React from "react";
-import ComponentCard from '../ComponentCard/ComponentCard';
+import './_pregled.scss';
+import ComponentCard from './ComponentCard';
 import { ComponentImage, IconImage } from '../../utilities/images';
 import { NavLink } from "react-router-dom";
 
 const Pregled = () => {
   return (
-    <div className="page-structure">
+    <div className="pregled page-structure">
         <h2>Pregled komponenti</h2>
         <p>Metro sadrži komponente korisničkog sučelja za obogaćivanje Vaših web aplikacija.</p>
         <div className="horizontal-line"></div>
@@ -15,7 +16,7 @@ const Pregled = () => {
             <h3>Atomi</h3>
             <div className="row">
               
-              <NavLink to="/icon"><ComponentCard title="Ikone" image={ComponentImage.icon} /></NavLink>
+              <NavLink to="/icon" className="navLink"><ComponentCard title="Ikone" image={ComponentImage.icon} /></NavLink>
               <NavLink to="/icon"><ComponentCard title="Boja" image={ComponentImage.color} /></NavLink>
               <NavLink to="/typography"><ComponentCard title="Tipografija" image={ComponentImage.typo} /></NavLink>
               <NavLink to="/shadow"><ComponentCard title="Sjena" image={ComponentImage.shadow} /></NavLink>

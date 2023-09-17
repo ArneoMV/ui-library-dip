@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
-
 import Table from '../Table/Table';
 import Tab from '../Tab/Tab';
-
 import Form from './Form';
 import codeJsx from './Code/form_jsx.txt';
+import { Title, Paragraf } from '../../Atoms/Typography/Typography';
 
 const FormPage = () => {
 
@@ -44,16 +43,15 @@ const FormPage = () => {
 
     return (
         <div className="modular-page-structure">
-            <article>
-                <h2>Forma za prijavu</h2>
-                <p>Obrazac za prijavu je organ koji se koristi za prikupljanje korisničkih podataka kako bi se omogućila autentikacija i pristup određenom sustavu, aplikaciji ili usluzi. Ova komponenta je ključna za korisničke interakcije i često se koristi na web stranicama koje zahtijevaju korisničke račune.</p>
+            <article className="col-10-lg">
+                <Title level={2} color="neutral-700">Forma za prijavu</Title>
+                <Paragraf>Obrazac za prijavu je organ koji se koristi za prikupljanje korisničkih podataka kako bi se omogućila autentikacija i pristup određenom sustavu, aplikaciji ili usluzi. Ova komponenta je ključna za korisničke interakcije i često se koristi na web stranicama koje zahtijevaju korisničke račune.</Paragraf>
+                <Title level={4} color="neutral-700">Kada se koristi:</Title>
                 <ul>
-                    <h4>Kada korisiti formu</h4>
                     <li>Korisnička Identifikacija: Forma za prijavu obično sadrži polja za unos korisničkog imena ili e-pošte te lozinke. Ovi podaci koriste se za identifikaciju korisnika.</li>
                     <li>Sigurnost i Autentikacija: Ova komponenta igra ključnu ulogu u zaštiti korisničkih podataka. Osigurava da samo ovlašteni korisnici mogu pristupiti sustavu.</li>
                     <li>Praktičnost i Korisničko Iskustvo: Kvalitetno dizajnirani obrasci za prijavu pružaju intuitivno korisničko iskustvo, s jasnim uputama i opcijama za oporavak lozinke u slučaju zaborava.</li>
                 </ul>
-                <h3>Kada korisiti formu</h3>
             </article>
  
             {/* Primjeri */}

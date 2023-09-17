@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import './components/Homepage/_homepage.scss';
+
+
 
 import './styles/scss/index.scss';
 import Navigation from './components/Homepage/Navigation.jsx';
@@ -37,17 +40,15 @@ const App = () => {
       <div className='body'>
         <Navigation />
         <main>
-          <div className='col-2-sm col-2-md col-2-lg'>
-            <Menu className='col-2-sm col-2-md col-2-lg'/>
-          </div>
-          <div className='content col-8-sm col-8-md col-8-lg'>
+          <Menu />
+          <div className='content'>
             <Routes>
               {/* Uklonite element atribut */}
               <Route path="/" />
               {/* Dodajte Route koji će sadržavati element atribut */}
               <Route path="/ui-librery-dip" element={<Pregled />} />
               <Route path="/pregled" element={<Pregled />} />
-              {/* Dodatne rute */}
+              {/* Ostale rute */}
               <Route path="/button" element={<ButtonPage />} />
               <Route path="/input" element={<InputPage />} />
               <Route path="/checkbox" element={<CheckboxPage />} />

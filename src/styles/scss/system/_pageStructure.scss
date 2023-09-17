@@ -30,6 +30,7 @@
     gap: $base-border-radius-lg;
     overflow: visible;
     margin-bottom: $margin-xxl;
+    box-sizing: border-box;
     article {
       display: flex;
       gap: $col-gap-sm;

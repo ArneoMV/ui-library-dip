@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Table from '../../Organism/Table/Table';
 import Tab from '../../Organism/Tab/Tab';
-
 import Select from './Select';
 import codeJsx from './Code/select_jsx.txt';
+import { Title, Paragraf } from '../../Atoms/Typography/Typography';
 
 const SelectPage = () => {
   // Select component
@@ -66,10 +66,10 @@ const SelectPage = () => {
   
     return (
         <div className="modular-page-structure">
-          <article>
-            <h2>Izbornik</h2>
-            <p>Izbornik (Select) je molekula koja omogućuje korisnicima odabir jedne opcije iz padajuće liste. Izbornici su korisni za prikazivanje više opcija na ograničenom prostoru.</p>
-            <h4>Kada ga koristiti</h4>
+          <article className="col-10-lg">
+              <Title level={2} color="neutral-700">Izbornik</Title>
+              <Paragraf>Izbornik je molekula koja omogućuje korisnicima odabir jedne opcije iz padajuće liste. Izbornici su korisni za prikazivanje više opcija na ograničenom prostoru.</Paragraf>
+              <Title level={4} color="neutral-700">Kada se koristi:</Title>
             <ul>
               <li>Odabir Iz Skupa Opcija: Izbornici omogućuju korisnicima odabir jedne opcije između više dostupnih opcija, čime se omogućava prilagodba sučelja prema korisničkim potrebama.</li>
               <li>Organizacija Opcija: Opcije u izborniku često su organizirane po kategorijama ili abecednom redu, čime se olakšava pronalaženje željene opcije.</li>

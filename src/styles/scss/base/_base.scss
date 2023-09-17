@@ -16,11 +16,6 @@ body {
     align-content: flex-start;
     align-items: flex-start;;
 }
-main {
-    display: flex;
-    width: 100%;
-}
-
 
 img, iframe, object, embed, video {
 	width: 100%;
@@ -45,14 +40,6 @@ div {
     padding: $base-padding;
 }
 
-.content {
-    position: relative;
-    top: 12vh; /* Adjust top position to accommodate the fixed navbar height */
-    left: 0;
-    margin-bottom: 150px;
-}
-
-
 
 
 .test {
@@ -75,4 +62,16 @@ div {
       background-position: 0% 50%;
     }
   }
-  
+
+
+
+::-webkit-scrollbar {
+    width: 3px;
+    height: 0.5px;
+}
+::-webkit-scrollbar-thumb {
+    background: $primary-500;
+}
+::-webkit-scrollbar-track {
+    background: $neutral-200;
+}

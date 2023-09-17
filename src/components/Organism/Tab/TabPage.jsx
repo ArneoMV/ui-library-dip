@@ -47,11 +47,11 @@ const TabPage = () => {
  
     return (
         <div className="modular-page-structure">
-            <article>
-                <h2>Tab</h2>
-                <p>Tab je organ koji omogućava organizaciju i navigaciju između različitih sekcija ili kategorija na web stranici ili aplikaciji. Tabovi često koriste ikone ili tekst kako bi jasno označili svaku sekciju.</p>
+            <article className="col-10-lg">
+                <Title level={2} color="neutral-700">Tab</Title>
+                <Paragraf>Tab je organ koji omogućava organizaciju i navigaciju između različitih sekcija ili kategorija na web stranici ili aplikaciji. Tabovi često koriste ikone ili tekst kako bi jasno označili svaku sekciju.</Paragraf>
+                <Title level={4} color="neutral-700">Kada se koristi</Title>
                 <ul>
-                    <h4>Kada korisiti tab</h4>
                     <li>Navigacija i Kategorizacija: Tabovi omogućuju korisnicima brzu navigaciju između različitih dijelova web stranice ili aplikacije, što poboljšava korisničko iskustvo.</li>
                     <li>Vizualna Orijentacija: Ovi organi pružaju vizualnu orijentaciju korisnicima, čineći im jasnim koje sekcije su dostupne za istraživanje.</li>
                     <li>Intuitivna Interakcija: Klikom na tab korisnici mogu brzo prelaziti između sekcija, a odabrani tab jasno označava trenutno prikazani sadržaj.</li>

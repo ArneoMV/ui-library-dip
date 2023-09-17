@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import Table from '../../Organism/Table/Table';
 import Tab from '../../Organism/Tab/Tab';
-
 import Input from './Input';
 import codeJsx from './Code/input_jsx.txt';
+import { Title, Paragraf } from '../../Atoms/Typography/Typography';
+
 
 const InputPage = () => {
     // Tab component
@@ -39,11 +40,11 @@ const InputPage = () => {
 
     return (
         <div className="page-structure">
-            <article>
-                <h2>Polje za unos</h2>
-                <p>Polje za unos je molekula koja omogućuje korisnicima unos teksta ili podataka unutar sučelja. Polja za unos su neizostavni elementi interaktivnih formulara i dijaloga.</p>
+            <article className="col-10-lg">
+                <Title level={2} color="neutral-700">Polje za unos</Title>
+                <Paragraf>Polje za unos je molekula koja omogućuje korisnicima unos teksta ili podataka unutar sučelja. Polja za unos su neizostavni elementi interaktivnih formulara i dijaloga.</Paragraf>
+                <Title level={4} color="neutral-700">Kada se koristi:</Title>
                 <ul>
-                    <h4>Kada korisiti tab</h4>
                     <li>Unos Podataka: Polja za unos omogućuju korisnicima da unesu tekst, brojeve ili druge podatke, čime se omogućava interakcija s aplikacijom ili web stranicom.</li>
                     <li>Validacija i Povratne Informacije: Unosni elementi često uključuju validaciju unesenih podataka i pružaju povratne informacije korisnicima o ispravnosti unosa.</li>
                     <li>Raznolikost Upotrebe: Polja za unos koriste se u različitim kontekstima, od pretrage i prijave do slanja poruka i komentiranja sadržaja.</li>

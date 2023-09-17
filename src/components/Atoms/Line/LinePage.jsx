@@ -2,12 +2,9 @@ import React, { useEffect, useState } from 'react';
 import './line.scss';
 import Table from '../../Organism/Table/Table';
 import Tab from '../../Organism/Tab/Tab';
-
 import Line from './Line';
-
 import codeScss from './Code/line_scss.txt';
-// import Prism from "prismjs";
-// import "../../styles/prism.css";
+import { Title, Paragraf } from '../Typography/Typography';
 
 const LinePage = () => {
     // Tab component
@@ -41,15 +38,15 @@ const LinePage = () => {
 
     return (
         <div className="modular-page-structure">
-            <article>
-                <h2>Linija</h2>
-                <p>Linija je jednostavan vizualni element koji se koristi za odvajanje, povezivanje ili definiranje različitih dijelova sučelja. Linije pružaju strukturu i jasnoću, čineći sučelje organiziranim i lako razumljivim.</p>
+            <article className="col-10-lg">
+                
+                <Title level={2} color="neutral-700">Linija</Title>
+                <Paragraf>Linija je jednostavan vizualni element koji se koristi za odvajanje, povezivanje ili definiranje različitih dijelova sučelja. Linije pružaju strukturu i jasnoću, čineći sučelje organiziranim i lako razumljivim.</Paragraf>
+                <Title level={4} color="neutral-700">Kada korisiti linije:</Title>
                 <ul>
-                    <h4>Kada korisiti sjenu</h4>
                     <li>Linije se često koriste za fizičko razdvajanje različitih sekcija na web stranici ili za grupiranje sličnih elemenata, čime se olakšava navigacija korisnicima.</li>
-                    <li> Linije se koriste kako bi se usmjerila pažnja korisnika na određene dijelove sučelja, poput naslova, tablica ili odjeljaka s posebnim informacijama.</li>
+                    <li>Linije se koriste kako bi se usmjerila pažnja korisnika na određene dijelove sučelja, poput naslova, tablica ili odjeljaka s posebnim informacijama.</li>
                 </ul>
-                <h3>Vrste</h3>
             </article>
 
             {/* Primjeri */}

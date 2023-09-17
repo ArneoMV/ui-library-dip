@@ -4,10 +4,10 @@ import AlertContext from "../../Organism/Alert/alert.context";
 import Alert from "../../Organism/Alert/Alert.jsx";
 import Table from '../../Organism/Table/Table';
 import Tab from '../../Organism/Tab/Tab';
+import { Title, Paragraf } from '../Typography/Typography';
 
 
 import codeJsx from './Code/color_jsx.txt';
-import { Title, Paragraf, Button, Caption, Link } from '../Typography/Typography.jsx';
 import Line from '../Line/Line';
 
 
@@ -52,17 +52,17 @@ const ColorPage = () => {
     return (
         <div className="modular-page-structure color-page">
             <Alert />
-            <article>
-                <h2>Boja</h2>
-                <p>Boja je osnovna komponenta dizajna koja igra ključnu ulogu u definiranju estetike i komunikaciji u svijetu IT-a. Boje dodaju dubinu, emocionalnu vrijednost i kontrast sučeljima, potičući korisnike na određene akcije i pružajući prepoznatljivost.</p>
-                <h4>Kada korisiti tab</h4>
+            <article className="col-10-lg">
+                <Title level={2} color="neutral-700">Boja</Title>
+                <Paragraf>Boja je osnovna komponenta dizajna koja igra ključnu ulogu u definiranju estetike i komunikaciji u svijetu IT-a. Boje dodaju dubinu, emocionalnu vrijednost i kontrast sučeljima, potičući korisnike na određene akcije i pružajući prepoznatljivost.</Paragraf>
+                <Title level={4} color="neutral-700">Kada korisiti boje:</Title>
                 <ul>
                     <li>Boja je od vitalnog značaja za identitet marke i njezin prepoznatljiv izgled. Primjerice, karakteristična boja može brzo asocirati korisnike s određenom tvrtkom ili proizvodom.</li>
                     <li>Boje se koriste kako bi se postigao kontrast između teksta i pozadine, osiguravajući da su informacije lako čitljive i pristupačne.</li>
                     <li>Različite boje izražavaju različite emocije i osjećaje. Na primjer, crvena može simbolizirati hitnost, dok plava sugerira smirenost.</li>
                 </ul>
-                <h3>Vrste</h3>
-                <p>Postoje primary, secondary, gradient</p>
+                <Title level={4} color="neutral-700">Vrste boja:</Title>
+                <Paragraf>Primary, secondary i gradient</Paragraf>
             </article>
 
             {/* Primjeri */}

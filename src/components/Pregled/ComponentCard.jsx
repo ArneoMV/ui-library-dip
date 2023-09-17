@@ -1,11 +1,13 @@
 import React from 'react';
+import './_component-card.scss';
+
 
 const ComponentCard = ({ title, image }) => {
   return (
     <div className="component-card column">
 
       <div className="card-title">
-        <p>{title}</p>
+        {title}
       </div>
 
       <div className="horizontal-line"></div>

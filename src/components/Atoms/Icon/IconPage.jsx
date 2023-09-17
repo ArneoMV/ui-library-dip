@@ -4,6 +4,7 @@ import Tab from '../../Organism/Tab/Tab';
 import Icon from './Icon';
 import './icon.scss';
 import codeJsx from './Code/icon_jsx.txt';
+import { Title, Paragraf } from '../Typography/Typography';
 
 const IconPage = () => {
     // Tab component
@@ -37,11 +38,12 @@ const IconPage = () => {
 
     return (
         <div className="modular-page-structure icon">
-            <article>
-                <h2>Ikone</h2>
-                <p>Ikone su vizualni elementi koji predstavljaju određene pojmove, radnje ili objekte putem jednostavnih simbola. 
-                    Koriste se za jasno komuniciranje informacija korisnicima i poboljšanje korisničkog iskustva.</p>
-                <h4>Kada korisiti tab</h4>
+            <article className="col-10-lg">
+                <Title level={2} color="neutral-700">Ikone</Title>
+                <Paragraf>Ikone su vizualni elementi koji predstavljaju određene pojmove, radnje ili objekte putem jednostavnih simbola. 
+                    Koriste se za jasno komuniciranje informacija korisnicima i poboljšanje korisničkog iskustva.
+                </Paragraf>
+                <Title level={4} color="neutral-700">Kada korisiti ikone:</Title>
                 <ul>
                     <li>Ikone se često koriste u navigaciji kako bi označile različite sekcije ili funkcionalnosti web stranice ili aplikacije, pružajući vizualni trag korisnicima.</li>
                     <li> Ikone se koriste za označavanje akcija poput "Izbriši," "Spremi," ili "Podijeli," omogućujući korisnicima brzu i intuitivnu interakciju.</li>
