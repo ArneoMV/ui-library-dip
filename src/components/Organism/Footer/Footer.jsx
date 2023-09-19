@@ -9,17 +9,17 @@ const Footer = () => {
     <footer className="footer">
       <div className='footerContainer'>
         <div className="column">
-          <Title level={4} color="align_center-700">Customers</Title>
+          <Title level={6} color="align_center-700">Customers</Title>
           <Button type="link">Buyers</Button>
           <Button type="link">Suppliers</Button>
         </div>
         <div className="column ">
-        <Title level={4} color="neutral-700">Company</Title>
+        <Title level={6} color="neutral-700">Company</Title>
           <Button type="link">About</Button>
           <Button type="link">Team</Button>
         </div>
         <div className="column">
-          <Title level={4} color="neutral-700">Follow Us</Title>
+          <Title level={6} color="neutral-700">Follow Us</Title>
           <div className='row'>
             <Button type="icon" iconName="xTwitter" />
             <Button type="icon" iconName="threads" />

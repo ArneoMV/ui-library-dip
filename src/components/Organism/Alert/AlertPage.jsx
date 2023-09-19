@@ -59,13 +59,13 @@ const AlertPage = () => {
             <article className="col-10-lg">
                 <Title level={2} color="neutral-700">Obavijest</Title>
                 <Paragraf>Obavijest je komponenta za prikazivanje obavijesti ili poruka korisniku u obliku prekrivajućih prozora. To omogućuje aplikaciji da privremeno prikaže važne informacije korisniku, kao što su upozorenja, potvrde, ili poruke o uspjehu.</Paragraf>
-                <Title level={4} color="neutral-700">Kada se koristi:</Title>
+                <Title level={5} color="neutral-700">Kada se koristi:</Title>
                 <ul>
                     <li>Važne Informacije: Uzbune se koriste za istaknutje i komunikaciju važnih informacija, kao što su upozorenja, obavijesti ili greške u aplikaciji.</li>
                     <li>Jasnoća i Kontrast: Ovi organi često koriste jake boje i ikone kako bi privukli pažnju korisnika i istaknuli poruku.</li>
                     <li>Brza Reakcija: Uzbune zahtijevaju brzu reakciju korisnika kako bi se suočili s situacijom, primjerice, zatvaranjem obavijesti ili poduzimanjem potrebnih radnji.</li>
                 </ul>
-                <Title level={4} color="neutral-700">Vrste</Title>
+                <Title level={5} color="neutral-700">Vrste</Title>
                 <Paragraf>Postoje četiri vrste obavijesti, primary, success, warning and error</Paragraf>
             </article>
 

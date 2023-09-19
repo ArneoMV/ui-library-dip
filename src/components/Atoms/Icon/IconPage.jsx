@@ -43,7 +43,7 @@ const IconPage = () => {
                 <Paragraf>Ikone su vizualni elementi koji predstavljaju određene pojmove, radnje ili objekte putem jednostavnih simbola. 
                     Koriste se za jasno komuniciranje informacija korisnicima i poboljšanje korisničkog iskustva.
                 </Paragraf>
-                <Title level={4} color="neutral-700">Kada korisiti ikone:</Title>
+                <Title level={5} color="neutral-700">Kada korisiti ikone:</Title>
                 <ul>
                     <li>Ikone se često koriste u navigaciji kako bi označile različite sekcije ili funkcionalnosti web stranice ili aplikacije, pružajući vizualni trag korisnicima.</li>
                     <li> Ikone se koriste za označavanje akcija poput "Izbriši," "Spremi," ili "Podijeli," omogućujući korisnicima brzu i intuitivnu interakciju.</li>

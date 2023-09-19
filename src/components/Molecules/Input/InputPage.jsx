@@ -43,7 +43,7 @@ const InputPage = () => {
             <article className="col-10-lg">
                 <Title level={2} color="neutral-700">Polje za unos</Title>
                 <Paragraf>Polje za unos je molekula koja omogućuje korisnicima unos teksta ili podataka unutar sučelja. Polja za unos su neizostavni elementi interaktivnih formulara i dijaloga.</Paragraf>
-                <Title level={4} color="neutral-700">Kada se koristi:</Title>
+                <Title level={5} color="neutral-700">Kada se koristi:</Title>
                 <ul>
                     <li>Unos Podataka: Polja za unos omogućuju korisnicima da unesu tekst, brojeve ili druge podatke, čime se omogućava interakcija s aplikacijom ili web stranicom.</li>
                     <li>Validacija i Povratne Informacije: Unosni elementi često uključuju validaciju unesenih podataka i pružaju povratne informacije korisnicima o ispravnosti unosa.</li>

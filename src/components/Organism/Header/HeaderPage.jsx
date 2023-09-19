@@ -9,7 +9,7 @@ const HeaderPage = () => {
         <article className="col-10-lg">
             <Title level={2} color="neutral-700">Zaglavlje</Title>
             <Paragraf>Zaglavlje (Header) je organ smješten na vrhu web stranice i predstavlja vizualni element koji omogućuje korisnicima brz i lagan pristup ključnim informacijama i funkcionalnostima unutar web aplikacije ili stranice.</Paragraf>
-            <Title level={4} color="neutral-700">Kada se koristi</Title>
+            <Title level={5} color="neutral-700">Kada se koristi</Title>
             <ul>
                 <li>Logotip i Navigacija: Zaglavlje obično sadržava logotip, navigacijske poveznice i akcijske gumbe te druge relevantne komponente.</li>
                 <li>Dosljedan Izgled: Funkcija ovog organa je osigurati dosljedan izgled i pružiti ključne informacije na svim stranicama web mjesta.</li>

@@ -18,6 +18,9 @@
     width: fit-content;
     height: 100%;
     overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
     .menu-item, .menu-title {
       padding: 0 24px;
       width: auto;

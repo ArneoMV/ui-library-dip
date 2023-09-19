@@ -4,6 +4,7 @@ import Tab from '../../Organism/Tab/Tab';
 import Button from './Button';
 import codeJsx from './code/button_jsx.txt';
 import { Title, Paragraf } from '../../Atoms/Typography/Typography';
+import './_button-page.scss';
 
 const ButtonPage = () => {
     // Tab component
@@ -38,26 +39,11 @@ const ButtonPage = () => {
                 <Title level={2} color="neutral-700">Gumb</Title>
                 <Paragraf>Služi za pokretanje operacije.</Paragraf>
                 <Paragraf>Gumb je molekula koja predstavlja jednostavan element sučelja namijenjen interakciji korisnika. Gumbi često sadrže tekst ili ikonu i koriste se za izvođenje akcija ili prijelaz na druge dijelove sučelja.</Paragraf>
-                <Title level={4} color="neutral-700">Kada se gumb koristi:</Title>
+                <Title level={5} color="neutral-700">Kada se gumb koristi:</Title>
                 <ul>
                     <li>Filtriranje i Prilagodba: Potvrdni okviri su korisni u filtriranju i prilagodbi prikaza sadržaja, kao što su opcije sortiranja ili filtriranja rezultata pretrage.</li>
                     <li>Vizualni Indikator: Promjenom izgleda ili animacijama, gumbi pružaju vizualni indikator korisnicima da su interaktivni i moguće ih je kliknuti.</li>
                     <li>Usmjeravanje Korisnika: Gumbi se često koriste za usmjeravanje korisnika na druge dijelove sučelja, poput odabira različitih kartica ili prelaska na nove stranice.</li>
-                </ul>
-                <Paragraf>Gumbi omogućuju korisnicima izvođenje različitih akcija, kao što su "Spremi," "Pošalji" ili "Izbriši."</Paragraf>
-                <Title level={4} color="neutral-700">Vrste:</Title>
-                <ul>
-                    <li>Primarni gumb: označava glavnu radnju, najviše jedan primarni gumb u jednom odjeljku.</li>
-                    <li>Sekundarni gumb: označava niz akcija bez prioriteta.</li>
-                    <li>Link gumb: koristi se za vanjske poveznice.</li>
-                    <li>Ikona: služi za prikazivanje slikovne akcije.</li>
-                </ul>
-                <Title level={4} color="neutral-700">Stanja:</Title>
-                <ul>
-                    <li>error: koristi se za radnje rizika, poput brisanja ili autorizacije.</li>
-                    <li>outline: koristi se u situacijama sa složenom pozadinom, obično na početnim stranicama.</li>
-                    <li>disabled: kada akcije nisu dostupne.</li>
-                    <li>loading: dodajte spinner za učitavanje u gumb, izbjegavajući i više podnošenja</li>
                 </ul>
             </article>
             {/* Primjeri */}
@@ -67,7 +53,11 @@ const ButtonPage = () => {
                     <div className="padding col-8-lg">
                         <div className="col">
                         <div className="row padding">
-                            <h5 className="example-title">Primary</h5>
+                            <div className='btn-title-box'>
+                                <Title level={6} color="neutral-700">Primarni</Title>
+                            </div>
+                            
+                            
                             <Button type="primary">Normal</Button>
                             <Button type="primary" className="hover">Hover</Button>
                             <Button type="primary" className="active">Active</Button>
@@ -76,7 +66,10 @@ const ButtonPage = () => {
                         </div>
 
                         <div className="row padding">
-                            <h5 className="example-title">Secondary</h5>
+                            <div className='btn-title-box'>
+                                <Title level={6} color="neutral-700">Sekundarni</Title>
+                            </div>
+                            
                             <Button type="secondary">Normal</Button>
                             <Button type="secondary" className="hover">Hover</Button>
                             <Button type="secondary" className="active">Active</Button>
@@ -85,7 +78,10 @@ const ButtonPage = () => {
                         </div>
 
                         <div className="row padding">
-                            <h5 className="example-title">Link</h5>
+                            <div className='btn-title-box'>
+                                <Title level={6} color="neutral-700">Poveznica</Title>
+                            </div>
+                            
                             <Button type="link">Normal</Button>
                             <Button type="link" className="hover">Hover</Button>
                             <Button type="link" className="active">Active</Button>
@@ -93,7 +89,10 @@ const ButtonPage = () => {
                             <Button type="link" disabled>Disabled</Button>
                         </div>
                         <div className="row padding">
-                            <h5 className="example-title">Icon</h5>
+                            <div className='btn-title-box'>
+                                <Title level={6} color="neutral-700">Ikona</Title>
+                            </div>
+                            
                             <Button type="icon" iconName="arrowLeftShortFill" />
                             <Button type="icon" iconName="check2" />
                             <Button type="icon" iconName="capslockFill" />
@@ -102,17 +101,36 @@ const ButtonPage = () => {
                         </div>
                         </div>
                     </div>
+
                     <div className="horizontal-line"></div>
+
                     <div className="padding col-12-lg">
- 
                         <div className="code-container">
                             <Tab options={tabHeaders} content={tabContent} />
                         </div>
- 
                     </div>
                 </div>
             </div>
  
+
+                 <article className="col-10-lg">
+                    <Title level={5} color="neutral-700">Vrste:</Title>
+                    <ul>
+                        <li>Primarni gumb: označava glavnu radnju, najviše jedan primarni gumb u jednom odjeljku.</li>
+                        <li>Sekundarni gumb: označava niz akcija bez prioriteta.</li>
+                        <li>Link gumb: koristi se za vanjske poveznice.</li>
+                        <li>Ikona: služi za prikazivanje slikovne akcije.</li>
+                    </ul>
+                    <Title level={4} color="neutral-700">Stanja:</Title>
+                    <ul>
+                        <li>error: koristi se za radnje rizika, poput brisanja ili autorizacije.</li>
+                        <li>outline: koristi se u situacijama sa složenom pozadinom, obično na početnim stranicama.</li>
+                        <li>disabled: kada akcije nisu dostupne.</li>
+                        <li>loading: dodajte spinner za učitavanje u gumb, izbjegavajući i više podnošenja</li>
+                    </ul>
+                </article>
+
+
             {/* Table */}
             <Table data={tableText} headers={tableHeaders}/>
     </div>

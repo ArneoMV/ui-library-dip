@@ -58,14 +58,12 @@ const TypographyPage = () => {
             <article className='col-10-lg'>
                 <Title level={2} color="neutral-700">Tipografija</Title>
                 <Paragraf>Tipografija se odnosi na odabir i stilizaciju tipografskih elemenata, uključujući fontove, veličinu, razmak između slova i stilove. Ona je ključni element dizajna koji utječe na čitljivost, percepciju i estetiku sučelja.</Paragraf>
-                <Title level={4} color="neutral-700">Značajke tipografije:</Title>
+                <Title level={5} color="neutral-700">Značajke tipografije:</Title>
                 <ul>
                     <li>Pravilno odabrana tipografija omogućuje čitljivost teksta i uspostavlja hijerarhiju informacija na stranici, ističući naslove, podnaslove i tijelo teksta.</li>
                     <li>Tipografija doprinosi stilu i prepoznatljivosti sučelja. Odabir fontova može reflektirati ozbiljnost, kreativnost ili inovativnost.</li>
                     <li>Debljina, boja i veličina fonta se često koriste za naglašavanje važnih informacija ili akcija, poput naslova članaka ili CTA (Call to Action) gumba.</li>
                 </ul>
-                <h3>Vrste</h3>
-                <p>Postoje primarni gumb, zadani gumb, isprekidani gumb, tekstualni gumb i gumb za vezu</p>
             </article>
             {/* Heading */}
             <div className="example-section column col-10-lg">
@@ -91,7 +89,6 @@ const TypographyPage = () => {
                 <div className="column">
                     <div className="padding padding-top">
                         <div className="column col-gap-lg ">
-
                             {/* Paragraf */}
                             <Paragraf>Typo (default)</Paragraf>
                             <Paragraf type="primary">Typo (primary)</Paragraf>

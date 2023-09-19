@@ -42,7 +42,7 @@ const LinePage = () => {
                 
                 <Title level={2} color="neutral-700">Linija</Title>
                 <Paragraf>Linija je jednostavan vizualni element koji se koristi za odvajanje, povezivanje ili definiranje različitih dijelova sučelja. Linije pružaju strukturu i jasnoću, čineći sučelje organiziranim i lako razumljivim.</Paragraf>
-                <Title level={4} color="neutral-700">Kada korisiti linije:</Title>
+                <Title level={5} color="neutral-700">Kada korisiti linije:</Title>
                 <ul>
                     <li>Linije se često koriste za fizičko razdvajanje različitih sekcija na web stranici ili za grupiranje sličnih elemenata, čime se olakšava navigacija korisnicima.</li>
                     <li>Linije se koriste kako bi se usmjerila pažnja korisnika na određene dijelove sučelja, poput naslova, tablica ili odjeljaka s posebnim informacijama.</li>

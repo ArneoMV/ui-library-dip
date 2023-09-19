@@ -47,7 +47,7 @@ const RadiobuttonPage = () => {
             <article className="col-10-lg">
                 <Title level={2} color="neutral-700">Radio</Title>
                 <Paragraf>Radio Gumb je molekula koja omogućuje korisnicima odabir jedne opcije iz ponuđenog skupa opcija. Radio gumbi se koriste kada je potrebno omogućiti korisnicima ekskluzivan izbor između više opcija.</Paragraf>
-                <Title level={4} color="neutral-700">Kada se koristi:</Title>
+                <Title level={5} color="neutral-700">Kada se koristi:</Title>
                 <ul>
                     <li>Ekskluzivan Izbor: Radio gumbi omogućuju korisnicima odabir samo jedne opcije iz ponuđenog skupa, čime se postiže ekskluzivan izbor.</li>
                     <li>Selekcija i Preglednost: Označeni radio gumbi jasno pokazuju korisnički odabir, što povećava preglednost i smanjuje zabunu.</li>

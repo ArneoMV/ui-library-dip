@@ -8,6 +8,7 @@ import Icon from '../../Atoms/Icon/Icon';
 import '../../Atoms/Icon/icon.scss';
 import { neutral, success } from '../../Atoms/Color/Color';
 
+
 const Select = ({ type, options, isOpen, toggleOpen, onSelect, title }) => {
   const [selectedOptions, setSelectedOptions] = useState([]);
 

@@ -46,7 +46,7 @@ const FormPage = () => {
             <article className="col-10-lg">
                 <Title level={2} color="neutral-700">Forma za prijavu</Title>
                 <Paragraf>Obrazac za prijavu je organ koji se koristi za prikupljanje korisničkih podataka kako bi se omogućila autentikacija i pristup određenom sustavu, aplikaciji ili usluzi. Ova komponenta je ključna za korisničke interakcije i često se koristi na web stranicama koje zahtijevaju korisničke račune.</Paragraf>
-                <Title level={4} color="neutral-700">Kada se koristi:</Title>
+                <Title level={5} color="neutral-700">Kada se koristi:</Title>
                 <ul>
                     <li>Korisnička Identifikacija: Forma za prijavu obično sadrži polja za unos korisničkog imena ili e-pošte te lozinke. Ovi podaci koriste se za identifikaciju korisnika.</li>
                     <li>Sigurnost i Autentikacija: Ova komponenta igra ključnu ulogu u zaštiti korisničkih podataka. Osigurava da samo ovlašteni korisnici mogu pristupiti sustavu.</li>

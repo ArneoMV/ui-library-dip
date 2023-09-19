@@ -48,16 +48,11 @@ const CheckboxPage = () => {
             <article className="col-10-lg">
                 <Title level={2} color="neutral-700">Potvrdni okvir</Title>
                 <Paragraf>Potvrdni okvir (Checkbox) je molekula koja omogućuje korisnicima odabir više opcija među ponuđenim izborima. Potvrdni okviri koriste se za označavanje ili poništavanje određenih opcija.</Paragraf>
-                <Title level={4} color="neutral-700">Kada korisiti:</Title>
+                <Title level={5} color="neutral-700">Kada korisiti:</Title>
                 <ul>
                     <li>Višestruki Izbor: Potvrdni okviri omogućuju korisnicima jednostavan i istovremeni izbor više opcija iz skupa ponuđenih.</li>
                     <li>Potvrda i Selekcija: Označeni potvrdni okviri potvrđuju korisničke odabire, pružajući povratne informacije o izborima.</li>
                     <li>Filtriranje i Prilagodba: Potvrdni okviri su korisni u filtriranju i prilagodbi prikaza sadržaja, kao što su opcije sortiranja ili filtriranja rezultata pretrage.</li>
-                </ul>
-                <Title level={4} color="neutral-700">Kako se koristi:</Title>
-                <ul>
-                    <li>Kreirajte novu datoteku Checkbox.js i kopirajte kod za Checkbox komponentu u tu datoteku.</li>
-                    <li> Smjestite Checkbox.js u odgovarajući direktorij vašeg projekta, obično unutar components direktorija.</li>
                 </ul>
             </article>
 
