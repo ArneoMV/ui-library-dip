@@ -58,7 +58,7 @@ const FormPage = () => {
             <div className="example-section column">
  
                 <div className="column">
-                    <div className="padding col-5-lg">
+                    <div className="padding col-3-lg">
                         <div className="column">
                             <Form />
                         </div>

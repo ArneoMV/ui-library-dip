@@ -9,6 +9,19 @@ import { Title, Paragraf } from '../../Atoms/Typography/Typography';
 
 
 const Form = () => {
+
+  // User Login info
+  const database = [
+    {
+      username: "user1",
+      password: "pass1"
+    },
+    {
+      username: "user2",
+      password: "pass2"
+    }
+  ];
+
   const {
     register,
     control,
@@ -22,11 +35,12 @@ const Form = () => {
     // (by default) The validation occurs during the onSubmit event, which is triggered by invoking the handleSubmit function."
     mode: 'onChange', // "Validation is triggered on the changeevent for each input, leading to multiple re-renders."
     defaultValues: {
-      username: 'user',
-      password: 'pass',
+      username: '',
+      password: '',
     },
   });
 
+  
   const onSubmit = (data) => {
     alert(`Username: ${data.username}\n${data.email}`);
     if (window.confirm('Osvježi polja za unos?')) {
