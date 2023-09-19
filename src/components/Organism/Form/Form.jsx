@@ -22,14 +22,14 @@ const Form = () => {
     // (by default) The validation occurs during the onSubmit event, which is triggered by invoking the handleSubmit function."
     mode: 'onChange', // "Validation is triggered on the changeevent for each input, leading to multiple re-renders."
     defaultValues: {
-      username: '',
-      email: '',
+      username: 'user',
+      password: 'pass',
     },
   });
 
   const onSubmit = (data) => {
     alert(`Username: ${data.username}\n${data.email}`);
-    if (window.confirm('Reset form data?')) {
+    if (window.confirm('Osvježi polja za unos?')) {
       // Reset the entire form state, fields reference, and subscriptions.
       //  There are optional arguments and will allow partial form state reset.
       reset({ username: '', email: '' });
@@ -49,6 +49,7 @@ const Form = () => {
         <div className='column form-content'>
           <Input
             label="Username"
+            type="text"
             placeholder="Add username"
             register={register('username', {
               required: {
@@ -64,16 +65,16 @@ const Form = () => {
           />
           <Input
             label="Password"
-            type="Password"
+            type="password"
             placeholder="Add password"
-            register={register('email', {
+            register={register('username', {
               required: {
               value: true,
-                message: 'Email is required',
+                message: 'Password is required',
               },
               pattern: {
                 value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                message: 'Invalid email format',
+                message: 'Invalid password',
               },
               validate: {
                 notBlackListed: (fieldValue) => {
@@ -84,7 +85,7 @@ const Form = () => {
                 },
               },
             })}
-            error={errors.email && errors.email.message}
+            error={errors.password && errors.password.message}
           />
           <div className='row'>
             <Title level={4} color="neutral-700">Sign In</Title>

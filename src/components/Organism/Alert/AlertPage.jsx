@@ -7,7 +7,7 @@ import AlertContext from "./alert.context";
 import Alert from "./Alert.jsx";
 import codeJsx from './Code/alert_jsx.txt';
 import { Title, Paragraf } from '../../Atoms/Typography/Typography';
-
+import './alert-page.scss';
 
 const AlertPage = () => {
     // Tab component
@@ -54,7 +54,7 @@ const AlertPage = () => {
     };
 
     return (
-        <div className="modular-page-structure color-page">
+        <div className="modular-page-structure alert-page">
             <Alert />
             <article className="col-10-lg">
                 <Title level={2} color="neutral-700">Obavijest</Title>
@@ -75,10 +75,10 @@ const AlertPage = () => {
                 <div className="column">
                     <div className="padding row">
                         <div className="row">
-                            <Button type="link" onClick={handleShowAlertInfo}>Info Alert</Button>
-                            <Button type="link" onClick={handleShowAlertSuccess}>Success Alert</Button>
-                            <Button type="link" onClick={handleShowAlertWarrning}>Warning Alert</Button>
-                            <Button type="link" onClick={handleShowAlertError}>Error Alert</Button>
+                            <Button type="link" onClick={handleShowAlertInfo} className="txt-info">Info Alert</Button>
+                            <Button type="link" onClick={handleShowAlertSuccess} className="txt-success">Success Alert</Button>
+                            <Button type="link" onClick={handleShowAlertWarrning} className="txt-warning">Warning Alert</Button>
+                            <Button type="link" onClick={handleShowAlertError} className="txt-error">Error Alert</Button>
                         </div>
 
                     </div>

@@ -1,0 +1,26 @@
+@use '../../../styles/scss/abstract/color' as *;
+@use '../../../styles/scss/base/variable' as *;
+
+.alert-page {
+    .txt-info {
+        color: $primary-300;
+    }
+    .txt-success {
+        color: $success-300;
+    }
+    .txt-warning {
+        color: $warning-300;
+    }
+    .txt-error {
+        color: $error-300;
+    }
+
+
+    .button {
+        .link {
+
+        }
+
+    }
+
+}

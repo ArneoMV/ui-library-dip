@@ -31,18 +31,18 @@ const TabPage = () => {
         JSXfileContent,
     ];
     const tabContent_1 = [
-        <React.Fragment>
+        <div className='tab-content'>
             <Title level={4} color="neutral-700">Chupa chups danish jujubes</Title>
             <Paragraf>Chocolate bar jelly-o bear claw jujubes cookie. Cupcake macaroon pudding tiramisu lollipop cookie croissant icing donut. Chocolate cotton candy pastry gummies toffee marzipan. Chocolate pudding cotton candy tiramisu sesame snaps macaroon wafer gummies. Dragée chocolate biscuit sesame snaps pie donut muffin. Carrot cake bonbon lollipop donut croissant dragée icing macaroon caramels.</Paragraf>
-        </React.Fragment>,
-        <React.Fragment>
+        </div>,
+        <div className='tab-content'>
             <Title level={4} color="neutral-700">Cotton candy chocolate cookie</Title>
             <Paragraf>Donut chocolate bar danish cotton candy pudding shortbread. Jujubes soufflé bonbon chocolate lollipop. Icing tart sugar plum jelly-o carrot cake cake liquorice. Liquorice chupa chups soufflé bear claw candy wafer. Oat cake tiramisu chupa chups biscuit croissant lemon drops icing tootsie roll. Danish cake oat cake candy cotton candy dragée brownie sweet.</Paragraf>
-        </React.Fragment>,
-        <React.Fragment>
+        </div>,
+        <div className='tab-content'>
             <Title level={4} color="neutral-700">Sweet cookie dragée brownie</Title>
             <Paragraf>Powder candy gingerbread candy jelly beans. Tiramisu toffee sesame snaps tiramisu croissant pie danish. Lemon drops sweet roll chocolate cake pudding soufflé donut lollipop icing chocolate. Tiramisu carrot cake chupa chups ice cream chocolate candy canes. Lemon drops brownie halvah jelly-o halvah gummies. Chocolate fruitcake caramels chocolate bar dragée jelly cookie. Shortbread candy canes gummies oat cake chocolate bar wafer sweet roll gummies.</Paragraf>
-        </React.Fragment>
+        </div>
     ];
  
     return (

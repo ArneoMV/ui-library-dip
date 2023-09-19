@@ -2,8 +2,8 @@ import React from 'react';
 import './_button.scss';
 import Icon from '../../Atoms/Icon/Icon';
 
-const Button = ({ type = 'default', children, disabled, onClick, iconName }) => {
-  const buttonClassName = `button ${type} ${disabled ? 'disabled' : ''}`;
+const Button = ({ type = 'default', children, disabled, onClick, iconName, className }) => {
+  const buttonClassName = `button ${type} ${disabled ? 'disabled' : ''} ${className || ''}`;
 
   if (type === 'icon') {
     return (
@@ -21,6 +21,7 @@ const Button = ({ type = 'default', children, disabled, onClick, iconName }) => 
 };
 
 export default Button;
+
 
 
 
