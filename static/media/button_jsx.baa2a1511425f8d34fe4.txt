@@ -1,4 +1,4 @@
-import Button from 'metro-ui-components';
+import Button from './lib';
 
 <Button type="primary">Primary</Button>
 <Button type="secondary">Secondary</Button>

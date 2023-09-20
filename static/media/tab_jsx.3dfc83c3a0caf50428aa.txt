@@ -1,4 +1,4 @@
-import Tab from 'metro-ui-components'
+import Tab from './lib'
 
 const TabPage = () => {
 

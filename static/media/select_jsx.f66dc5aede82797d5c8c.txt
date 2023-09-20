@@ -1,4 +1,4 @@
-import Select from 'metro-ui-components'
+import Select from './lib'
 
 const SelectPage = () => {
 // Select component
