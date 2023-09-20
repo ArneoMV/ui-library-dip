@@ -1,8 +1,9 @@
+
 import React, { useState } from "react";
 import classNames from 'classnames';
 import './ColorCard.scss';
 
-const ColorCard = ({ colorName, colorHex, onClick }) => {
+const ColorCard = ({ colorName, colorHex, onClick, className, customClasses }) => {
   const handleCopyHex = () => {
     navigator.clipboard.writeText(colorHex)
       .then(() => {
@@ -12,19 +13,19 @@ const ColorCard = ({ colorName, colorHex, onClick }) => {
         console.error("Failed to copy: ", error);
       });
   };
-  return (
+  
+  // Koristimo classNames biblioteku da kombinujemo klase
+  const cardClasses = classNames('color-card', className, customClasses);
 
-    // V1  onClick={handleCopyHex}
-    <div onClick={() => { onClick(colorName, colorHex); handleCopyHex(); }} className="color-card" style={{ backgroundColor: colorHex }}>
+  return (
+    <div onClick={() => { onClick(colorName, colorHex); handleCopyHex(); }} className={cardClasses} style={{ backgroundColor: colorHex }}>
       <div className="color-info">
         <p className="color-name">{colorName}</p>
         <p className="color-hex">
           {colorHex}
         </p>
       </div>
-
     </div>
-
   );
 };
 

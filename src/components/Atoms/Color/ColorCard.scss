@@ -1,3 +1,6 @@
+@use '../../../styles/scss/abstract/color' as *;
+@use '../../../styles/scss/base/variable' as *;
+
 .color-page {
     .example-section {
         .color-palette {
@@ -7,7 +10,6 @@
         .color-palette {
             width: 100px;
             height: 50px;
-            background-color: blue;
             transition: width 0.3s ease; // Add a transition to the width property
         }
         
@@ -51,5 +53,12 @@ margin-right: 16px;
 
 .color-hex {
 font-weight: normal;
+}
+
+.txt-black {
+    color: $neutral-900 ;
+}
+.txt-white {
+    color: $neutral-100 ;
 }
   

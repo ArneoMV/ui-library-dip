@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 25.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 886.2 250.8" style="enable-background:new 0 0 886.2 250.8;" xml:space="preserve">
 <style type="text/css">
@@ -15,7 +14,7 @@
 <polygon points="3557.4,2659.8 2167.6,2659.8 2168,2355.8 3173.2,2279.5 3557.4,2433.4 "/>
 <path d="M3314.1,307.8H2170c-14.2,0-25.7-13.4-25.7-29.9V10.7c0-14.8,9.3-27.4,21.9-29.6l1136.1-195.5c1.8,50.8,11.1,60.8,11.1,79.1
 	l8.2,385.1C3321.6,266.3,3313.7,268.7,3314.1,307.8z"/>
-<g>
+<g style="mix-blend-mode:difference">
 	<g>
 		<path d="M541.7-353.4c-2.1-1.8-5-2.5-8.7-2.2l-20.7,1.7l0.6,27.9l20.7-1.4c5-0.3,8.6-2.4,10.8-6.1c2.2-3.8,2.8-8.3,1.6-12.5
 			C545.5-348.9,543.9-351.5,541.7-353.4z"/>

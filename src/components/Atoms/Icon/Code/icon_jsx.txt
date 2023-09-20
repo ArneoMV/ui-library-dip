@@ -1,4 +1,4 @@
-import Icon from 'metro-ui-components';
+import Icon from './lib';
 
 <Icon name="arrowDown" />
 <Icon name="arrowLeftShortFill" />

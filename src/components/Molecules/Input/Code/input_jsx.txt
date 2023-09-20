@@ -1,4 +1,4 @@
-import Input from 'metro-ui-components'
+import Input from './lib'
 
 <Input label="Normal Input" placeholder="Enter text" type="text" />
 <Input label="success Input" placeholder="Enter password" success />

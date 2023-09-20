@@ -1,4 +1,4 @@
-import Radio from 'metro-ui-components'
+import Radio from './lib'
 
 <RadioButton
     label="Normal"
