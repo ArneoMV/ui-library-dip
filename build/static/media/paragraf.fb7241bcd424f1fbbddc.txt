@@ -1,4 +1,4 @@
-import Paragraf from 'metro-ui-components';
+import Paragraf from './lib';
 
 
 <Paragraf>Typo (default)</Paragraf>

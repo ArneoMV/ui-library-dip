@@ -1,3 +1,0 @@
-import Line from 'metro-ui-components';
-
-<Line />

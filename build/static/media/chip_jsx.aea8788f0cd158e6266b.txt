@@ -1,0 +1,3 @@
+import Checkbox from './lib'
+
+<Chip text="JavaScript" />

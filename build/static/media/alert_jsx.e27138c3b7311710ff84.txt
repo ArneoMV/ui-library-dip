@@ -1,4 +1,4 @@
-import Alert from 'metro-ui-components'
+import Alert from './lib'
 
 const AlertPage = () => {
   // Alert
