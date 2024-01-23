@@ -8,7 +8,6 @@
 }
 
 @mixin inputErrorTextStyles {
-  font-family: Sofia Sans;
   color: $error-200;
   font-size: 14px;
   margin-top: 5px;
@@ -25,16 +24,16 @@
 
 
 @mixin input-base {
+  font-family: Inter, sans-serif;
   background-color: $neutral-100;
   border-radius: $base-border-radius-md;
   border: 2px solid $neutral-400;
   cursor: pointer;
   padding: 8px 12px;
   color: $neutral-700;
-  font-family: Sofia Sans;
   font-size: 14px;
-  font-weight: 600;
-  line-height: 1.4;
+  font-weight: 500;
+  line-height: 115%;
   letter-spacing: 0.07em;
   text-align: left;
   width: 100%;
@@ -43,6 +42,16 @@
 .input {
   position: relative;
   background-color: transparent;
+
+  input {
+    &::placeholder {
+      color: $neutral-800;
+      font-family: Inter, sans-serif;
+      font-weight: 400;
+      line-height: 115%;
+
+    }
+  }
 
   &.input-error {
     .input-field {
