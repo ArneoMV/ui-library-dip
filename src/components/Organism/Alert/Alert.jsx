@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import AlertContext from "./alert.context";
 import './_alert.scss';
-import { ComponentImage, IconImage } from '../../../utilities/images';
+import { IconImage } from '../../../utilities/images';
 
 const alertStyles = {
   padding: "16px",

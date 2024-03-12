@@ -64,10 +64,8 @@ const ColorPage = () => {
                 <Title level={5} color="neutral-700">Vrste boja:</Title>
                 <Paragraf>Primary, secondary i gradient</Paragraf>
             </article>
-
             {/* Primjeri */}
             <div className="example-section column">
-
                 <div className="column">
                     <div className="padding row">
                         <div className="col col-3-xl">
